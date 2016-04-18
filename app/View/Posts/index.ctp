@@ -37,4 +37,7 @@
 echo $this->Html->link(
 '投稿する',array('controller'=>'posts', 'action'=>'add')
 );
+/*
+echo $this->Form->postLin('LOGOUT', array('action' => 'logout', );)
+*/
  ?>
