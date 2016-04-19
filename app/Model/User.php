@@ -24,10 +24,13 @@ class User extends AppModel{
 		)
 	);
 	public function beforeSave($options = array()){
-$this->data['User']['password'] = AuthComponent::password(
-$this->data['User']['password']
-);
-return true;
+		if(isset($this->data[$this->alias]['password'])){
+			$passwordHasher = new BlowfishPasswordHasher();
+			$this->data[$this->alias]['password'] = $passwordHasher->hash(
+			$this->data[$this->alias]['password']
+		);
+		}
+		return true;
 	}
 
 	}

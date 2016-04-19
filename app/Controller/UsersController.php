@@ -10,10 +10,13 @@ public function login(){
 	if($this->request->is('post')){
 		if($this->Auth->login()){
 			$this->redirect($this->Auth->redirect());
-			$this->Session->setFlash(__('無効なログイン情報です。'));
+		}else{
+			$this->Flash->error(__('無効なログイン情報です。'));
+		}
 	}
 }
 public function logout(){
+	$this->redirect($this->Auth->logout());
 }
 	public function index(){
 		$this->User->recursive = 0;

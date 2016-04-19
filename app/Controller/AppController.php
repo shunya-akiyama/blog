@@ -32,27 +32,31 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 	public $components = array(
-	'Acl',
+	'Flash',
 	'Auth' => array(
-		'authorize' => array(
-    'Actions'	=> array('acionPath'=>'controllers')
-		)
-	),
-	'Session'
+		'loginRedirect' => array('controller' => 'posts','action' => 'index'),
+		'logoutRedirect' => array(
+			'controller' => 'pages',
+			'action' => 'display',
+			'home'
+		),
+		'authenticate' => array(
+			'Form' => array(
+				'passwordHasher' => 'Blowfish'
+			)
+		),
+		'authorize' => array('Controller')
+	)
 );
+
 	public function beforeFilter(){
-  $this->Auth->loginAction = array(
-		'controller'=>'users',
-		'action'=>'login'
-	);
-	$this->Auth->logoutRedirect = array(
-		'controller'=>'users',
-		'action'=>'login'
-	);
-	$this->Auth->loginRedirect = array(
-		'controller'=>'posts',
-		'action'=>'add'
-	);
+	$this->Auth->allow('index', 'view');
+}
+public function isAuthorized($user){
+	if(isset($user['role']) && $user['role'] === 'admin'){
+		return true;
+	}
+	return false;
 }
 
 }
