@@ -23,13 +23,6 @@ class Post extends AppModel {
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
-		),
-		'Cat' => array(
-			'className' => 'Cat',
-			'foreignKey' => 'cat_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
 		)
 	);
 }

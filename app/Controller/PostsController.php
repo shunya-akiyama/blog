@@ -13,16 +13,17 @@ public $components = array('Paginator', 'Flash');
  *
  * @var array
  */
-	public $components = array('Paginator');
-
+public function beforeFilter(){
+	parent::beforeFilter();
+	$this->Auth->allow('index', 'view');
+}
 /**
  * index method
  *
  * @return void
  */
 	public function index() {
-		$this->Post->recursive = 0;
-		$this->set('posts', $this->Paginator->paginate());
+    $this->set('posts', $this->Post->find('all'));
 	}
 
 /**

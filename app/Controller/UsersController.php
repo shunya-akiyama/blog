@@ -7,28 +7,48 @@ App::uses('AppController', 'Controller');
  * @property PaginatorComponent $Paginator
  */
 class UsersController extends AppController {
-public $components = array('Paginator', 'Flash');
+	public $components = array('Paginator', 'Flash');
 	public function beforeFilter(){
 		parent::beforeFilter();
-		$this->Auth->allow();
+		$this->Auth->allow('initDB');
 	}
 /**
  * Components
  *
  * @var array
  */
+  public function initDB(){
+		$group = $this->User->Group;
+    $group->id = 1;
+		$this->Acl->allow($group, 'controllers');
+
+		$group->id = 2;
+		$this->Acl->deny($group, 'controllers');
+		$this->Acl->allow($group, 'controllers/Posts');
+		$this->Acl->allow($group, 'controllers/Tags');
+
+    $group->id = 3;
+		$this->Acl->deny($group, 'controllers');
+		$this->Acl->allow($group, 'controllers/Posts/add');
+		$this->Acl->allow($group, 'controllers/Posts/edit');
+		$this->Acl->allow($group, 'controllers/Tags/add');
+		$this->Acl->allow($group, 'controllers/Tags/edit');
+    echo "all done";
+		exit;
+	}
+
 
   public function login(){
-		if($this->request->is('post')){
-			if($this->Auth->login()){
-				return $this->redirect($this->Auth->redirect());
-			}
-			$this->Session->setFlash(__('パスワードと名前を入力してください。'));
+    if($this->Session->read('Auth.User')){
+			 $this->Session->setFlash('You are logged in!');
+			 $this->redirect('/', null, false);
 		}
+
 	}
 
   public function logout(){
-
+    $this->Session->setFlash('GoodBye!');
+		$this->redirect($this->Auth->logout());
 	}
 /**
  * index method

@@ -1,9 +1,11 @@
 <?php
-echo $this->Form->create('User', array('action'=>'login'));
-echo $this->inputs(array(
-  'legend'=>__('login'),
-  'username',
-  'password'
+echo $this->Form->create('User', array(
+  'url'=> array(
+    'controller' => 'users',
+    'action' => 'login'
+  )
 ));
-echo $this->Form->end(__('login'));
+echo $this->Form->input('User.username')
+echo $this->Form->input('User.password')
+echo $this->Form->end('login');
 ?>
