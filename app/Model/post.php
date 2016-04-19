@@ -1,15 +1,35 @@
 <?php
-class Post extends AppModel{
-public $validate = array(
-	'title' => array(
-		'rule' => 'notBlank'
-	),
-	'body' => array(
-		'rule' => 'notBlank'
-	)
-);
+App::uses('AppModel', 'Model');
+/**
+ * Post Model
+ *
+ * @property User $User
+ * @property Cat $Cat
+ */
+class Post extends AppModel {
 
-public function isOwnedBy($post, $user){
-	return $this->field('id', array('id'=> $post, 'user_id'=> $user)) !== false;
-}
+
+	// The Associations below have been created with all possible keys, those that are not needed can be removed
+
+/**
+ * belongsTo associations
+ *
+ * @var array
+ */
+	public $belongsTo = array(
+		'User' => array(
+			'className' => 'User',
+			'foreignKey' => 'user_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'Cat' => array(
+			'className' => 'Cat',
+			'foreignKey' => 'cat_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		)
+	);
 }

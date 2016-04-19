@@ -1,74 +1,104 @@
 <?php
-class PostsController extends AppController{
-  public $helpers = array('Html','Form','Flash');
-public $components = array('Flash');
-	public function index(){
-		$this->set('posts', $this->Post->find('all'));
-	}
-  public function view($id = null){
-    if(!$id){
-			throw new NotFoundException(__('InvaildPost'));
-		}
-	$post = $this->Post->findById($id);
-	if (!$post){
-		throw new NotFoundException(__('InvaildPost'));
-	}
-	$this->set('post',$post);
-	}
-public function add(){
-	if($this->request->is('post')){
-    $this->request->data['Post']['user_id'] = $this->Auth->user('id');
-		$this->Post->create();
-		if($this->Post->save($this->request->data)){
-			$this->Flash->success(__('投稿完了'));
-			return $this->redirect(array('action'=>'index'));
-		}
-		$this->Flash->error(__('投稿失敗'));
-	}
-}
+App::uses('AppController', 'Controller');
+/**
+ * Posts Controller
+ *
+ * @property Post $Post
+ * @property PaginatorComponent $Paginator
+ */
+class PostsController extends AppController {
+public $components = array('Paginator', 'Flash');
+/**
+ * Components
+ *
+ * @var array
+ */
+	public $components = array('Paginator');
 
-public function isAuthorized($user){
-  if($this->action === 'add'){
-    return true;
-  }
-  if(in_array($this->action, array('edit','delete'))){
-    $postId = (int) $this->request->params['pass'][0];
-    if($this->Post->isOwnedBy($postId, $user['id'])){
-      return true;
-    }
-  }
-  return parent::isAuthorized($user);
-}
+/**
+ * index method
+ *
+ * @return void
+ */
+	public function index() {
+		$this->Post->recursive = 0;
+		$this->set('posts', $this->Paginator->paginate());
+	}
 
-public function edit($id = null){
-  if(!$id){
-    throw new NotFoundException(__('InvaildPost'));
-  }
-  $post = $this->Post->findById($id);
-  if(!$post){
-    throw new NotFoundException(__('InvaildPost'));
-  }
-  if($this->request->is(array('post', 'put'))){
-    $this->Post->id = $id;
-    if($this->Post->save($this->request->data)){
-      $this->Flash->success(__('編集完了'));
-      return $this->redirect(array('action'=>'index'));
-    }
-    $this->Flash->error(__('投稿失敗'));
-  }
-  if(!$this->request->data){
-    $this->request->data = $post;
-  }
-}
-public function delete($id){
-  if($this->request->is('get')){
-    throw new MethodNotAllowedException();
-  }
-  if($this->Post->delete($id)){
-    $this->Flash->success(__('削除完了',h($id)));
-  }else{
-    $this->Flash->error(__('削除失敗',h($id)));
-  }
-  return $this->redirect(array('action'=>'index'));
-}
+/**
+ * view method
+ *
+ * @throws NotFoundException
+ * @param string $id
+ * @return void
+ */
+	public function view($id = null) {
+		if (!$this->Post->exists($id)) {
+			throw new NotFoundException(__('Invalid post'));
+		}
+		$options = array('conditions' => array('Post.' . $this->Post->primaryKey => $id));
+		$this->set('post', $this->Post->find('first', $options));
+	}
+
+/**
+ * add method
+ *
+ * @return void
+ */
+	public function add() {
+		if ($this->request->is('post')) {
+			$this->Post->create();
+			if ($this->Post->save($this->request->data)) {
+				$this->Flash->success(__('The post has been saved.'));
+				return $this->redirect(array('action' => 'index'));
+			} else {
+				$this->Flash->error(__('The post could not be saved. Please, try again.'));
+			}
+		}
+	}
+
+/**
+ * edit method
+ *
+ * @throws NotFoundException
+ * @param string $id
+ * @return void
+ */
+	public function edit($id = null) {
+		if (!$this->Post->exists($id)) {
+			throw new NotFoundException(__('Invalid post'));
+		}
+		if ($this->request->is(array('post', 'put'))) {
+			if ($this->Post->save($this->request->data)) {
+				$this->Flash->success(__('The post has been saved.'));
+				return $this->redirect(array('action' => 'index'));
+			} else {
+				$this->Flash->error(__('The post could not be saved. Please, try again.'));
+			}
+		} else {
+			$options = array('conditions' => array('Post.' . $this->Post->primaryKey => $id));
+			$this->request->data = $this->Post->find('first', $options);
+		}
+	}
+
+/**
+ * delete method
+ *
+ * @throws NotFoundException
+ * @param string $id
+ * @return void
+ */
+	public function delete($id = null) {
+		$this->Post->id = $id;
+		if (!$this->Post->exists()) {
+			throw new NotFoundException(__('Invalid post'));
+		}
+		$this->request->allowMethod('post', 'delete');
+		if ($this->Post->delete()) {
+			$this->Flash->success(__('The post has been deleted.'));
+		} else {
+			$this->Flash->error(__('The post could not be deleted. Please, try again.'));
+		}
+		return $this->redirect(array('action' => 'index'));
+	}
 }
