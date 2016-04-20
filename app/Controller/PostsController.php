@@ -7,23 +7,22 @@ App::uses('AppController', 'Controller');
  * @property PaginatorComponent $Paginator
  */
 class PostsController extends AppController {
-public $components = array('Paginator', 'Flash');
+
 /**
  * Components
  *
  * @var array
  */
-public function beforeFilter(){
-	parent::beforeFilter();
-	$this->Auth->allow('index', 'view');
-}
+	public $components = array('Paginator');
+
 /**
  * index method
  *
  * @return void
  */
 	public function index() {
-    $this->set('posts', $this->Post->find('all'));
+		$this->Post->recursive = 0;
+		$this->set('posts', $this->Paginator->paginate());
 	}
 
 /**

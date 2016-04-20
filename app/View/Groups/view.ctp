@@ -42,10 +42,9 @@
 		<th><?php echo __('Id'); ?></th>
 		<th><?php echo __('Username'); ?></th>
 		<th><?php echo __('Password'); ?></th>
-		<th><?php echo __('Role'); ?></th>
+		<th><?php echo __('Group Id'); ?></th>
 		<th><?php echo __('Created'); ?></th>
 		<th><?php echo __('Modified'); ?></th>
-		<th><?php echo __('Group Id'); ?></th>
 		<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($group['User'] as $user): ?>
@@ -53,10 +52,9 @@
 			<td><?php echo $user['id']; ?></td>
 			<td><?php echo $user['username']; ?></td>
 			<td><?php echo $user['password']; ?></td>
-			<td><?php echo $user['role']; ?></td>
+			<td><?php echo $user['group_id']; ?></td>
 			<td><?php echo $user['created']; ?></td>
 			<td><?php echo $user['modified']; ?></td>
-			<td><?php echo $user['group_id']; ?></td>
 			<td class="actions">
 				<?php echo $this->Html->link(__('View'), array('controller' => 'users', 'action' => 'view', $user['id'])); ?>
 				<?php echo $this->Html->link(__('Edit'), array('controller' => 'users', 'action' => 'edit', $user['id'])); ?>

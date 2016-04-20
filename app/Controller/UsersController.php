@@ -7,57 +7,21 @@ App::uses('AppController', 'Controller');
  * @property PaginatorComponent $Paginator
  */
 class UsersController extends AppController {
-	public $components = array('Paginator', 'Flash');
-	public function beforeFilter(){
-		parent::beforeFilter();
-		$this->Auth->allow('initDB');
-	}
+
 /**
  * Components
  *
  * @var array
  */
-  public function initDB(){
-		$group = $this->User->Group;
-    $group->id = 1;
-		$this->Acl->allow($group, 'controllers');
+	public $components = array('Paginator');
 
-		$group->id = 2;
-		$this->Acl->deny($group, 'controllers');
-		$this->Acl->allow($group, 'controllers/Posts');
-		$this->Acl->allow($group, 'controllers/Tags');
-
-    $group->id = 3;
-		$this->Acl->deny($group, 'controllers');
-		$this->Acl->allow($group, 'controllers/Posts/add');
-		$this->Acl->allow($group, 'controllers/Posts/edit');
-		$this->Acl->allow($group, 'controllers/Tags/add');
-		$this->Acl->allow($group, 'controllers/Tags/edit');
-    echo "all done";
-		exit;
-	}
-
-
-  public function login(){
-    if($this->Session->read('Auth.User')){
-			 $this->Session->setFlash('You are logged in!');
-			 $this->redirect('/', null, false);
-		}
-
-	}
-
-  public function logout(){
-    $this->Session->setFlash('GoodBye!');
-		$this->redirect($this->Auth->logout());
-	}
 /**
  * index method
  *
  * @return void
  */
 	public function index() {
-		$this->loadModel('Group');
-	$this->User->recursive = 0;
+		$this->User->recursive = 0;
 		$this->set('users', $this->Paginator->paginate());
 	}
 
@@ -82,10 +46,6 @@ class UsersController extends AppController {
  * @return void
  */
 	public function add() {
-		$this->loadModel('Group');
-		$this->set('select1', $this->Group->find('list', array(
-			'fields'=>array('id', 'name')
-		)));
 		if ($this->request->is('post')) {
 			$this->User->create();
 			if ($this->User->save($this->request->data)) {
@@ -95,6 +55,8 @@ class UsersController extends AppController {
 				$this->Flash->error(__('The user could not be saved. Please, try again.'));
 			}
 		}
+		$groups = $this->User->Group->find('list');
+		$this->set(compact('groups'));
 	}
 
 /**
@@ -119,6 +81,8 @@ class UsersController extends AppController {
 			$options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
 			$this->request->data = $this->User->find('first', $options);
 		}
+		$groups = $this->User->Group->find('list');
+		$this->set(compact('groups'));
 	}
 
 /**
