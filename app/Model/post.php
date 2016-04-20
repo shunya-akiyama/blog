@@ -24,12 +24,14 @@ class Post extends AppModel {
 			'fields' => '',
 			'order' => ''
 		),
-		'Cat' => array(
-			'className' => 'Cat',
-			'foreignKey' => 'cat_id',
+/*
+		'Tag' => array(
+			'className' => 'Tag',
+			'foreignKey' => 'part_no',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		)
+*/
 	);
 }

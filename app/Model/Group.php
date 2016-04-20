@@ -6,12 +6,17 @@ App::uses('AppModel', 'Model');
  * @property User $User
  */
 class Group extends AppModel {
-
 /**
  * Validation rules
  *
  * @var array
  */
+  public $actsAs = array('Acl' => array('type'=>'requester'));
+
+  public function parentNode(){
+		return null;
+	}
+
 	public $validate = array(
 		'name' => array(
 			'notBlank' => array(

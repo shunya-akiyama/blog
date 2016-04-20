@@ -8,12 +8,18 @@ App::uses('AppController', 'Controller');
  */
 class TagsController extends AppController {
 
+	public $components = array('Paginator', 'Flash');
+
+	public function beforeFilter(){
+		parent::beforeFilter();
+		$this->Auth->allow('index','view');
+	}
+
 /**
  * Components
  *
  * @var array
  */
-	public $components = array('Paginator');
 
 /**
  * index method

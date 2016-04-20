@@ -31,11 +31,6 @@
 			<?php echo h($post['Post']['user_id']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Cat Id'); ?></dt>
-		<dd>
-			<?php echo h($post['Post']['cat_id']); ?>
-			&nbsp;
-		</dd>
 	</dl>
 </div>
 <div class="actions">

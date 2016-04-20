@@ -7,13 +7,39 @@ App::uses('AppController', 'Controller');
  * @property PaginatorComponent $Paginator
  */
 class UsersController extends AppController {
+public $components = array('Paginator', 'Flash');
+public function beforeFilter(){
+	parent::beforeFilter();
+	$this->Auth->allow();
+}
+  public function initDB(){
+		$group = $this->User->Group;
+    /* All OK */
+		$group->id = 1;
+		$this->Acl->allow($group, 'controllers');
 
+		/*posts tags access OK*/
+		$group->id=2;
+		$this->Acl->deny($group, 'controllers');
+		$this->Acl->allow($group, 'controllers/Posts');
+		$this->Acl->allow($group, 'controllers/Tags');
+
+		/*posts tagas post&edit only*/
+		$group->id=3;
+		$this->Acl->deny($group, 'controllers');
+		$this->Acl->allow($group, 'controllers/Posts/add');
+		$this->Acl->allow($group, 'controllers/Posts/edit');
+		$this->Acl->allow($group, 'controllers/Tags/add');
+		$this->Acl->allow($group, 'controllers/Tags/edit');
+
+		echo "all done";
+		exit;
+	}
 /**
  * Components
  *
  * @var array
  */
-	public $components = array('Paginator');
 
 /**
  * index method
@@ -25,6 +51,33 @@ class UsersController extends AppController {
 		$this->set('users', $this->Paginator->paginate());
 	}
 
+
+	public function login(){
+		if($this->request->is('post')){
+			if($this->Auth->login()){
+				return $this->redirect($this->Auth->redirect());
+			}
+			if($this->Session->read('Auth.User')){
+				$this->Session->setFlash('ログイン中');
+				$this->redirect('/', null, false);
+			}
+			$this->Session->setFlash(__('loginしてください。'));
+		}
+	}
+
+
+/*
+	public function login(){
+		if($this->Session->read('Auth.User')){
+			$this->Session->setFlash('ログイン中');
+			$this->redirect('/', null, false);
+		}
+	}
+*/
+	public function logout(){
+    $this->Session->setFlash('GoodBye');
+		$this->redirect($this->Auth->logout());
+	}
 /**
  * view method
  *

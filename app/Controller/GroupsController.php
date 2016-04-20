@@ -7,13 +7,19 @@ App::uses('AppController', 'Controller');
  * @property PaginatorComponent $Paginator
  */
 class GroupsController extends AppController {
+	public $components = array('Paginator', 'Flash');
 
+/*
+public function beforeFilter(){
+	parent::beforeFilter();
+	$this->Auth->allow();
+}
+*/
 /**
  * Components
  *
  * @var array
  */
-	public $components = array('Paginator');
 
 /**
  * index method
