@@ -14,5 +14,6 @@
 	<ul>
 
 		<li><?php echo $this->Html->link(__('List Posts'), array('action' => 'index')); ?></li>
+<li><?php echo $this->Html->link(__('LogOut'), array('controller'=>'users', 'action'=>'logout')); ?></li>
 	</ul>
 </div>

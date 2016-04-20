@@ -65,15 +65,16 @@ public function beforeFilter(){
 
 
 
-	public function login(){
+/*	public function login(){
 		if($this->Session->read('Auth.User')){
 			$this->Session->setFlash('ログイン中');
 			$this->redirect('/', null, false);
 		}
 	}
+*/
 	public function logout(){
-    $this->Session->setFlash('GoodBye');
 		$this->redirect($this->Auth->logout());
+		$this->Session->setFlash('GoodBye');
 	}
 /**
  * view method
