@@ -57,6 +57,6 @@ public $helpers = array('Html','Form','Session');
 			'controller' => 'posts',
 			'action' => 'add'
 		);
-		$this->Auth->allow('display');
+  $this->Auth->allow('display');
   }
 }

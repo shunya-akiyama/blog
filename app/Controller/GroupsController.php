@@ -9,12 +9,11 @@ App::uses('AppController', 'Controller');
 class GroupsController extends AppController {
 	public $components = array('Paginator', 'Flash');
 
-/*
 public function beforeFilter(){
 	parent::beforeFilter();
 	$this->Auth->allow();
 }
-*/
+
 /**
  * Components
  *

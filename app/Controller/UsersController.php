@@ -8,10 +8,12 @@ App::uses('AppController', 'Controller');
  */
 class UsersController extends AppController {
 public $components = array('Paginator', 'Flash');
+
 public function beforeFilter(){
 	parent::beforeFilter();
 	$this->Auth->allow();
 }
+
   public function initDB(){
 		$group = $this->User->Group;
     /* All OK */
@@ -57,23 +59,18 @@ public function beforeFilter(){
 			if($this->Auth->login()){
 				return $this->redirect($this->Auth->redirect());
 			}
-			if($this->Session->read('Auth.User')){
-				$this->Session->setFlash('ログイン中');
-				$this->redirect('/', null, false);
-			}
 			$this->Session->setFlash(__('loginしてください。'));
 		}
 	}
 
 
-/*
+
 	public function login(){
 		if($this->Session->read('Auth.User')){
 			$this->Session->setFlash('ログイン中');
 			$this->redirect('/', null, false);
 		}
 	}
-*/
 	public function logout(){
     $this->Session->setFlash('GoodBye');
 		$this->redirect($this->Auth->logout());
