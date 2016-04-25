@@ -64,9 +64,12 @@ Cache::config('default', array('engine' => 'File'));
  * advanced ways of loading plugins
  *
  *  // Loads all plugins at once
- * CakePlugin::load('DebugKit'); // Loads a single plugin named DebugKit
- */
-/*CakePlugin::loadAll();
+*/
+//CakePlugin::loadAll();
+ CakePlugin::load('DebugKit');
+ CakePlugin::load('Upload');
+
+/*
 CakePlugin::load('AclExtras');
 */
 /**
