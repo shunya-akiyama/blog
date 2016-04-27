@@ -16,18 +16,12 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
 	<!-- Le styles -->
 	<?php echo $this->Html->css('bootstrap'); ?>
-	<style>
-	body {
-		padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-	}
-	</style>
-	<?php // echo $this->Html->css('bootstrap-responsive.min'); ?>
+	<?php echo $this->Html->css('style'); ?>
 
 	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-
 	<!-- Le fav and touch icons -->
 	<!--
 	<link rel="shortcut icon" href="/ico/favicon.ico">
@@ -43,44 +37,53 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 </head>
 
 <body>
-
-	<div class="navbar navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container">
-				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</a>
-				<a class="brand" href="#"><?php echo __('CakePHP'); ?></a>
-				<div class="nav-collapse">
-					<ul class="nav">
-						<li class="active"><a href="#">Home</a></li>
-						<li><a href="#about">About</a></li>
-						<li><a href="#contact">Contact</a></li>
-					</ul>
-				</div><!--/.nav-collapse -->
-			</div>
-		</div>
-	</div>
+<div class="container-fluid">
+	<header class="row col-xs-12">
+				<div class="container col-xs-12">
+						<ul class="row">
+							<li class="col-xs-2 active"><a href="#">Home</a></li>
+							<li class="col-xs-2"><a href="#test">Test</a></li>
+							<li class="col-xs-2"><a href="#about">About</a></li>
+							<li class="col-xs-2"><a href="#contact">Contact</a></li>
+						</ul>
+				</div>
+	</header>
 
 	<div class="container">
+<div class="row">
+		<div class="col-xs-12 col-md-8">
+			<h1>Blog</h1>
+			<p>
+				BlogTest Page
+			</p>
+		</div>
+</div>
+		<div class="row">
+			<article class="col-xs-12 col-md-8">
 
-		<h1>Bootstrap starter template</h1>
+				<?php echo $this->Session->flash(); ?>
 
-		<?php echo $this->Session->flash(); ?>
+				<?php echo $this->fetch('content'); ?>
+      </article>
+			<aside class="col-xs-6 col-md-4">
+        <ul>
+        	<li>Home</li>
+					<li>Category</li>
+					<li>Tag</li>
+					<li>新規投稿</li>
+        </ul>
+			</aside>
 
-		<?php echo $this->fetch('content'); ?>
-
+			</div>
+		</div>
 	</div> <!-- /container -->
-
+</div> <!-- /containerfluid -->
 	<!-- Le javascript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-	<?php echo $this->Html->script('bootstrap.min'); ?>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<?php echo $this->Html->script('bootstrap'); ?>
 	<?php echo $this->fetch('script'); ?>
 
 </body>
 </html>
-11

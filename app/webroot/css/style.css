@@ -1,0 +1,19 @@
+@import url(https://fonts.googleapis.com/css?family=Lora:400italic);
+header{
+  background: #428bca;
+  height: 40px;
+}
+header>.container>ul>li{
+  margin-top: 10px;
+  list-style:none;
+}
+header>.container>ul>li>a{
+  color: #ffffff;
+}
+header>.container>ul>li>a:hover{
+  color:black;
+}
+*p,
+*a{
+  font-family: 'Lora', serif;
+}

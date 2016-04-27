@@ -22,7 +22,7 @@ class PostsController extends AppController{
     if(!$post){
       throw new NotFoundException(__('ご覧になれません。'));
     }
-    echo debug($post);
+    //echo debug($post);
     $this->set('post', $post);
     //$this->set(compact($post,$tag));
     }
