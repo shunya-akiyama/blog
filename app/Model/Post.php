@@ -1,6 +1,6 @@
 <?php
 class Post extends AppModel{
-
+public $use = 'Post';
   public $validate = array(
     'title'=>array(
       'rule'=>'notBlank'
@@ -26,5 +26,17 @@ class Post extends AppModel{
       'conditions' => ''
     ),
   );
+
+public $hasAndBelongsToMany = array(
+  'Tag'=>array(
+    'className'=>'Tag',
+    'joinTable'=>'posts_tags',
+    'foreignKey'=>'post_id',
+    'associationForeignKey'=>'tag_id',
+    'with'=>'PostsTag',
+    'conditions'=>''
+  ),
+);
+
 }
 ?>

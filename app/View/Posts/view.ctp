@@ -2,6 +2,8 @@
 <p>
   <small>Created:<?php echo $post['Post']['created']; ?></small>
 </p>
+  <?php echo h($post['Tag'][0]['tag']); ?>
+</p>
 <ul>
   <?php
   foreach ($post['Image'] as $post["Image"]): ?>

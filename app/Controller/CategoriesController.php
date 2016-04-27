@@ -8,7 +8,7 @@
         $this->Category->create();
         if($this->Category->save($this->request->data)){
           $this->Flash->success(__('カテゴリー追加完了'));
-          return $this->redirect(array('controller'=>'Posts','action'=>'index'));
+          return $this->redirect(array('controller'=>'post','action'=>'index'));
       }
     }
   }

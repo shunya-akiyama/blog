@@ -7,5 +7,8 @@ echo $this->Form->input('title');
 echo $this->Form->input('body');
 echo $this->Form->input('category_id');
 echo $this->Form->input('Posts.category_id',array('type'=>'hidden'));
+echo $this->Form->input('Tag.tag_id');
+echo $this->Form->input('Posts.Tags.post_id',array('type'=>'hidden'));
+echo $this->Form->input('Posts_Tags.tag_id',array('type'=>'hidden'));
 echo $this->Form->end('保存');
  ?>

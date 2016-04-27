@@ -2,31 +2,34 @@
 class PostsController extends AppController{
   public $helpers = array('Html', 'Form','Flash');
   public $components = array('Flash','Session');
-  public $uses = array('Category','Post');
-
+  public $uses = array('Category','Post','PostsTag');
+  public $name = 'Posts';
+  public $hasAndBelongsToMany = array('tag');
   /* 触るな!!!! */
   public function index(){
-    $this->set('posts', $this->Post->find('all'));
-echo debug($this->Post->find('all'));
-  }
-
+    $posts=$this->Post->PostsTag->find('all',array('recursive'=>2));
+    $categories=$this->Post->Category->find('all');
+    //$this->set('posts', $posts);
+     $this->set(compact('posts','categories'));
+}
   /* 触るな!!!! */
   public function view($id = null){
     if(!$id){
       throw new NotFoundException(__('ご覧になれません。'));
     }
+    //$tag = $this->PostsTag->findById($id,null,null,1);
     $post = $this->Post->findById($id);
     if(!$post){
       throw new NotFoundException(__('ご覧になれません。'));
     }
+    echo debug($post);
     $this->set('post', $post);
-    echo debug($this->Post->find('all'));
-  }
+    //$this->set(compact($post,$tag));
+    }
 
 
     /* 触るな!!!! */
   public function add(){
-    $this->set('categories',$this->Post->Category->find('list',array('fields'=>array('category'))));
     if($this->request->is('post')){
       $this->Post->create();
       if($this->Post->saveAll($this->request->data)){
@@ -34,6 +37,10 @@ echo debug($this->Post->find('all'));
         return $this->redirect(array('action'=>'index'));
       }
     }
+    //カテゴリ、タグの呼び出し
+    $category = $this->set('categories',$this->Post->Category->find('list',array('fields'=>array('category'))));
+    $tag = $this->set('tags',$this->Post->Tag->find('list',array('fields'=>array('tag'))));
+    $this->set(compact('categories','tags'));
   }
 
   public function edit($id = null){
