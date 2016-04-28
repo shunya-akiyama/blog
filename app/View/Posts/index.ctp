@@ -4,10 +4,10 @@
   <li><?php echo $post['Post']['id'] ?>
     <p><?php echo $this->Html->link($post['Post']['title'],
     array('controller'=>'posts', 'action'=>'view', $post['Post']['id'])); ?>
-    :<?php echo h($post['Post']['Category']['category']); ?>
+    :<?php echo h($post['Category']['category']); ?>
 </p>
 <p>
-  <?php echo h($post['Tag']['tag']); ?>
+  <?php echo h($post['Tag'][0]['tag']); ?>
 </p>
     <p>
     <?php echo $this->Html->link('編集',
@@ -29,6 +29,24 @@ array('controller'=>'posts','action'=>'add'));
 <fieldset>
 <legend>検索</legend>
 <p><?php echo $this->Form->input('title',array('type'=>'text','div'=>false,'label'=>false)); ?></p>
+<?php echo $this->Form->submit(__('検索')); ?>
+<?php echo $this->Form->end(); ?>
+
+</fieldset>
+
+
+<?php echo $this->Form->create(); ?>
+<fieldset>
+<legend>検索</legend>
+<p><?php echo $this->Form->input('category',array('type'=>'text','div'=>false,'label'=>false)); ?></p>
+<?php echo $this->Form->submit(__('検索')); ?>
+<?php echo $this->Form->end(); ?>
+
+</fieldset>
+<?php echo $this->Form->create(); ?>
+<fieldset>
+<legend>検索</legend>
+<p><?php echo $this->Form->input('tag',array('type'=>'text','div'=>false,'label'=>false)); ?></p>
 <?php echo $this->Form->submit(__('検索')); ?>
 <?php echo $this->Form->end(); ?>
 

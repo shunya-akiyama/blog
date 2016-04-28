@@ -7,8 +7,17 @@ public $actsAs = array('Search.Searchable');
 
 public $filterArgs = array(
   'title'=>array(
+    'type'=>'like',
+    'field'=>array('Post.title')),
+
+  'category'=>array(
   'type'=>'like',
-  'field'=>array('title')),
+  'field'=>array('Category.category')),
+/*
+  'tag'=>array(
+    'type'=>'subquery',
+    'field'=>array('Tag.tag')),
+*/
 );
 
   public $validate = array(

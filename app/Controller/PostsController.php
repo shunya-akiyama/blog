@@ -32,6 +32,7 @@ public function beforeFilter(){
     $this->Prg->commonProcess();
     $this->paginate = array(
       'Post'=>array(
+        'recursive'=>1,
         'conditions'=>array(
           $this->Post->parseCriteria($this->passedArgs)
         )
