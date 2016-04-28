@@ -1,17 +1,45 @@
 <?php
 class PostsController extends AppController{
-  public $helpers = array('Html', 'Form','Flash');
-  public $components = array('Flash','Session');
-  public $uses = array('Category','Post','PostsTag');
   public $name = 'Posts';
+  public $uses = array('Post','Category','PostsTag');
+  public $helpers = array('Html', 'Form','Flash');
+  public $components = array('Flash','Session','Search.Prg');
+  public $presetVars = true;
   public $hasAndBelongsToMany = array('tag');
   /* 触るな!!!! */
+/*
   public function index(){
     $posts=$this->Post->PostsTag->find('all',array('recursive'=>2));
     $categories=$this->Post->Category->find('all');
     //$this->set('posts', $posts);
      $this->set(compact('posts','categories'));
+  }
+*/
+/*
+public function beforeFilter(){
+  $this->presetVars = $this->Post->presetVars;
+  $pager_numbers = array(
+    'before'=>' - ',
+    'after'=>' - ',
+    'modules'=>'5',
+    'separator'=>' ',
+    'class'=>'pagenumbers',
+  );
+  $this->set('pager_numbers',$pager_numbers);
 }
+*/
+  public function index(){
+    $this->Prg->commonProcess();
+    $this->paginate = array(
+      'Post'=>array(
+        'conditions'=>array(
+          $this->Post->parseCriteria($this->passedArgs)
+        )
+      )
+    );
+    $this->set('posts',$this->Paginator->paginate());
+  }
+
   /* 触るな!!!! */
   public function view($id = null){
     if(!$id){

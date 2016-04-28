@@ -1,13 +1,23 @@
 <?php
 class Post extends AppModel{
 public $use = 'Post';
+public $order = ('Post.id DESC');
+public $actsAs = array('Search.Searchable');
+
+
+public $filterArgs = array(
+  'title'=>array(
+  'type'=>'like',
+  'field'=>array('title')),
+);
+
   public $validate = array(
     'title'=>array(
       'rule'=>'notBlank'
     ),
     'body'=>array(
-      'rule'=>'notBlank'
-    )
+      'rule'=>'notBlank',
+    ),
   );
 
   public $hasMany = array(

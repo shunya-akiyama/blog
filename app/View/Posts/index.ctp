@@ -25,3 +25,11 @@ echo $this->Html->link('新規投稿',
 array('controller'=>'posts','action'=>'add'));
 ?>
 </p>
+<?php echo $this->Form->create(); ?>
+<fieldset>
+<legend>検索</legend>
+<p><?php echo $this->Form->input('title',array('type'=>'text','div'=>false,'label'=>false)); ?></p>
+<?php echo $this->Form->submit(__('検索')); ?>
+<?php echo $this->Form->end(); ?>
+
+</fieldset>

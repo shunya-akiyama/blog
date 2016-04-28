@@ -5,7 +5,7 @@ echo $this->Form->create('User');
 
  <fieldset>
   <legend>
-    <?php echo __(ログインが必要です。); ?>
+    <?php echo __('ログインが必要です。'); ?>
   </legend>
   <?php
     echo $this->Form->input('name');
