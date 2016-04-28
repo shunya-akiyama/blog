@@ -68,6 +68,7 @@ Cache::config('default', array('engine' => 'File'));
 //CakePlugin::loadAll();
  CakePlugin::load('DebugKit');
  CakePlugin::load('Upload');
+ CakePlugin::load('Search');
  CakePlugin::load('TwitterBootstrap');
 
 /*
