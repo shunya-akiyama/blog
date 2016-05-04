@@ -20,6 +20,8 @@
 <?php endforeach; ?>
 </ul>
 <p>
+  <?php echo $this->Paginator->prev(__('前'),array('tag'=>'li')); ?>
+  <?php echo $this->Paginator->next(__('次'),array('tag'=>'li')); ?>
 <?php
 echo $this->Html->link('新規投稿',
 array('controller'=>'posts','action'=>'add'));
@@ -28,25 +30,9 @@ array('controller'=>'posts','action'=>'add'));
 <?php echo $this->Form->create(); ?>
 <fieldset>
 <legend>検索</legend>
-<p><?php echo $this->Form->input('title',array('type'=>'text','div'=>false,'label'=>false)); ?></p>
-<?php echo $this->Form->submit(__('検索')); ?>
-<?php echo $this->Form->end(); ?>
-
-</fieldset>
-
-
-<?php echo $this->Form->create(); ?>
-<fieldset>
-<legend>検索</legend>
-<p><?php echo $this->Form->input('category',array('type'=>'text','div'=>false,'label'=>false)); ?></p>
-<?php echo $this->Form->submit(__('検索')); ?>
-<?php echo $this->Form->end(); ?>
-
-</fieldset>
-<?php echo $this->Form->create(); ?>
-<fieldset>
-<legend>検索</legend>
-<p><?php echo $this->Form->input('tag',array('type'=>'text','div'=>false,'label'=>false)); ?></p>
+<p><?php echo $this->Form->input('titles',array('div'=>false,'label'=>'タイトル')); ?></p>
+<p><?php echo $this->Form->input('category',array('type'=>'select','multiple'=>'checkbox','options'=>$category,'div'=>false,'label'=>'カテゴリー')); ?></p>
+<p><?php echo $this->Form->input('tag',array('type'=>'select','multiple'=>'checkbox','options'=>$tag,'div'=>false,'label'=>'タグ')); ?></p>
 <?php echo $this->Form->submit(__('検索')); ?>
 <?php echo $this->Form->end(); ?>
 

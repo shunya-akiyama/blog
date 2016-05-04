@@ -3,44 +3,36 @@ class PostsController extends AppController{
   public $name = 'Posts';
   public $uses = array('Post','Category','PostsTag');
   public $helpers = array('Html', 'Form','Flash');
-  public $components = array('Flash','Session','Search.Prg');
   public $presetVars = true;
   public $hasAndBelongsToMany = array('tag');
-  /* 触るな!!!! */
-/*
+  public $paginate = array('maxLimit'=>5);
+	public $components = array('Flash','Session','Paginator',
+	'Search.Prg'=>array(
+		'commonProcess'=>array(
+			'paramType'=>'querystring',
+			'filterEmpty'=>true,
+			)
+		)
+	);
+
   public function index(){
-    $posts=$this->Post->PostsTag->find('all',array('recursive'=>2));
-    $categories=$this->Post->Category->find('all');
-    //$this->set('posts', $posts);
-     $this->set(compact('posts','categories'));
+		$this->Post->recursive = 2;
+    $this->Paginator->settings = $this->paginate;
+		$posts = $this->Paginator->paginate('Post');
+		$this->set('posts',$posts);
+//タイトル検索
+		$this->Prg->commonProcess();
+	  $this->Paginator->settings['conditions']=$this->Post->parseCriteria($this->Prg->parsedParams());
+		$this->set('posts',$this->Paginator->paginate());
+//カテゴリ検索
+		$this->set('category',$this->Category->find('list',array('fields'=>array('id','category'))));
+//タグ検索
+    $this->set('tag',$this->Post->Tag->find('list',array('fields'=>array('id','tag'))));
   }
-*/
 /*
-public function beforeFilter(){
-  $this->presetVars = $this->Post->presetVars;
-  $pager_numbers = array(
-    'before'=>' - ',
-    'after'=>' - ',
-    'modules'=>'5',
-    'separator'=>' ',
-    'class'=>'pagenumbers',
-  );
-  $this->set('pager_numbers',$pager_numbers);
+public function find(){
 }
 */
-  public function index(){
-    $this->Prg->commonProcess();
-    $this->paginate = array(
-      'Post'=>array(
-        'recursive'=>1,
-        'conditions'=>array(
-          $this->Post->parseCriteria($this->passedArgs)
-        )
-      )
-    );
-    $this->set('posts',$this->Paginator->paginate());
-  }
-
   /* 触るな!!!! */
   public function view($id = null){
     if(!$id){

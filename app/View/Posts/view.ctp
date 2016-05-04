@@ -9,8 +9,8 @@
   foreach ($post['Image'] as $post["Image"]): ?>
   <?php
   if ($post["Image"]["dir"] > 0) {
-    $base = $this->Html->url("/files/image/");
-    echo '<li>'.$this->Html->image($base."attachment/"."/".$post["Image"]["dir"]."/".$post["Image"]["attachment"]).'</li>';
+    $base = $this->Html->url("/files/image/");//自宅環境ではこの記述で動かなかったので一旦外し、下記にパスを直接入れた。
+    echo '<li>'.$this->Html->image("/files/image/attachment/"."/".$post["Image"]["dir"]."/".$post["Image"]["attachment"]).'</li>';
   }
    ?>
 <?php endforeach; ?>
