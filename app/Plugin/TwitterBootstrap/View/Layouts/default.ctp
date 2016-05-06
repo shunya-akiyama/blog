@@ -66,12 +66,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 				<?php echo $this->fetch('content'); ?>
       </article>
 			<aside class="col-xs-6 col-md-4">
-        <ul>
-        	<li>Home</li>
-					<li>Category</li>
-					<li>Tag</li>
-					<li>新規投稿</li>
-        </ul>
+        <?php echo $this->element('sidebar'); ?>
 			</aside>
 
 			</div>

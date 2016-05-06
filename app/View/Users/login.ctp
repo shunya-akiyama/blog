@@ -1,6 +1,8 @@
+<?php echo Configure::version(); ?>
+
+
 <?php
 echo $this->Flash->render('auth');
-echo $this->Form->create('User');
  ?>
 
  <fieldset>
@@ -8,8 +10,9 @@ echo $this->Form->create('User');
     <?php echo __('ログインが必要です。'); ?>
   </legend>
   <?php
-    echo $this->Form->input('name');
-    echo $this->form->input('password');
-   ?>
+  	echo $this->Form->create('User');
+    echo $this->Form->input('username');
+    echo $this->Form->input('password');
+    echo $this->Form->end(__('Login'));
+	 ?>
  </fieldset>
- <?php echo $this->Form->end(__('Login')); ?>

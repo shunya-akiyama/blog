@@ -5,7 +5,6 @@ class PostsController extends AppController{
   public $helpers = array('Html', 'Form','Flash');
   public $presetVars = true;
   public $hasAndBelongsToMany = array('tag');
-  public $paginate = array('maxLimit'=>5);
 	public $components = array('Flash','Session','Paginator',
 	'Search.Prg'=>array(
 		'commonProcess'=>array(
@@ -14,6 +13,12 @@ class PostsController extends AppController{
 			)
 		)
 	);
+	public $paginate = array('maxLimit'=>5);
+
+	public function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allow('index');
+    }
 
   public function index(){
 		$this->Post->recursive = 2;
@@ -29,27 +34,18 @@ class PostsController extends AppController{
 //タグ検索
     $this->set('tag',$this->Post->Tag->find('list',array('fields'=>array('id','tag'))));
   }
-/*
-public function find(){
-}
-*/
-  /* 触るな!!!! */
   public function view($id = null){
     if(!$id){
       throw new NotFoundException(__('ご覧になれません。'));
     }
-    //$tag = $this->PostsTag->findById($id,null,null,1);
     $post = $this->Post->findById($id);
     if(!$post){
       throw new NotFoundException(__('ご覧になれません。'));
     }
-    //echo debug($post);
     $this->set('post', $post);
-    //$this->set(compact($post,$tag));
     }
 
 
-    /* 触るな!!!! */
   public function add(){
     if($this->request->is('post')){
       $this->Post->create();

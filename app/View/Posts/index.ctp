@@ -1,39 +1,23 @@
 <h1>index</h1>
 <ul>
-  <?php foreach ($posts as $post): ?>
-  <li><?php echo $post['Post']['id'] ?>
-    <p><?php echo $this->Html->link($post['Post']['title'],
+<?php foreach ($posts as $post): ?>
+  <li>
+		<p><?php echo h($post['Post']['created']); ?></p>
+    <h2><?php echo $this->Html->link($post['Post']['title'],
     array('controller'=>'posts', 'action'=>'view', $post['Post']['id'])); ?>
-    :<?php echo h($post['Category']['category']); ?>
-</p>
-<p>
-  <?php echo h($post['Tag'][0]['tag']); ?>
-</p>
-    <p>
-    <?php echo $this->Html->link('編集',
-    array('action'=>'edit', $post['Post']['id'])); ?>
-  <?php echo $this->Form->postLink('Delete',array('action'=>'delete',$post['Post']['id']),array('confirm'=>'削除してよろしいですか?')); ?>
+	</h2>
+  <p>
+		カテゴリー:<?php echo h($post['Category']['category']); ?>
   </p>
-    <p><?php echo h($post['Post']['created']); ?></p>
-
+	<p>
+	  タグ:<?php echo h($post['Tag'][0]['tag']); ?>
+	</p>
   </li>
 <?php endforeach; ?>
 </ul>
 <p>
-  <?php echo $this->Paginator->prev(__('前'),array('tag'=>'li')); ?>
-  <?php echo $this->Paginator->next(__('次'),array('tag'=>'li')); ?>
-<?php
-echo $this->Html->link('新規投稿',
-array('controller'=>'posts','action'=>'add'));
-?>
+  <?php echo $this->Paginator->prev(__('前'),array('tag'=>'p')); ?>
 </p>
-<?php echo $this->Form->create(); ?>
-<fieldset>
-<legend>検索</legend>
-<p><?php echo $this->Form->input('titles',array('div'=>false,'label'=>'タイトル')); ?></p>
-<p><?php echo $this->Form->input('category',array('type'=>'select','multiple'=>'checkbox','options'=>$category,'div'=>false,'label'=>'カテゴリー')); ?></p>
-<p><?php echo $this->Form->input('tag',array('type'=>'select','multiple'=>'checkbox','options'=>$tag,'div'=>false,'label'=>'タグ')); ?></p>
-<?php echo $this->Form->submit(__('検索')); ?>
-<?php echo $this->Form->end(); ?>
-
-</fieldset>
+<p>
+  <?php echo $this->Paginator->next(__('次'),array('tag'=>'p')); ?>
+</p>
