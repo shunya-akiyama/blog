@@ -17,7 +17,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<!-- Le styles -->
 	<?php echo $this->Html->css('bootstrap'); ?>
 	<?php echo $this->Html->css('style'); ?>
-
+  <?php echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js') ?>
 	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -66,9 +66,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 				<?php echo $this->fetch('content'); ?>
       </article>
 			<aside class="col-xs-6 col-md-4">
-        <?php echo $this->element('sidebar'); ?>
-			</aside>
-
+        <?php $list=$this->requestAction('/posts/find'); ?>
+        <?php echo $this->element('sidebar',array('tag'=>$tag)); ?>
+      </aside>
 			</div>
 		</div>
 	</div> <!-- /container -->

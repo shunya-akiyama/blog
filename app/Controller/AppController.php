@@ -1,6 +1,7 @@
 <?php
 
 class AppController extends Controller {
+
 public $components = array('Paginator','Session','DebugKit.Toolbar',
 'Auth'=>array(
   'loginRedirect'=>array(

@@ -17,10 +17,25 @@ class PostsController extends AppController{
 
 	public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('index');
+        $this->Auth->allow('index','view','find');
     }
 
   public function index(){
+		$this->Post->recursive = 2;
+    $this->Paginator->settings = $this->paginate;
+		$posts = $this->Paginator->paginate('Post');
+		$this->set('posts',$posts);
+		//タイトル検索
+		$this->Prg->commonProcess();
+	  $this->Paginator->settings['conditions']=$this->Post->parseCriteria($this->Prg->parsedParams());
+		$this->set('posts',$this->Paginator->paginate());
+//カテゴリ検索
+		$this->set('category',$this->Category->find('list',array('fields'=>array('id','category'))));
+//タグ検索
+    $this->set('tag',$this->Post->Tag->find('list',array('fields'=>array('id','tag'))));
+  }
+
+  public function find(){
 		$this->Post->recursive = 2;
     $this->Paginator->settings = $this->paginate;
 		$posts = $this->Paginator->paginate('Post');
@@ -33,7 +48,8 @@ class PostsController extends AppController{
 		$this->set('category',$this->Category->find('list',array('fields'=>array('id','category'))));
 //タグ検索
     $this->set('tag',$this->Post->Tag->find('list',array('fields'=>array('id','tag'))));
-  }
+	}
+	
   public function view($id = null){
     if(!$id){
       throw new NotFoundException(__('ご覧になれません。'));
@@ -42,6 +58,11 @@ class PostsController extends AppController{
     if(!$post){
       throw new NotFoundException(__('ご覧になれません。'));
     }
+  //カテゴリ検索
+    $this->set('category',$this->Category->find('list',array('fields'=>array('id','category'))));
+//タグ検索
+    $this->set('tag',$this->Post->Tag->find('list',array('fields'=>array('id','tag'))));
+
     $this->set('post', $post);
     }
 

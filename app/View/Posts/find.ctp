@@ -1,4 +1,4 @@
-<h1>一覧</h1>
+<h1>検索結果</h1>
 <ul>
 <?php foreach ($posts as $post): ?>
   <li>

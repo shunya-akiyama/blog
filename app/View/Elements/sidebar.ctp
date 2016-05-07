@@ -1,5 +1,5 @@
 <fieldset>
-<?php echo $this->Form->create(); ?>
+<?php echo $this->Form->create('Post',array('url'=>'/posts/find')); ?>
 <legend>検索</legend>
 <p><?php echo $this->Form->input('titles',array('div'=>false,'label'=>'タイトル')); ?></p>
 <p><?php echo $this->Form->input('category',array('type'=>'select','multiple'=>'checkbox','options'=>$category,'div'=>false,'label'=>'カテゴリー')); ?></p>

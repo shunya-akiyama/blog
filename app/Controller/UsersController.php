@@ -6,10 +6,11 @@ class UsersController extends AppController{
 
   public function beforeFilter() {
 		parent::beforeFilter();
-        $this->Auth->allow('logout');
+        $this->Auth->allow('logout','find');
     }
 
 	public function index(){
+　　$this->requestAction('posts/index');
 		$this->User->recursive=0;
     $this->set('users', $this->paginate());
 		$this->loadModel('Post');
