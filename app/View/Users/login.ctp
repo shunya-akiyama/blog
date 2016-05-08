@@ -1,10 +1,5 @@
-<?php echo Configure::version(); ?>
-
-
-<?php
-echo $this->Flash->render('auth');
- ?>
-
+<?php echo $this->Flash->render('auth'); ?>
+<?php echo $this->Html->link('公開側画面はこちら',array('controller'=>'posts','action'=>'index')); ?>
  <fieldset>
   <legend>
     <?php echo __('ログインが必要です。'); ?>

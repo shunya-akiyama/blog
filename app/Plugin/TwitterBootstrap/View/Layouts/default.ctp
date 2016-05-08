@@ -66,7 +66,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 				<?php echo $this->fetch('content'); ?>
       </article>
 			<aside class="col-xs-6 col-md-4">
-        <?php $list=$this->requestAction('/posts/find'); ?>
         <?php echo $this->element('sidebar',array('tag'=>$tag)); ?>
       </aside>
 			</div>

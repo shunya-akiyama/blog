@@ -1,4 +1,5 @@
 <?php
+App::uses('AppController','Controller');
 class PostsController extends AppController{
   public $name = 'Posts';
   public $uses = array('Post','Category','PostsTag');
@@ -33,7 +34,8 @@ class PostsController extends AppController{
 		$this->set('category',$this->Category->find('list',array('fields'=>array('id','category'))));
 //タグ検索
     $this->set('tag',$this->Post->Tag->find('list',array('fields'=>array('id','tag'))));
-  }
+}
+
 
   public function find(){
 		$this->Post->recursive = 2;
@@ -49,7 +51,7 @@ class PostsController extends AppController{
 //タグ検索
     $this->set('tag',$this->Post->Tag->find('list',array('fields'=>array('id','tag'))));
 	}
-	
+
   public function view($id = null){
     if(!$id){
       throw new NotFoundException(__('ご覧になれません。'));
@@ -72,14 +74,18 @@ class PostsController extends AppController{
       $this->Post->create();
       if($this->Post->saveAll($this->request->data)){
         $this->Flash->success(__('投稿完了'));
-        return $this->redirect(array('action'=>'index'));
+        return $this->redirect(array('controller'=>'users','action'=>'index'));
       }
     }
     //カテゴリ、タグの呼び出し
     $category = $this->set('categories',$this->Post->Category->find('list',array('fields'=>array('category'))));
     $tag = $this->set('tags',$this->Post->Tag->find('list',array('fields'=>array('tag'))));
     $this->set(compact('categories','tags'));
-  }
+    //カテゴリ検索
+        $this->set('category',$this->Category->find('list',array('fields'=>array('id','category'))));
+    //タグ検索
+        $this->set('tag',$this->Post->Tag->find('list',array('fields'=>array('id','tag'))));
+}
 
   public function edit($id = null){
     if(!$id){
@@ -93,7 +99,7 @@ class PostsController extends AppController{
       $this->Post->id = $id;
       if($this->Post->saveAll($this->request->data)){
         $this->Flash->success(__('編集完了'));
-        return $this->redirect(array('action'=>'index'));
+        return $this->redirect(array('controller'=>'users','action'=>'index'));
       }
       $this->Flash->error(__('保存できませんでした。'));
     }
@@ -111,7 +117,7 @@ class PostsController extends AppController{
     }else{
       $this->Flash->error(__('削除できませんでした。',h($id)));
     }
-    return $this->redirect(array('action'=>'index'));
+    return $this->redirect(array('controller'=>'users','action'=>'index'));
     }
 }
 ?>
