@@ -2,7 +2,7 @@
 App::uses('AppController','Controller');
 class PostsController extends AppController{
   public $name = 'Posts';
-  public $uses = array('Post','Category','PostsTag');
+  public $uses = array('Post','Attachment','Category','PostsTag');
   public $helpers = array('Html', 'Form','Flash');
   public $presetVars = true;
   public $hasAndBelongsToMany = array('tag');
@@ -57,6 +57,15 @@ class PostsController extends AppController{
       throw new NotFoundException(__('ご覧になれません。'));
     }
     $post = $this->Post->findById($id);
+    $img=$this->Attachment->find('count',array('conditions'=>array(
+                                              'Attachment.post_id'=>$id,
+                                              'NOT'=>array(
+                                              'Attachment.dir'=>'null'
+                                              )
+                                            )));
+
+$this->set('img',$img);
+
     if(!$post){
       throw new NotFoundException(__('ご覧になれません。'));
     }
@@ -64,7 +73,6 @@ class PostsController extends AppController{
     $this->set('category',$this->Category->find('list',array('fields'=>array('id','category'))));
 //タグ検索
     $this->set('tag',$this->Post->Tag->find('list',array('fields'=>array('id','tag'))));
-
     $this->set('post', $post);
     }
 

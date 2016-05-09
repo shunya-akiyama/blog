@@ -16,6 +16,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
 	<!-- Le styles -->
 	<?php echo $this->Html->css('bootstrap'); ?>
+  <?php echo $this->Html->css('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css'); ?>
 	<?php echo $this->Html->css('style'); ?>
   <?php echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js') ?>
 	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -30,7 +31,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png">
 	-->
-	<?php
+  <?php echo $this->Html->script('search'); ?>
+  <?php
 	echo $this->fetch('meta');
 	echo $this->fetch('css');
 	?>
@@ -38,15 +40,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
 <body>
 <div class="container-fluid">
-	<header class="row col-xs-12">
-				<div class="container col-xs-12">
-						<ul class="row">
-							<li class="col-xs-2 active"><a href="#">Home</a></li>
-							<li class="col-xs-2"><a href="#test">Test</a></li>
-							<li class="col-xs-2"><a href="#about">About</a></li>
-							<li class="col-xs-2"><a href="#contact">Contact</a></li>
-						</ul>
-				</div>
+	<header class="">
+    <?php echo $this->element('head_menu',array('tag'=>$tag)); ?>
 	</header>
 
 	<div class="container">
@@ -58,6 +53,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			</p>
 		</div>
 </div>
+</div><!-- /container -->
+<div class="container">
 		<div class="row">
 			<article class="col-xs-12 col-md-8">
 
@@ -69,13 +66,12 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
         <?php echo $this->element('sidebar',array('tag'=>$tag)); ?>
       </aside>
 			</div>
-		</div>
-	</div> <!-- /container -->
-</div> <!-- /containerfluid -->
+    </div><!-- /container -->
+	</div> <!-- /containerfluid -->
+
 	<!-- Le javascript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<?php echo $this->Html->script('bootstrap'); ?>
 	<?php echo $this->fetch('script'); ?>
 

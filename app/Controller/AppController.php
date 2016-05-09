@@ -2,7 +2,7 @@
 
 class AppController extends Controller {
 
-public $components = array('Paginator','Session','DebugKit.Toolbar',
+public $components = array('Paginator','Session',/*'DebugKit.Toolbar',*/
 'Auth'=>array(
   'loginRedirect'=>array(
     'controller'=>'users',
@@ -25,11 +25,6 @@ public $helpers = array(
   'Form'=>array('className'=>'TwitterBootstrap.BootstrapForm'),
   'Paginator'=>array('className'=>'TwitterBootstrap.BootstrapPaginator')
 );
-/*
-public function beforeFilter(){
-	$this->Auth->allow('view');
-}
-*/
 public $layout = 'TwitterBootstrap.default';
 }
 ?>

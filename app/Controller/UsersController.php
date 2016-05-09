@@ -13,8 +13,7 @@ class UsersController extends AppController{
 	public $paginate = array('maxLimit'=>5);
 	public $uses = array('Post','Category','PostsTag','User');
   public function beforeFilter() {
-		parent::beforeFilter();
-        $this->Auth->allow('logout','find','login');
+        $this->Auth->allow('logout','find','login','add');
     }
 
 	public function index(){

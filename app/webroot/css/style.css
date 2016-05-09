@@ -1,19 +1,27 @@
-@import url(https://fonts.googleapis.com/css?family=Lora:400italic);
+body {
+  list-style:none;
+}
+header > .container > .row > #search{
+  padding: 5px;
+  text-align: center;
+  background: #428bca;
+  color: #ffffff;
+}
+
+header > .container > #search_form{
+  display: none;
+  background: #428bca;
+
+}
+header>.container>#search_form>form{
+  background: #428bca;
+
+}
+
 header{
   background: #428bca;
   height: 40px;
 }
-header>.container>ul>li{
-  margin-top: 10px;
-  list-style:none;
-}
-header>.container>ul>li>a{
-  color: #ffffff;
-}
 header>.container>ul>li>a:hover{
   color:black;
-}
-*p,
-*a{
-  font-family: 'Lora', serif;
 }
