@@ -158,7 +158,7 @@
 /**
  * Turn off all caching application-wide.
  */
-	//Configure::write('Cache.disable', true);
+	Configure::write('Cache.disable', true);
 
 /**
  * Enable cache checking.
@@ -244,7 +244,7 @@
  * timestamping regardless of debug value.
  */
 	//Configure::write('Asset.timestamp', true);
-
+Configure::write('Asset.timestamp', 'force');
 /**
  * Compress CSS output by removing comments, whitespace, repeating tags, etc.
  * This requires a/var/cache directory to be writable by the web server for caching.
