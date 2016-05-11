@@ -55,8 +55,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			</div>
     </div><!-- /container -->
 	</div> <!-- /containerfluid -->
-  <div id="cover">
-  </div>
 
 	<!-- Le javascript
     ================================================== -->

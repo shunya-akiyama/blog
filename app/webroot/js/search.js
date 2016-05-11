@@ -11,6 +11,24 @@ $(document).ready(function(){
  })
   $('.modal-set li a').bind('click', function(e){
     e.preventDefault();
+    $('#prev').css({
+      'display':'inline-block',
+      'width':'50px',
+       'margin-top':'300px',
+       'margin-left':'5%',
+     'text-align':'left',
+       'font-size':'50px',
+       'color':'#ffffff'
+    })
+    $('#next').css({
+      'display':'inline-block',
+      'width':'50px',
+       'margin-top':'300px',
+       'margin-left':'85%',
+       'text-align':'right',
+       'font-size':'50px',
+       'color':'#ffffff'
+    })
     $('#cover').css({
       'position':'absolute',
       'position':'fixed',
@@ -35,3 +53,15 @@ $(document).ready(function(){
       $('#cover').hide();
     });
   });
+
+$(function(){
+  var i = 1;
+  if($('.content').find('img')){
+    $('img').each(function(){
+      $(this).attr('id','wow'+(i++));
+    });
+  }else{
+    $('.modal-wrap').remove();
+  };
+
+});
