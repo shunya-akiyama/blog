@@ -4,7 +4,7 @@
 <?php echo $this->Html->para('','Created:'.$post['Post']['created']); ?>
 <?php echo $this->Html->para('',$post['Category']['category']); ?>
 <?php echo $this->Html->para('',$post['Tag'][0]['tag']); ?>
-<div class="modal-wrap">
+<div class="modal-wrap" id="image-wrap">
   <ul class="modal-set">
 <?php foreach ($post['Image'] as $post["Image"]): ?>
 
@@ -33,7 +33,8 @@ array('class'=>'image modal'.$i,'escape'=>false)),array('id'=>'modal'.$i,'class'
  <p><?php echo nl2br(h($post['Post']['body'])); ?></p>
  <div id="cover">
    <div class="navi">
-     <a href="#" id="prev"><</a>
-     <a href="#" id="next">></a>
+     <a href="" id="prev"><</a>
+     <a href="" id="next">></a>
+     <a href="#" id="close">close</a>
    </div>
  </div>
