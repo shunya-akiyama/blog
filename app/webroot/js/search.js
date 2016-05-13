@@ -28,8 +28,10 @@ $(document).ready(function(){
       'text-align':'right',
       'font-size':'50px',
       'color':'#ffffff',
-      'overflow':'hidden'
+      'overflow':'hidden',
+      'z-index':'100'
     })
+    .fadeIn('slow');
     $('#close').css({
       'display':'inline-block',
       'position':'fixed',
@@ -77,7 +79,6 @@ $(document).ready(function(){
       $('#next').bind('click',function(e){
         e.preventDefault();
         $(this).attr('href', 'num'+(counter+1));
-
       })
 
       $('#prev').bind('click',function(e){
