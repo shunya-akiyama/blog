@@ -51,20 +51,18 @@ header >.col-xs-12 > .container >
 */
 
 
-.modal-wrap .image{
+.modal-wrap > .modal-set > li{
   width: 500px;
   height: 400px;
   float: left;
+  overflow: hidden;
 }
 
 .modal-wrap{
   width: 500px;
-  margin: 0 auto;
   overflow: hidden;
 }
 
-.modal-wrap .modal-set{
-}
 
 .modal-wrap > .modal-set > .image > a > .popup-image{
   width: 500px;
@@ -73,6 +71,7 @@ header >.col-xs-12 > .container >
 #cover{
   background: rgba(0,0,0,0.7);
   display: none;
+  position: fixed;
   left: 0;
   top: 0;
   z-index: 10;

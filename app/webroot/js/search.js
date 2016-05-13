@@ -6,43 +6,39 @@ $(document).ready(function(){
   });
 });
 
-
 //モーダル
- $('.modal-set li a').each(function(){
-   $('<img>').attr('src',$(this).attr('href'));
- });
-
   $('.modal-set li a').bind('click', function(e){
     e.preventDefault();
     $('#prev').css({
       'display':'inline-block',
+      'position':'fixed',
       'width':'50px',
-       'margin-top':'350px',
-       'margin-left':'5%',
-     'text-align':'left',
-       'font-size':'50px',
-       'color':'#ffffff'
+      'margin-top':'350px',
+      'margin-left':'5%',
+      'text-align':'left',
+      'font-size':'50px',
+      'color':'#ffffff'
     })
     $('#next').css({
       'display':'inline-block',
+      'position':'fixed',
       'width':'50px',
-       'margin-top':'350px',
-       'margin-left':'85%',
-       'text-align':'right',
-       'font-size':'50px',
-       'color':'#ffffff',
-       'overflow':'hidden'
+      'margin-top':'350px',
+      'margin-left':'85%',
+      'text-align':'right',
+      'font-size':'50px',
+      'color':'#ffffff',
+      'overflow':'hidden'
     })
     $('#close').css({
       'display':'inline-block',
+      'position':'fixed',
       'width':'80px',
       'heghit':'30px',
-
-      'margin-left': '50%',
-      'margin-top': '150px',
-       'text-align':'center',
-       'font-size':'30px',
-       'color':'#ffffff'
+      'font-size':'30px',
+      'right':430,
+      'top':120,
+      'color':'#ffffff'
     })
     $('#cover').css({
       'position':'fixed',
@@ -54,8 +50,8 @@ $(document).ready(function(){
     .fadeIn('slow');
   $('#pic').css({
     'position':'fixed',
-    'left':Math.floor(($(window).width() - 500) /35) + '%',
-    'top':$(window).scrollTop() + 150 + 'px',
+    'left':Math.floor(($(window).width() - 500) /30) + '%',
+    'top': 150 + 'px',
     'z-index':'100'
   })
   .find('img').attr('src', $(this).attr('href')).end()
@@ -70,12 +66,21 @@ $(document).ready(function(){
   });
 
 //スライド
-var counter = 0;
-var total = 0;
+  var counter = 0;
+  var total = 0;
 
-  $('#image-wrap ul li').each(function(){
-    $('#next').attr('href','#num'+(counter));
-    $(this).find('img').attr('id','num'+(counter));
-      counter++;
+  $('#pic a').each(function(){
+    $(this).attr('id','num'+(counter));
+    counter++;
+    $('<img>').attr('src',$(this).attr('href'));
 
+      $('#next').bind('click',function(e){
+        e.preventDefault();
+        $('#pic').find('img').attr('src', $(this).attr('href')).show();
+      })
+
+      $('#prev').bind('click',function(e){
+        e.preventDefault();
+        $('#pic').find('img').attr('src', $(this).attr('href')).show();
+      })
   });

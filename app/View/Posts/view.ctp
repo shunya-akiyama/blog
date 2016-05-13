@@ -32,9 +32,9 @@ array('class'=>'image modal'.$i,'escape'=>false)),array('id'=>'modal'.$i,'class'
 </div>
  <p><?php echo nl2br(h($post['Post']['body'])); ?></p>
  <div id="cover">
-   <div class="navi">
+   <div id="navi">
      <a href="" id="prev"><</a>
      <a href="" id="next">></a>
-     <a href="#" id="close">close</a>
+     <a href="#" id="close">X</a>
    </div>
  </div>
