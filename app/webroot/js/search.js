@@ -77,6 +77,8 @@ $(document).ready(function(){
       $('#next').bind('click',function(e){
         e.preventDefault();
         $('#pic').find('img').attr('src', $(this).attr('href')).show();
+        return false;
+
       })
 
       $('#prev').bind('click',function(e){

@@ -6,15 +6,18 @@
 <?php echo $this->Html->para('',$post['Tag'][0]['tag']); ?>
 <div class="modal-wrap" id="image-wrap">
   <ul class="modal-set">
+    <?php
+    $i = 0
+     ?>
 <?php foreach ($post['Image'] as $post["Image"]): ?>
-
   <?php
   $base = $this->Html->url("/files/image/");//自宅環境ではこの記述で動かなかったので一旦外し、下記にパスを直接入れた。
     if($post["Image"]["dir"] > 0) {
       echo $this->Html->tag('li',
       $this->Html->image($base."attachment/"."/".$post["Image"]["dir"]."/".$post["Image"]["attachment"],
-      array('class'=>'img-responsive popup-image','url'=>$base."attachment"."/".$post["Image"]["dir"]."/".$post["Image"]["attachment"])),
+      array('id'=>'num'.$i,'class'=>'img-responsive popup-image','url'=>$base."attachment"."/".$post["Image"]["dir"]."/".$post["Image"]["attachment"])),
       array('class'=>'image','id'=>'pic'));
+$i++;
     }
 /*
 ,
