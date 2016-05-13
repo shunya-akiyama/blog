@@ -76,8 +76,7 @@ $(document).ready(function(){
 
       $('#next').bind('click',function(e){
         e.preventDefault();
-        $('#pic').find('img').attr('src', $(this).attr('href')).show();
-        return false;
+        $(this).attr('href', 'num'+(counter+1));
 
       })
 

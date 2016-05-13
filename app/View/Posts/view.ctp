@@ -18,6 +18,7 @@
       array('id'=>'num'.$i,'class'=>'img-responsive popup-image','url'=>$base."attachment"."/".$post["Image"]["dir"]."/".$post["Image"]["attachment"])),
       array('class'=>'image','id'=>'pic'));
 $i++;
+echo $this->Html->link('next','#num'.$i);
     }
 /*
 ,
