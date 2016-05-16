@@ -7,7 +7,17 @@ $(document).ready(function(){
 });
 
 //モーダル
-  $('.modal-set li a').bind('click', function(e){
+$(function(){
+
+  var $group = $('#image-wrap>li>a');
+  var groupIndex = $group.index(this);
+  var length = $group.length;
+  var width = $(window).width();
+  var height = $(window).height();
+  var top = $(window).scrollTop();
+  var image = $('img').attr('id','current');
+
+  $group.bind('click', function(e){
     e.preventDefault();
     $('#prev').css({
       'display':'inline-block',
@@ -58,31 +68,36 @@ $(document).ready(function(){
   })
   .find('img').attr('src', $(this).attr('href')).end()
   .fadeIn();
-  });
+  $('#prev,#next').bind('click',function(e){
+    if($(this).attr('href')=='#next'){
+      if(groupIndex + 1 > length){
+        groupIndex++;
+      }else{
+        groupIndex = 0;
+      }
+    }else{
+      if(groupIndex - 1 >= 0){
+        groupIndex--;
+      }else{
+        groupIndex=length - 1;
+      }
+    }
+    e.preventDefault();
+  $('#current').attr({src:$group.filter(':eq('+groupIndex+')')
+  .attr('href')})
+  })
+    $('#pic').show()
 
+  });
+});
 //モーダル閉じ
-  $('#close').bind('click', function(){
-    $('#pic').fadeOut('slow',function(){
-      $('#cover').hide();
-    });
-  });
-
-//スライド
-  var counter = 0;
-  var total = 0;
-
-  $('#pic a').each(function(){
-    $(this).attr('id','num'+(counter));
-    counter++;
-    $('<img>').attr('src',$(this).attr('href'));
-
-      $('#next').bind('click',function(e){
-        e.preventDefault();
-        $(this).attr('href', 'num'+(counter+1));
-      })
-
-      $('#prev').bind('click',function(e){
-        e.preventDefault();
-        $('#pic').find('img').attr('src', $(this).attr('href')).show();
-      })
-  });
+$('#close').bind('click',function(e){
+  $('#pic').css({
+    'position':'absolute',
+    'left':0,
+    'top': 0 ,
+    'overflow':'hidden',
+    'display':'block'
+  })
+  $('#cover').fadeOut();
+});

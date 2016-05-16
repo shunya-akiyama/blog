@@ -75,8 +75,16 @@ header >.col-xs-12 > .container >
   overflow: hidden;
 }
 
+.modal-wrap > .modal-set {
+  display: block;
 
-.modal-wrap > .modal-set > .image > a > .popup-image{
+}
+.modal-wrap > .modal-set > li {
+  display: block;
+  overflow: hidden;
+
+}
+.modal-wrap > .modal-set > .image > a > #current{
   width: 500px;
 }
 
@@ -91,6 +99,20 @@ header >.col-xs-12 > .container >
 #next{
 }
 
+.modal-active{
+  overflow: hidden !important;
+}
+#modalBg{
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 1000;
+  background: black;
+}
+#modal{
+  position: absolute;
+  z-index: 2000;
+}
 .footer{
   background: #428bca;
   height: 60px;
