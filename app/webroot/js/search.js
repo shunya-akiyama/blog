@@ -9,15 +9,14 @@ $(document).ready(function(){
 //モーダル
 $(function(){
 
-  var $group = $('#image-wrap>li>a');
+  var $group = $('#image-wrap>.modal-set>li>a');
   var groupIndex = $group.index(this);
   var length = $group.length;
   var width = $(window).width();
   var height = $(window).height();
   var top = $(window).scrollTop();
-  var image = $('img').attr('id','current');
-
-  $group.bind('click', function(e){
+  var image = $('#dummy>img').attr('id','current');
+$($group).bind('click', function(e){
     e.preventDefault();
     $('#prev').css({
       'display':'inline-block',
@@ -60,17 +59,19 @@ $(function(){
       'height':$(window).height()
     })
     .fadeIn('slow');
-  $('#pic').css({
+  $('#current').css({
     'position':'fixed',
     'left':Math.floor(($(window).width() - 500) /30) + '%',
     'top': 150 + 'px',
     'z-index':'100'
   })
-  .find('img').attr('src', $(this).attr('href')).end()
-  .fadeIn();
+  .fadeIn('slow');
+
   $('#prev,#next').bind('click',function(e){
-    if($(this).attr('href')=='#next'){
-      if(groupIndex + 1 > length){
+    e.preventDefault();
+
+  if($(this).attr('href') == '#next'){
+      if(groupIndex + 1 < length){
         groupIndex++;
       }else{
         groupIndex = 0;
@@ -82,22 +83,21 @@ $(function(){
         groupIndex=length - 1;
       }
     }
-    e.preventDefault();
-  $('#current').attr({src:$group.filter(':eq('+groupIndex+')')
-  .attr('href')})
+    $('#current').attr({src:$group.filter(':eq('+ groupIndex + ')')
+    .attr('href')});
+
   })
-    $('#pic').show()
 
   });
 });
 //モーダル閉じ
 $('#close').bind('click',function(e){
-  $('#pic').css({
-    'position':'absolute',
+  $('#current').css({
+    'position':'relative',
     'left':0,
     'top': 0 ,
     'overflow':'hidden',
     'display':'block'
-  })
+  }).fadeOut()
   $('#cover').fadeOut();
 });

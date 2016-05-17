@@ -4,38 +4,31 @@
 <?php echo $this->Html->para('','Created:'.$post['Post']['created']); ?>
 <?php echo $this->Html->para('',$post['Category']['category'],array('class'=>'fa fa-flag')); ?>
 <?php echo $this->Html->para('',$post['Tag'][0]['tag'],array('class'=>'fa fa-tags')); ?>
-<div class="modal-wrap">
-  <ul class="modal-set" id="image-wrap">
+<div class="modal-wrap" id="image-wrap">
+  <ul class="modal-set">
 <?php foreach ($post['Image'] as $post["Image"]): ?>
-  <?php
-  $base = $this->Html->url("/files/image/");//自宅環境ではこの記述で動かなかったので一旦外し、下記にパスを直接入れた。
+<?php
+ $base = $this->Html->url("/files/image/");//自宅環境ではこの記述で動かなかったので一旦外し、下記にパスを直接入れた。
     if($post["Image"]["dir"] > 0) {
       echo $this->Html->tag('li',
-      $this->Html->image($base."attachment/"."/".$post["Image"]["dir"]."/".$post["Image"]["attachment"],
-      array('class'=>'img-responsive','url'=>$base."attachment"."/".$post["Image"]["dir"]."/".$post["Image"]["attachment"])),
-      array('class'=>'image','id'=>'pic'));
+      $this->Html->link($this->Html->image($base."attachment/"."/".$post["Image"]["dir"]."/".$post["Image"]["attachment"],array('class'=>'img-responsive')),array($base."attachment/"."/".$post["Image"]["dir"]."/".$post["Image"]["attachment"]),array('escape'=>false)),
+      array('class'=>'image'));
 
+
+     echo $this->Html->div('',$this->Html->image($base."attachment/"."/".$post["Image"]["dir"]."/".$post["Image"]["attachment"],
+     array('class'=>'popup-image')),array('id'=>'dummy'));
     }
-/*
-,
-array('class'=>'image'),array('id'=>$id.$i)
-
-echo $this->Html->div('',
-$this->Html->link($this->Html->image($base."attachment/"."/".$post["Image"]["dir"]."/".$post["Image"]["attachment"],
-array('id'=>$id,'class'=>'slide')),$base."attachment/"."/".$post["Image"]["dir"]."/".$post["Image"]["attachment"],
-array('class'=>'image modal'.$i,'escape'=>false)),array('id'=>'modal'.$i,'class'=>'slider'));
-
-*/
   ?>
-
 <?php endforeach; ?>
-  </ul>
+</ul>
+</div>
+
 </div>
  <p><?php echo nl2br(h($post['Post']['body'])); ?></p>
  <div id="cover">
    <div id="navi">
-     <a href="" id="prev"><</a>
-     <a href="" id="next">></a>
+     <a href="" id="prev">&lt;</a>
+     <a href="" id="next">&gt;</a>
      <a href="#" id="close">X</a>
    </div>
  </div>
