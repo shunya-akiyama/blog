@@ -61,7 +61,7 @@ $($group).bind('click', function(e){
     .fadeIn('slow');
   $('#current').css({
     'position':'fixed',
-    'left':Math.floor(($(window).width() - 500) /30) + '%',
+    'left':Math.floor(($(window).width() - 500) /50) + '%',
     'top': 150 + 'px',
     'z-index':'100'
   })
@@ -71,7 +71,9 @@ $($group).bind('click', function(e){
     e.preventDefault();
 
   if($(this).attr('href') == '#next'){
-      if(groupIndex + 1 < length){
+    $('#current').attr({src:$group.filter(':eq('+ groupIndex + ')')
+    .attr('href')});
+    if(groupIndex + 1 < length){
         groupIndex++;
       }else{
         groupIndex = 0;
@@ -83,8 +85,6 @@ $($group).bind('click', function(e){
         groupIndex=length - 1;
       }
     }
-    $('#current').attr({src:$group.filter(':eq('+ groupIndex + ')')
-    .attr('href')});
 
   })
 

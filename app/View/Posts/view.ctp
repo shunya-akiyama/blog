@@ -9,14 +9,15 @@
 <?php foreach ($post['Image'] as $post["Image"]): ?>
 <?php
  $base = $this->Html->url("/files/image/");//自宅環境ではこの記述で動かなかったので一旦外し、下記にパスを直接入れた。
+//$path = $this->Html->webroot();
     if($post["Image"]["dir"] > 0) {
       echo $this->Html->tag('li',
-      $this->Html->link($this->Html->image($base."attachment/"."/".$post["Image"]["dir"]."/".$post["Image"]["attachment"],array('class'=>'img-responsive')),array($base."attachment/"."/".$post["Image"]["dir"]."/".$post["Image"]["attachment"]),array('escape'=>false)),
+      $this->Html->link($this->Html->image($base."attachment/"."/".$post["Image"]["dir"]."/".$post["Image"]["attachment"],array('class'=>'img-responsive')),$base."attachment/"."/".$post["Image"]["dir"]."/".$post["Image"]["attachment"],array('escape'=>false)),
       array('class'=>'image'));
 
 
      echo $this->Html->div('',$this->Html->image($base."attachment/"."/".$post["Image"]["dir"]."/".$post["Image"]["attachment"],
-     array('class'=>'popup-image')),array('id'=>'dummy'));
+     array('class'=>'img-responsive popup-image')),array('id'=>'dummy'));
     }
   ?>
 <?php endforeach; ?>

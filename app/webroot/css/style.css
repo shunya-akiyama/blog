@@ -76,12 +76,7 @@ header >.col-xs-12 > .container >
   width: 500px;
   overflow: hidden;
 }
-.modal-wrap > .modal-set > li {
-  display: block;
-  overflow: hidden;
-
-}
-.modal-wrap > .modal-set > .image > a > .image{
+#dummy > .image{
   width: 500px;
 }
 
