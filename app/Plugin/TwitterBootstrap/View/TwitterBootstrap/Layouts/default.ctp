@@ -61,7 +61,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<!-- Le javascript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<?php echo $this->Html->script('bootstrap'); ?>
+	<?php echo $this->element('sql_dump'); ?>
+  <?php echo $this->Html->script('bootstrap'); ?>
   <?php echo $this->Html->script('search'); ?>
 <?php echo $this->fetch('script'); ?>
 

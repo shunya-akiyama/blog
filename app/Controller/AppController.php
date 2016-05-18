@@ -2,7 +2,7 @@
 
 class AppController extends Controller {
 
-public $components = array('Paginator','Session',/*'DebugKit.Toolbar',*/
+public $components = array('Paginator','Session','DebugKit.Toolbar',
 'Auth'=>array(
   'loginRedirect'=>array(
     'controller'=>'users',

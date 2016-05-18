@@ -1,12 +1,20 @@
 <ul>
 <?php foreach ($posts as $post): ?>
 <li><?php echo h($post['Post']['id']); ?>
-	<p><?php echo $this->Html->link($post['Post']['title'],
+	<h2><?php echo $this->Html->link($post['Post']['title'],
 	array('controller'=>'posts', 'action'=>'view', $post['Post']['id'])); ?>
-	:<?php echo h($post['Category']['category']); ?>
-</p>
+</h2>
+	<?php echo $this->Html->para('',$post['Category']['category'],array('class'=>'fa fa-flag')); ?>
 <p>
-<?php echo h($post['Tag'][0]['tag']); ?>
+	<?php
+	$i=0;
+	if($i < 5);
+	$i++;
+	 ?>
+	 <?php foreach ($post['Tag'] as $post["Tag"]): ?>
+
+	<?php echo $this->Html->para('',$post['Tag']['tag'],array('class'=>'fa fa-tags')); ?>
+	 <?php endforeach; ?>
 </p>
 	<p>
 	<?php echo $this->Html->link('編集',
@@ -18,8 +26,10 @@
 </li>
 <?php endforeach; ?>
 </ul>
-<?php echo $this->Paginator->prev(__('前'),array('tag'=>'li')); ?>
-<?php echo $this->Paginator->next(__('次'),array('tag'=>'li')); ?>
+<ul>
+  <li><?php echo $this->Paginator->prev(__('前'),array('tag'=>'p')); ?></li>
+  <li><?php echo $this->Paginator->next(__('次'),array('tag'=>'p')); ?></li>
+</ul>
 
 <?php
 echo $this->Html->link('記事の新規投稿',

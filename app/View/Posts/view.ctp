@@ -1,9 +1,16 @@
-<?php echo $this->Html->div('container') ?>
-<?php echo $this->Html->div('row col-xs-12 col-md-12 col-lg-12 content') ?>
 <?php echo $this->Html->tag('h1',$post['Post']['title']); ?>
 <?php echo $this->Html->para('','Created:'.$post['Post']['created']); ?>
 <?php echo $this->Html->para('',$post['Category']['category'],array('class'=>'fa fa-flag')); ?>
-<?php echo $this->Html->para('',$post['Tag'][0]['tag'],array('class'=>'fa fa-tags')); ?>
+<?php
+$i=0;
+if($i < 5);
+$i++;
+ ?>
+ <?php foreach ($post['Tag'] as $post["Tag"]): ?>
+
+<?php echo $this->Html->para('',$post['Tag']['tag'],array('class'=>'fa fa-tags')); ?>
+ <?php endforeach; ?>
+
 <div class="modal-wrap" id="image-wrap">
   <ul class="modal-set">
 <?php $i = 1;

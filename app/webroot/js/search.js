@@ -10,6 +10,7 @@ $(document).ready(function(){
 $(function(){
 
   var $group = $('#image-wrap>.modal-set>li>a');
+  var tmp = $('#image-wrap>.modal-set>li>a>img');
   var groupIndex = $group.index(this);
   var length = $group.length;
   var width = $(window).width();
@@ -20,7 +21,6 @@ $($group).bind('click', function(e){
     e.preventDefault();
 
     //console.log($group);
-    tmp = $('#image-wrap>.modal-set>li>a>img');
       //groupIndex = $(e.target).index();
 
       tmp.each(function(f){

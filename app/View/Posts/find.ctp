@@ -1,3 +1,7 @@
+<?php
+$i=0;
+if($i < 5);
+$i++; ?>
 <h1>検索結果</h1>
 <ul>
 <?php foreach ($posts as $post): ?>
@@ -10,7 +14,11 @@
 		カテゴリー:<?php echo h($post['Category']['category']); ?>
   </p>
 	<p>
-	  タグ:<?php echo h($post['Tag'][0]['tag']); ?>
+	  タグ:
+    <?php foreach ($post['Tag'] as $post["Tag"]): ?>
+
+ 	<?php echo $this->Html->para('',$post['Tag']['tag'],array('class'=>'fa fa-tags')); ?>
+ 	 <?php endforeach; ?>
 	</p>
   </li>
 <?php endforeach; ?>

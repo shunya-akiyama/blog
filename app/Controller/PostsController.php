@@ -64,7 +64,7 @@ class PostsController extends AppController{
                                               )
                                             )));
 
-$this->set('img',$img);
+    $this->set('img',$img);
 
     if(!$post){
       throw new NotFoundException(__('ご覧になれません。'));
@@ -80,7 +80,7 @@ $this->set('img',$img);
   public function add(){
     if($this->request->is('post')){
       $this->Post->create();
-      if($this->Post->saveAll($this->request->data)){
+      if($this->Post->saveAssociated($this->request->data)){
         $this->Flash->success(__('投稿完了'));
         return $this->redirect(array('controller'=>'users','action'=>'index'));
       }
