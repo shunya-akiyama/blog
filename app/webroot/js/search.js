@@ -18,6 +18,10 @@ $(function(){
   var image = $('#dummy>img').attr('id','current');
 $($group).bind('click', function(e){
     e.preventDefault();
+      groupIndex = $(e.target).index();
+
+      //console.log($(e.target.id).index());
+      console.log($(e.target));
     $('#prev').css({
       'display':'inline-block',
       'position':'fixed',
@@ -51,14 +55,15 @@ $($group).bind('click', function(e){
       'top':120,
       'color':'#ffffff'
     })
+    $('#current').attr({src:$group.filter(':eq('+ groupIndex + ')')
+    .attr('href')});
     $('#cover').css({
       'position':'fixed',
       'left':0,
       'top':0,
       'width':$(window).width(),
       'height':$(window).height()
-    })
-    .fadeIn('slow');
+    }).fadeIn('slow');
   $('#current').css({
     'position':'fixed',
     'left':Math.floor(($(window).width() - 500) /50) + '%',
@@ -70,23 +75,29 @@ $($group).bind('click', function(e){
   $('#prev,#next').bind('click',function(e){
     e.preventDefault();
 
-  if($(this).attr('href') == '#next'){
-    $('#current').attr({src:$group.filter(':eq('+ groupIndex + ')')
-    .attr('href')});
-    if(groupIndex + 1 < length){
+//ここ注意
+  //console.log($(this).attr('id'));
+  if($(this).attr('src') != 'next'){
+      if(groupIndex + 1 < length){
         groupIndex++;
       }else{
         groupIndex = 0;
       }
     }else{
-      if(groupIndex - 1 >= 0){
+      if(groupIndex - 1 <= 0){
         groupIndex--;
       }else{
         groupIndex=length - 1;
       }
     }
 
-  })
+    $('#current').attr({src:$group.filter(':eq('+ groupIndex + ')')
+    .attr('href')});
+
+
+  }
+
+)
 
   });
 });
