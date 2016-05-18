@@ -18,10 +18,19 @@ $(function(){
   var image = $('#dummy>img').attr('id','current');
 $($group).bind('click', function(e){
     e.preventDefault();
-      groupIndex = $(e.target).index();
 
+    //console.log($group);
+    tmp = $('#image-wrap>.modal-set>li>a>img');
+      //groupIndex = $(e.target).index();
+
+      tmp.each(function(f){
+        if($(this).attr('src') == $(e.target).attr('src')){
+          groupIndex = f;
+        }
+      });
+      //console.log(groupIndex);
       //console.log($(e.target.id).index());
-      console.log($(e.target));
+      //console.log($(e.target));
     $('#prev').css({
       'display':'inline-block',
       'position':'fixed',
@@ -71,33 +80,32 @@ $($group).bind('click', function(e){
     'z-index':'100'
   })
   .fadeIn('slow');
+});
 
   $('#prev,#next').bind('click',function(e){
     e.preventDefault();
 
 //ここ注意
   //console.log($(this).attr('id'));
-  if($(this).attr('src') != 'next'){
+  if($(this).attr('id') == 'next'){
       if(groupIndex + 1 < length){
         groupIndex++;
       }else{
         groupIndex = 0;
       }
     }else{
-      if(groupIndex - 1 <= 0){
+      if(groupIndex - 1 >= 0){
         groupIndex--;
       }else{
         groupIndex=length - 1;
       }
     }
-
+    //console.log(groupIndex);
     $('#current').attr({src:$group.filter(':eq('+ groupIndex + ')')
     .attr('href')});
 
 
-  }
 
-)
 
   });
 });
