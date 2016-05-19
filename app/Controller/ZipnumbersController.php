@@ -11,6 +11,7 @@ var $name = 'Zipnumbers';
     public $tmp;
 
   public function zip(){
+
   }
 
   public function zipCode(){
@@ -18,6 +19,8 @@ var $name = 'Zipnumbers';
     if($this->request->is('ajax')){
       $this->autoRender=FALSE;
       $res = $this->request->data['Zipnumbers']['zip'];
+//      $this->render('zip','ajax');
+      echo $res;
     }else{
        echo "通信失敗";
     }

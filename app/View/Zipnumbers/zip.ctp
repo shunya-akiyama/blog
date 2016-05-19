@@ -6,7 +6,6 @@ echo $this->Form->end();
  ?>
 <?php echo $this->Form->input('',array('id'=>'answer')); ?>
 
-
  <?php $this->Html->scriptStart(array('inline'=>false)); ?>
   $(document).ready(function(){
 
@@ -16,6 +15,7 @@ echo $this->Form->end();
         url:'http://blog.dev/zipnumbers/zipCode',
         data: $('#ZipnumbersZipForm').serializeArray(),
         success: function(data, textStatus, jqXHR){
+          $('#answer').val(data);
         },
         error: function(data, textStatus, jqXHR){
 
