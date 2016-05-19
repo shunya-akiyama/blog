@@ -19,7 +19,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
   <?php echo $this->Html->css('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css'); ?>
 	<?php echo $this->Html->css('bootstrap'); ?>
   <?php echo $this->Html->css('style'); ?>
-  <?php echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js') ?>
+  <?php echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js',array('inline','false'));
+        echo $this->Js->writeBuffer(array('inline'=>'true'));
+   ?>
 	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
