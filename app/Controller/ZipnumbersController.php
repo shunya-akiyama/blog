@@ -9,18 +9,20 @@ var $name = 'Zipnumbers';
         $this->Auth->allow('zip','zipCode');
     }
     public $tmp;
-
   public function zip(){
+   $this->set('aa',$this->Zipnumber->find('first',
+   array('conditions' => array('Zipnumber.zip' => '4200885'))));
+}
 
-  }
+
 
   public function zipCode(){
-  //  $zip = $this->zip_code->find('all');
     if($this->request->is('ajax')){
       $this->autoRender=FALSE;
       $res = $this->request->data['Zipnumbers']['zip'];
-//      $this->render('zip','ajax');
-      echo $res;
+      $this->set('aa',$this->Zipnumber->find('first',
+      array('conditions' => array('Zipnumber.zip' => $res))));
+      echo $aa;
     }else{
        echo "通信失敗";
     }

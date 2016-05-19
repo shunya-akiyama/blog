@@ -5,7 +5,11 @@ echo $this->Form->submit('送信',array('id'=>'zipsubmit'));
 echo $this->Form->end();
  ?>
 <?php echo $this->Form->input('',array('id'=>'answer')); ?>
-
+<p>
+<?php
+echo $aa['Zipnumber']['prefecture'].$aa['Zipnumber']['city'].$aa['Zipnumber']['town'];
+?>
+</p>
  <?php $this->Html->scriptStart(array('inline'=>false)); ?>
   $(document).ready(function(){
 
