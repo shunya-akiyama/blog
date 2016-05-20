@@ -69,7 +69,7 @@ $group.bind('click', function(e){
     .fadeIn('slow');
   $('#current').css({
     'position':'fixed',
-    'left':Math.floor(($(window).width() - 500) /30) + '%',
+    'left':Math.floor(($(window).width() - 500) / 2) + '%',
     'top': 150 + 'px',
     'z-index':'100'
   })

@@ -13,8 +13,6 @@ $i++;
 
 <div class="modal-wrap" id="image-wrap">
   <ul class="modal-set">
-<?php $i = 1;
- ?>
 <?php foreach ($post['Image'] as $post["Image"]): ?>
 <?php
  $base = $this->Html->url("/files/image/");//自宅環境ではこの記述で動かなかったので一旦外し、下記にパスを直接入れた。
@@ -22,12 +20,10 @@ $i++;
     if($post["Image"]["dir"] > 0) {
       echo $this->Html->tag('li',
       $this->Html->link($this->Html->image($base."attachment/"."/".$post["Image"]["dir"]."/".$post["Image"]["attachment"],array('class'=>'img-responsive')),$base."attachment/"."/".$post["Image"]["dir"]."/".$post["Image"]["attachment"],array('escape'=>false)),
-      array('class'=>'image'.$i));
-
+      array('class'=>'img-thumbnail'));
 
      echo $this->Html->div('',$this->Html->image($base."attachment/"."/".$post["Image"]["dir"]."/".$post["Image"]["attachment"],
      array('class'=>'img-responsive　popup-image')),array('id'=>'dummy'));
-    $i++;
     }
   ?>
 <?php endforeach; ?>

@@ -31,4 +31,28 @@ App::uses('Model', 'Model');
 
  */
 class AppModel extends Model {
+  public function findByCategories($data=array()){
+    $category=$this->Category->find('list',array(
+      'fields'=>'Category.id',
+      'conditions'=>array('Category.id'=>$data['category']),
+    ));
+    $condition[1]=array(
+      'Post.category_id'=>$category,
+    );
+    return $condition;
+  }
+
+
+public function findByTags($data=array()){
+  $tag=$this->PostsTag->find('list',array(
+    'fields'=>'PostsTag.post_id',
+    'conditions'=>array('PostsTag.tag_id'=>$data['tag']),
+  ));
+  $condition[1]=array(
+    'Post.id'=>$tag,
+  );
+  return $condition;
+}
+
+
 }

@@ -15,7 +15,9 @@ header > .col-xs-12 > h1 a{
 header > .col-xs-12 > #search{
   display: inline;
 }
-
+.fa-search:hover{
+cursor: pointer;
+}
 header > .col-xs-12 > #search >p{
   text-align: center;
   width: 10%;
@@ -66,18 +68,19 @@ header >.col-xs-12 > .container >
 }
 
 .modal-wrap > .modal-set > li{
-  width: 500px;
   float: left;
   display: block;
   overflow: hidden;
 }
-
+.img-thumbnail{
+  margin: 10px 0;
+}
 .modal-wrap{
   width: 500px;
   overflow: hidden;
 }
 #dummy > .image{
-  width: 500px;
+  width: 800px;
 }
 
 #cover{
@@ -108,5 +111,21 @@ header >.col-xs-12 > .container >
 .footer{
   background: #428bca;
   height: 60px;
+  margin-top: 30px;
+}
+#answer{
+  width: 400px;
+}
+.paging{
+  overflow: hidden;
+}
+.paging > li{
+  float: left;
+}
+.disabled{
+  display: none;
+}
+
+.panel{
   margin-top: 30px;
 }

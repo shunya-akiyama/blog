@@ -21,12 +21,21 @@ class PostsController extends AppController{
         $this->Auth->allow('index','view','find');
     }
 
-  public function index(){
+  public function index($id=null){
 		$this->Post->recursive = 2;
     $this->Paginator->settings = $this->paginate;
 		$posts = $this->Paginator->paginate('Post');
 		$this->set('posts',$posts);
-		//タイトル検索
+    $post = $this->Post->findById($id);
+    $img=$this->Attachment->find('count',array('conditions'=>array(
+                                              'Attachment.post_id'=>$id,
+                                              'NOT'=>array(
+                                              'Attachment.dir'=>'null'
+                                              )
+                                            )));
+
+    $this->set('img',$img);
+//タイトル検索
 		$this->Prg->commonProcess();
 	  $this->Paginator->settings['conditions']=$this->Post->parseCriteria($this->Prg->parsedParams());
 		$this->set('posts',$this->Paginator->paginate());

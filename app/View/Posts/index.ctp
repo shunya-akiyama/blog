@@ -1,9 +1,5 @@
-<?php
-$i=0;
-if($i < 5);
-$i++; ?>
 <h1>一覧</h1>
-<ul>
+<ul class="col-xs-8 col-md-8 col-lg-8">
 <?php foreach ($posts as $post): ?>
   <li>
 		<p><?php echo h($post['Post']['created']); ?></p>
@@ -20,7 +16,20 @@ $i++; ?>
   </li>
 <?php endforeach; ?>
 </ul>
-<ul>
-  <li><?php echo $this->Paginator->prev(__('前'),array('tag'=>'p')); ?></li>
-  <li><?php echo $this->Paginator->next(__('次'),array('tag'=>'p')); ?></li>
+<p class="col-xs-4 col-md-4 col-lg-4">
+<?php echo $this->html->link('住所検索はこちら',array('controller'=>'zipnumbers','action'=>'zip')); ?>
+</p>
+
+<ul class="paging col-xs-12 col-md-12 col-lg-12">
+  <li><?php echo $this->Paginator->prev('Prev',array('tag'=>'p','class'=>'btn btn-default')); ?></li>
+<li><?php
+    echo $this->Paginator->counter(array(
+        'format' => __('{:page}/{:pages}ページを表示')
+    ));
+  ?></li>
+  <li><?php echo $this->Paginator->next('Next',array('tag'=>'p','class'=>'btn btn-default')); ?></li>
 </ul>
+
+<p class="col-xs-12 col-md-12 col-lg-12">
+  <?php echo $this->Html->link('Loginはこちら',array('controller'=>'users','action'=>'login')); ?>
+</p>

@@ -1,10 +1,10 @@
 <?php
 namespace Util;
 class Find {
-	
-	public $uses = array('Post','Category','PostsTag');
-	public $presetVars = true;
 
+	public $uses = array('Post','Attachment','Category','PostsTag');
+	public $presetVars = true;
+	public $helpers = array('Html', 'Form','Flash');
 	public $components = array('Flash','Session','Paginator',
 	'Search.Prg'=>array(
 		'commonProcess'=>array(

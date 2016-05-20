@@ -1,4 +1,5 @@
 <?php
+App::uses('AppModel', 'Model');
 class Post extends AppModel{
 public $use = 'Post';
 public $order = ('Post.id DESC');
