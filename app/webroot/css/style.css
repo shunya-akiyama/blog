@@ -63,9 +63,6 @@ header >.col-xs-12 > .container >
 }
 
 */
-#current{
-  display: none;
-}
 
 .modal-wrap > .modal-set > li{
   float: left;
@@ -90,8 +87,6 @@ header >.col-xs-12 > .container >
   left: 0;
   top: 0;
   z-index: 10;
-}
-#next{
 }
 
 .modal-active{
@@ -128,4 +123,52 @@ header >.col-xs-12 > .container >
 
 .panel{
   margin-top: 30px;
+}
+#prev{
+	display:inline-block;
+	position:absolute;
+  width:50px;
+	bottom: 100px;
+	margin-left:5%;
+	text-align:left;
+	font-size:50px;
+	color:#ffffff;
+
+}
+#next{
+	display:inline-block;
+	position:absolute;
+	width:50px;
+	margin-top:350px;
+	bottom: 100px;
+	margin-left:85%;
+	text-align:right;
+	font-size:50px;
+	color:#ffffff;
+	overflow:hidden;
+	z-index:100;
+}
+#close{
+	display:inline-block;
+	position:absolute;
+	top:30px;
+	right:50px;
+	width:80px;
+	height:30px;
+	font-size:30px;
+	right:430;
+	top:120;
+	color:#ffffff;
+}
+#cover{
+	position:fixed;
+	left:0;
+	top:0;
+}
+#current{
+	display:none;
+	position:absolute;
+	width:50%;
+	z-index:100;
+
 }

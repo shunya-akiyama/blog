@@ -9,9 +9,8 @@ var $name = 'Zipnumbers';
         parent::beforeFilter();
         $this->Auth->allow('zip','zipCode');
     }
-    public $tmp;
   public function zip(){
-   $this->set('aa',$this->Zipnumber->find('first',
+   $this->set('arnswer',$this->Zipnumber->find('first',
    array('conditions' => array('Zipnumber.zip' => ''))));
 }
 
@@ -21,13 +20,13 @@ var $name = 'Zipnumbers';
     if($this->request->is('ajax')){
       $this->autoRender=FALSE;
       $res = $this->request->data['Zipnumbers']['zip'];
-
-      $aa = $this->Zipnumber->find('first',
-      array('conditions' => array('Zipnumber.zip' => $res)));
-      //$aa = $this->set($this->Zipnumber->find('first',
-      //rray('conditions' => array('Zipnumber.zip' => $res))));
-      echo $aa['Zipnumber']['prefecture'].$aa['Zipnumber']['city'].$aa['Zipnumber']['town'];
-    }else{
+      if($answer = $this->Zipnumber->find('first',
+      array('conditions' => array('Zipnumber.zip' => $res)))){
+			echo $answer['Zipnumber']['prefecture'].$answer['Zipnumber']['city'].$answer['Zipnumber']['town'];
+		}else{
+			echo "ねーよ。";
+		}
+		}else{
        echo "通信失敗";
     }
   }

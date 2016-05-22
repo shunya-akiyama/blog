@@ -21,7 +21,7 @@
 </p>
 
 <ul class="paging col-xs-12 col-md-12 col-lg-12">
-  <li><?php echo $this->Paginator->prev('Prev',array('tag'=>'p','class'=>'btn btn-default')); ?></li>
+  <li><?php echo $this->Paginator->prev('Prev',array('class'=>'btn btn-default'),array()); ?></li>
 <li><?php
     echo $this->Paginator->counter(array(
         'format' => __('{:page}/{:pages}ページを表示')
