@@ -31,8 +31,12 @@ function cover(id){
     $('#prev,#next').click(function(e){
       e.preventDefault();
       i = 4;
-      cover("img3");
-      $('#next').attr('href', "img"+i);
+      //console.log($cur[3]);
+      var tmp = ($cur[3] + 1)%6 + 1;
+      $cur = "img" + tmp;
+      cover($cur);
+      //cover("img3");
+      //$('#next').attr('href', "img"+i);
       //$($slide).attr("src");
 //console.log($($slide).attr("src"));
     })
