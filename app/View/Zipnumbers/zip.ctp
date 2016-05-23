@@ -23,7 +23,7 @@ echo $this->Form->end();
     $('#zipsubmit').click(function(){
       $.ajax({
         type:'POST',
-        url:'http://192.168.33.10/akiyama_blog/zipnumbers/zipCode',
+        url:'http://blog.dev/zipnumbers/zipCode',
         data: $('#ZipnumbersZipForm').serializeArray(),
         success: function(data, textStatus, jqXHR){
           $('#answer').val(data);

@@ -8,53 +8,38 @@ $(document).ready(function(){
 
 //モーダル
 $(function(){
-  var $group = $('#image-wrap>.modal-set>li>a');
-  var tmp = $('#image-wrap>.modal-set>li>a>img');
-  var groupIndex = $group.index(this);
-  var length = $group.length;
-  var width = $(window).width();
-  var height = $(window).height();
-  var top = $(window).scrollTop();
-  var image = $('#dummy>img').attr('id','current');
-  $($group).bind('click', function(e){
+  var $group = $('.thumbnail-list > li');
+  var $slide = $('.modal-set > li > img');
+  var groupIndex = $slide.index(this);
+  var length = $slide.length;
+var $cur;
+function cover(id){
+  var imgobj = $("#" + id);
+  $($slide).attr("src",imgobj.attr('href')).css({
+    'left':Math.floor(($(window).width()) / 50) + '%',
+    'top': Math.floor(($(window).height()) / 50) + '%'
+  }).show();
+}
+//モーダル表示
+  $('a.thumbnail').click(function(e){
   e.preventDefault();
-  tmp.each(function(f){
-    if($(this).attr('src') == $(e.target).attr('src')){
-      groupIndex = f;
-    }
-    });
-    $('#next').fadeIn('slow');
-    $('#current').attr({src:$group.filter(':eq('+ groupIndex + ')').attr('href')});
-    $('#cover').css({
-      'width':$(window).width(),
-      'height':$(window).height()
-      }).fadeIn('slow');
-    $('#current').css({
-      'left':Math.floor(($(window).width()) / 50) + '%',
-      'top': Math.floor(($(window).height()) / 55) + '%',
-      }).fadeIn('slow');
+  $cur = $(this).attr('id');
+  console.log($cur);
+  $('#cover').fadeIn();
+//cover($(this));
+  cover($cur);
+    $('#prev,#next').click(function(e){
+      e.preventDefault();
+      i = 4;
+      cover("img3");
+      $('#next').attr('href', "img"+i);
+      //$($slide).attr("src");
+//console.log($($slide).attr("src"));
+    })
   });
 
-  $('#prev,#next').bind('click',function(e){
-    e.preventDefault();
-    if($(this).attr('id') == 'next'){
-      if(groupIndex + 1 < length){
-          groupIndex++;
-        }else{
-          groupIndex = 0;
-        }
-      }else{
-      if(groupIndex - 1 >= 0){
-          groupIndex--;
-        }else{
-          groupIndex=length - 1;
-        }
-      }
-    $('#current').attr({src:$group.filter(':eq('+ groupIndex + ')')
-    .attr('href')});
-  });
-});
 //モーダル閉じ
 $('#close').bind('click',function(e){
-  $('#cover,#current').fadeOut()
+  $('#cover').fadeOut();
+});
 });
