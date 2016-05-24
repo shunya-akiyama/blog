@@ -12,7 +12,7 @@ $base = $this->Html->url("/files/image/attachment/");//自宅環境ではこの�
 <div class="modal-wrap" id="image-wrap">
   <ul class="thumbnail-list">
     <?php
-    $i=1;
+    $i=0;
     $j=count($post['Image']);
     if($i <= $j);
      ?>
@@ -33,17 +33,11 @@ $base = $this->Html->url("/files/image/attachment/");//自宅環境ではこの�
 <div id="cover">
   <div class="modal-inner">
     <ul class="modal-set">
-      <?php
-      $i2=1;
-      $j=count($post['Image']);
-      if($i2 <= $j);
-       ?>
     <?php foreach ($post['Image'] as $row["Image"]): ?>
     <?php
      if($row["Image"]["dir"] > 0) {
       echo $this->Html->tag('li',$this->Html->image($base.$row["Image"]["dir"]."/".$row["Image"]["attachment"],
-      array('class'=>'img-responsive popup-image','id'=>'dummy'.$i2)),array());
-      $i2++;
+      array('class'=>'img-responsive popup-image','id'=>'dummy')),array());
      }
     ?>
     <?php endforeach; ?>

@@ -13,6 +13,7 @@ $(function(){
   var groupIndex = $slide.index(this);
   var length = $slide.length;
 var $cur;
+var i;
 function cover(id){
   var imgobj = $("#" + id);
   $($slide).attr("src",imgobj.attr('href')).css({
@@ -28,17 +29,35 @@ function cover(id){
   $('#cover').fadeIn();
 //cover($(this));
   cover($cur);
+/*
     $('#prev,#next').click(function(e){
       e.preventDefault();
-      i = 4;
-      //console.log($cur[3]);
       var tmp = ($cur[3] + 1)%6 + 1;
       $cur = "img" + tmp;
+      console.log($cur);
       cover($cur);
-      //cover("img3");
-      //$('#next').attr('href', "img"+i);
-      //$($slide).attr("src");
-//console.log($($slide).attr("src"));
+    })
+    */
+
+    $('#next').click(function(e){
+      e.preventDefault();
+      /*
+      $(this).attr('href',$cur);
+console.log($(this).attr('href',''));
+*/
+        e.preventDefault();
+        var tmp = (Number($cur[3]) + 1)%length;
+        $cur = "img" + tmp;
+        console.log($cur);
+        cover($cur);
+    })
+
+    $('#prev').click(function(e){
+      e.preventDefault();
+      var tmp = (Number($cur[3]) - 1 +length)%length;
+      $cur = "img" + tmp;
+      console.log($cur);
+      cover($cur);
     })
   });
 

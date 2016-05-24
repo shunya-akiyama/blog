@@ -157,9 +157,6 @@ header >.col-xs-12 > .container >
 .modal-inner{
   width:500px;
 }
-.modal-set{
-  width:1000px;
-}
 .modal-set > li{
   float: left;
 }
