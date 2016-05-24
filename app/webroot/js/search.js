@@ -12,8 +12,7 @@ $(function(){
   var $slide = $('.modal-set > li > img');
   var groupIndex = $slide.index(this);
   var length = $slide.length;
-var $cur;
-var i;
+  var $cur;
 function cover(id){
   var imgobj = $("#" + id);
   $($slide).attr("src",imgobj.attr('href')).css({
@@ -22,45 +21,31 @@ function cover(id){
   }).show();
 }
 //モーダル表示
-  $('a.thumbnail').click(function(e){
+$('a.thumbnail').click(function(e){
   e.preventDefault();
   $cur = $(this).attr('id');
   console.log($cur);
   $('#cover').fadeIn();
-//cover($(this));
   cover($cur);
-/*
-    $('#prev,#next').click(function(e){
-      e.preventDefault();
-      var tmp = ($cur[3] + 1)%6 + 1;
-      $cur = "img" + tmp;
-      console.log($cur);
-      cover($cur);
-    })
-    */
-
     $('#next').click(function(e){
       e.preventDefault();
-      /*
-      $(this).attr('href',$cur);
-console.log($(this).attr('href',''));
-*/
-        e.preventDefault();
-        var tmp = (Number($cur[3]) + 1)%length;
-        $cur = "img" + tmp;
-        console.log($cur);
-        cover($cur);
+      var tmp = (Number($cur[3]) + 1)%length;
+      if(tmp == 0){
+        return false;
+      }
+      $cur = "img" + tmp;
+      cover($cur);
     })
-
     $('#prev').click(function(e){
       e.preventDefault();
       var tmp = (Number($cur[3]) - 1 +length)%length;
+      if(tmp == length - 1){
+        return false;
+      }
       $cur = "img" + tmp;
-      console.log($cur);
       cover($cur);
     })
-  });
-
+});
 //モーダル閉じ
 $('#close').bind('click',function(e){
   $('#cover').fadeOut();
