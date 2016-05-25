@@ -89,7 +89,7 @@ class PostsController extends AppController{
   public function add(){
     if($this->request->is('post')){
       $this->Post->create();
-      if($this->Post->saveAssociated($this->request->data)){
+      if($this->Post->saveAll($this->request->data)){
         $this->Flash->success(__('投稿完了'));
         return $this->redirect(array('controller'=>'users','action'=>'index'));
       }
@@ -105,6 +105,10 @@ class PostsController extends AppController{
 }
 
   public function edit($id = null){
+    $category = $this->set('categories',$this->Post->Category->find('list',array('fields'=>array('category'))));
+    $tag = $this->set('tags',$this->Post->Tag->find('list',array('fields'=>array('tag'))));
+    $this->set(compact('categories','tags'));
+
     if(!$id){
       throw new NotFoundException(__('ご覧になれません。'));
     }

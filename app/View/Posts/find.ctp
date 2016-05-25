@@ -3,25 +3,30 @@ $i=0;
 if($i < 5);
 $i++; ?>
 <h1>検索結果</h1>
-<ul>
+<ul class="col-xs-8 col-md-8 col-lg-8">
 <?php foreach ($posts as $post): ?>
   <li>
     <h2><?php echo $this->Html->link($post['Post']['title'],
     array('controller'=>'posts', 'action'=>'view', $post['Post']['id'])); ?>
 	</h2>
-  <p class="fa fa-flag">
-		<?php echo h($post['Category']['category']); ?>
-  </p>
-    <?php foreach ($post['Tag'] as $post["Tag"]): ?>
- 	<?php echo $this->Html->para('',$post['Tag']['tag'],array('class'=>'fa fa-tags')); ?>
- 	 <?php endforeach; ?>
-   <p><?php echo h($post['Post']['created']); ?></p>
+  <span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
+  <?php echo $this->Html->para('',$post['Category']['category']); ?>
+	<p>
+  <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
+  <?php foreach ($post['Tag'] as $post["Tag"]): ?>
+  <?php echo $this->Html->tag('',$post['Tag']['tag']); ?>,
+  <?php endforeach; ?>
+  <p><?php echo h($post['Post']['created']); ?></p>
+	</p>
   </li>
+  <hr>
 <?php endforeach; ?>
 </ul>
-<p>
-  <?php echo $this->Paginator->prev(__('前'),array('tag'=>'p')); ?>
-</p>
-<p>
-  <?php echo $this->Paginator->next(__('次'),array('tag'=>'p')); ?>
+<ul class="paging col-xs-12 col-md-12 col-lg-12">
+  <li><?php echo $this->Paginator->prev('Prev',array('tag'=>false,'class'=>'btn btn-default'),null,array()); ?></li>
+  <li><?php echo $this->Paginator->numbers(array('class'=>'btn btn-default')); ?></li>
+  <li><?php echo $this->Paginator->next('Next',array('tag'=>false,'class'=>'btn btn-default'),null,array()); ?></li>
+</ul>
+<p class="col-xs-12 col-md-12 col-lg-12">
+  <?php echo $this->Html->link('Loginはこちら',array('controller'=>'users','action'=>'login')); ?>
 </p>

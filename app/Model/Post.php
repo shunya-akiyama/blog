@@ -5,15 +5,26 @@ public $use = 'Post';
 public $order = ('Post.id DESC');
 public $actsAs = array('Search.Searchable');
 
-
-  public $validate = array(
-    'title'=>array(
-      'rule'=>'notBlank'
-    ),
-    'body'=>array(
-      'rule'=>'notBlank',
-    ),
-  );
+    public $validate = array(
+      'title'=>array(
+        'rule'=>'notBlank',
+        'required'=>'false',
+        'allowEmpty'=>'true',
+        'message'=>'タイトルは必須です'
+      ),
+      'body'=>array(
+        'rule'=>'notBlank',
+        'required'=>'false',
+        'allowEmpty'=>'true',
+        'message'=>'本文も必須です'
+      ),
+      'Image.0.attachment'=>array(
+        'rule'=>array('uploadError'),
+        'required'=>'false',
+        'allowEmpty'=>'true',
+        'message'=>'画像が選択されていないか、拡張子が違う可能性があります。ファイルはjpg/jpeg/gif/pngのみ保存できます。'
+      )
+    );
 
   public $hasMany = array(
     'Image'=>array(

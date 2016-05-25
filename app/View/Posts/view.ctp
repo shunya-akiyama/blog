@@ -1,16 +1,18 @@
 <?php echo $this->Html->tag('h1',$post['Post']['title']); ?>
 <?php echo $this->Html->para('','Created:'.$post['Post']['created']); ?>
-<?php echo $this->Html->para('',$post['Category']['category'],array('class'=>'fa fa-flag')); ?>
+<span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
+<?php echo $this->Html->para('',$post['Category']['category']); ?>
 <?php
 $base = $this->Html->url("/files/image/attachment/");//自宅環境ではこの記述で動かなかったので一旦外し、下記にパスを直接入れた。
  ?>
- <?php foreach ($post['Tag'] as $tag["Tag"]): ?>
+ <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
+<?php foreach ($post['Tag'] as $tag["Tag"]): ?>
 
-<?php echo $this->Html->para('',$tag['Tag']['tag'],array('class'=>'fa fa-tags')); ?>
+<?php echo $this->Html->tag('',$tag['Tag']['tag']); ?>,
  <?php endforeach; ?>
 
 <div class="modal-wrap" id="image-wrap">
-  <ul class="thumbnail-list">
+  <ul class="row thumbnail-list">
     <?php
     $i=0;
     $j=count($post['Image']);
@@ -21,7 +23,8 @@ $base = $this->Html->url("/files/image/attachment/");//自宅環境ではこの�
     if($row["Image"]["dir"] > 0) {
       echo $this->Html->tag('li',
       $this->Html->link($this->Html->image($base.$row["Image"]["dir"]."/".$row["Image"]["attachment"],
-      array('class'=>'img-responsive')),$base.$row["Image"]["dir"]."/".$row["Image"]["attachment"],array('class'=>'thumbnail','id'=>'img'.$i,'escape'=>false)));
+      array('class'=>'img-responsive')),$base.$row["Image"]["dir"]."/".$row["Image"]["attachment"],
+      array('class'=>'thumbnail','id'=>'img'.$i,'escape'=>false)),array('class' => '.col-xs-12 .col-sm-6 .col-md-3' ));
       $i++;
   /*   echo $this->Html->div('',$this->Html->image("/files/image/attachment/"."/".$row["Image"]["dir"]."/".$row["Image"]["attachment"],
      array('class'=>'img-responsive　popup-image')),array('id'=>'dummy'));*/

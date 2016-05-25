@@ -10,7 +10,6 @@ $(document).ready(function(){
 $(function(){
   var $group = $('.thumbnail-list > li');
   var $slide = $('.modal-set > li > img');
-  var groupIndex = $slide.index(this);
   var length = $slide.length;
   var $cur;
 function cover(id){
@@ -30,18 +29,23 @@ $('a.thumbnail').click(function(e){
     $('#next').click(function(e){
       e.preventDefault();
       var tmp = (Number($cur[3]) + 1)%length;
+/*
       if(tmp == 0){
         return false;
       }
+*/
       $cur = "img" + tmp;
+      console.log($cur[3]);
       cover($cur);
     })
     $('#prev').click(function(e){
       e.preventDefault();
       var tmp = (Number($cur[3]) - 1 +length)%length;
+/*
       if(tmp == length - 1){
         return false;
       }
+*/
       $cur = "img" + tmp;
       cover($cur);
     })

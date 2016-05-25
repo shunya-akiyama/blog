@@ -12,17 +12,17 @@ header > .col-xs-12 > h1 a{
   color: #ffffff;
 }
 
-header > .col-xs-12 > #search{
+ #search > .glyphicon-search{
   display: inline;
-}
-.fa-search:hover{
-cursor: pointer;
-}
-header > .col-xs-12 > #search >p{
-  text-align: center;
-  width: 10%;
-  margin-left: auto;
+  font-size: 30px;
   color: #ffffff;
+  position: absolute;
+  right: 20px;
+  top: 30px;
+}
+.glyphicon-search:hover{
+cursor: pointer;
+font-weight: bold;
 }
 #search_form > .input-group{
   float: left;
@@ -32,12 +32,21 @@ header > .col-xs-12 > #search >p{
   display: inline;
   margin-left: auto;
 }
-#search_form > li > i{
+#search_form > li > .glyphicon-bookmark{
+  font-size: 30px;
+  color: #ffffff;
+}
+#search_form > li > .glyphicon-tags{
+  font-size: 30px;
   color: #ffffff;
 }
 .container >.row > article >
  ul > li > h2,a{
   color: #000000;
+}
+.tags{
+  float: left;
+  overflow: hidden;
 }
 
 header >.col-xs-12 > .container >
@@ -56,6 +65,9 @@ header >.col-xs-12 > .container >
 .container-fluid > .container{
   z-index: -1;
 }
+.glyphicon-bookmark ,.glyphicon-tags{
+  color: #000000;
+}
 /*
 .container-fluid > .container >
 .row > article > .container > .col-xs-12 >
@@ -63,18 +75,15 @@ header >.col-xs-12 > .container >
 }
 
 */
-
-.modal-wrap > .thumbnail-list > li{
+.thumbnail-list > li{
   float: left;
-  display: block;
-  overflow: hidden;
 }
 .thumbnail{
   width:300px;
+  height: 100%;
   margin: 10px 0;
 }
 .modal-wrap{
-  width: 500px;
   overflow: hidden;
 }
 
@@ -96,6 +105,10 @@ header >.col-xs-12 > .container >
 }
 .paging{
   overflow: hidden;
+}
+.paging > .current{
+  background-color: #428bca;
+  color:#ffffff;
 }
 .paging > li{
   float: left;

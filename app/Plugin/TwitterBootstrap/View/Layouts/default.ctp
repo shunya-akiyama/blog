@@ -15,11 +15,10 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<meta name="author" content="">
 
 	<!-- Le styles -->
-  <?php echo $this->Html->css('http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css'); ?>
-  <?php echo $this->Html->css('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css'); ?>
+  <?php echo $this->Html->css('reset.css'); ?>
 	<?php echo $this->Html->css('bootstrap'); ?>
   <?php echo $this->Html->css('style'); ?>
-  <?php echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js') ?>
+  <?php echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js') ?>
 	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -39,7 +38,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 </head>
 
 <body>
-<div class="container-fluid">
+<div class="container-fluid row">
 	<header>
     <?php echo $this->element('head_menu',array('tag'=>$tag)); ?>
 	</header>
