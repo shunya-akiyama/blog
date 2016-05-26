@@ -6,69 +6,62 @@ public $order = ('Post.id DESC');
 public $actsAs = array('Search.Searchable');
 
     public $validate = array(
-      'title'=>array(
+    'title'=>array(
         'rule'=>'notBlank',
         'required'=>'false',
         'allowEmpty'=>'true',
         'message'=>'タイトルは必須です'
-      ),
-      'body'=>array(
+    ),
+    'body'=>array(
         'rule'=>'notBlank',
         'required'=>'false',
         'allowEmpty'=>'true',
         'message'=>'本文も必須です'
-      ),
-      'Image.0.attachment'=>array(
-        'rule'=>array('uploadError'),
-        'required'=>'false',
-        'allowEmpty'=>'true',
-        'message'=>'画像が選択されていないか、拡張子が違う可能性があります。ファイルはjpg/jpeg/gif/pngのみ保存できます。'
-      )
+    ),
     );
 
-  public $hasMany = array(
+    public $hasMany = array(
     'Image'=>array(
-      'className' => 'Attachment',
-      'foreignKey'=>'post_id',
-      'conditions'=>array(
-        'Image.post_id'=>'Post'
-      ),
+        'className' => 'Attachment',
+        'foreignKey'=>'post_id',
+        'conditions'=>array(
+        'Image.post_id'=>'Post',
     ),
-  );
-  public $belongsTo = array(
+    ),
+    );
+    public $belongsTo = array(
     'Category' => array(
-      'className'=>'Category',
-      'foreignKey' => 'category_id',
-      'conditions' => ''
+        'className'=>'Category',
+        'foreignKey' => 'category_id',
+        'conditions' => ''
     ),
-  );
+    );
 
-public $hasAndBelongsToMany = array(
-  'Tag'=>array(
-    'className'=>'Tag',
-    'joinTable'=>'posts_tags',
-    'foreignKey'=>'post_id',
-    'associationForeignKey'=>'tag_id',
-    'with'=>'PostsTag',
-    'conditions'=>''
-  ),
-);
-
-public $filterArgs = array(
-  'titles'=>array(
-    'type'=>'like',
-    'field'=>array('Post.title'),
+    public $hasAndBelongsToMany = array(
+    'Tag'=>array(
+        'className'=>'Tag',
+        'joinTable'=>'posts_tags',
+        'foreignKey'=>'post_id',
+        'associationForeignKey'=>'tag_id',
+        'with'=>'PostsTag',
+        'conditions'=>''
     ),
+    );
 
-  'category'=>array(
-  'type'=>'query',
-  'method'=>'findByCategories',
-),
-  'tag'=>array(
-    'type'=>'query',
-    'method'=>'findByTags',
-  ),
-);
+    public $filterArgs = array(
+    'titles'=>array(
+        'type'=>'like',
+        'field'=>array('Post.title'),
+    ),
+    'category'=>array(
+        'type'=>'query',
+        'method'=>'findByCategories',
+    ),
+    'tag'=>array(
+        'type'=>'query',
+        'method'=>'findByTags',
+    ),
+    );
 
 
   public function findByCategories($data=array()){

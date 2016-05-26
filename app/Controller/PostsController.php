@@ -89,7 +89,8 @@ class PostsController extends AppController{
   public function add(){
     if($this->request->is('post')){
       $this->Post->create();
-      if($this->Post->saveAll($this->request->data)){
+      $data = $this->request->data;
+      if($this->Post->saveAll($data)){
         $this->Flash->success(__('投稿完了'));
         return $this->redirect(array('controller'=>'users','action'=>'index'));
       }
