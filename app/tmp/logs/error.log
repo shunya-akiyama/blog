@@ -71436,3 +71436,65 @@ Stack Trace:
 #15 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
 #16 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #17 {main}
+2016-05-27 18:28:04 Error: Fatal Error (4): syntax error, unexpected '}' in [/vagrant/blog/app/Model/Attachment.php, line 43]
+2016-05-27 18:28:04 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 43)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 43, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 43, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-05-27 18:28:30 Error: Fatal Error (64): Cannot use [] for reading in [/vagrant/blog/app/Model/Attachment.php, line 39]
+2016-05-27 18:28:30 Error: [FatalErrorException] Cannot use [] for reading
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use [] f...', '/vagrant/blog/a...', 39)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot use [] f...', '/vagrant/blog/a...', 39, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 64, 'Cannot use [] f...', '/vagrant/blog/a...', 39, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-05-27 18:34:15 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Attachment.model' in 'where clause'
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT `Image`....', Array)
+#2 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(664): DboSource->execute('SELECT `Image`....', Array, Array)
+#3 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(1451): DboSource->fetchAll('SELECT `Image`....', false)
+#4 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(1285): DboSource->_fetchHasMany(Object(Post), 'SELECT `Image`....', Array)
+#5 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(1144): DboSource->queryAssociation(Object(Post), Object(Attachment), 'hasMany', 'Image', Array, Array, true, Array, 0, Array)
+#6 /vagrant/blog/lib/Cake/Model/Model.php(3031): DboSource->read(Object(Post), Array)
+#7 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#8 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#9 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#10 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#11 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#12 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#13 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#14 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#15 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#16 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2016-05-27 18:35:44 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Attachment.model' in 'where clause'
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT `Image`....', Array)
+#2 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(664): DboSource->execute('SELECT `Image`....', Array, Array)
+#3 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(1451): DboSource->fetchAll('SELECT `Image`....', false)
+#4 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(1285): DboSource->_fetchHasMany(Object(Post), 'SELECT `Image`....', Array)
+#5 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(1144): DboSource->queryAssociation(Object(Post), Object(Attachment), 'hasMany', 'Image', Array, Array, true, Array, 0, Array)
+#6 /vagrant/blog/lib/Cake/Model/Model.php(3031): DboSource->read(Object(Post), Array)
+#7 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#8 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#9 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#10 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#11 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#12 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#13 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#14 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#15 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#16 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}

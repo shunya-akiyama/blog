@@ -34,13 +34,9 @@ class Attachment extends AppModel{
   );
 
     public function uploadCheck($check){
-      $i = 0;
-      if($i < 3){
         $value = array_values($check);
           debug($value);
-          return $value[$i]['error'] != 4;
-           $i++;
-      }
+          return $value[0]['error'] != 4;
     }
 
 }
