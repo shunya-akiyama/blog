@@ -29,6 +29,7 @@ public $actsAs = array('Search.Searchable');
     ),
     ),
     );
+    
     public $belongsTo = array(
     'Category' => array(
         'className'=>'Category',

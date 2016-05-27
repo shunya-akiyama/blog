@@ -27,22 +27,13 @@ class PostsController extends AppController{
 		$posts = $this->Paginator->paginate('Post');
 		$this->set('posts',$posts);
     $post = $this->Post->findById($id);
-    $img=$this->Attachment->find('count',array('conditions'=>array(
-                                              'Attachment.post_id'=>$id,
-                                              'NOT'=>array(
-                                              'Attachment.dir'=>'null'
-                                              )
-                                            )));
+    $img=$this->Attachment->find('count',
+    array('conditions'=>array('Attachment.post_id'=>$id,'NOT'=>array('Attachment.dir'=>'null'))));
 
     $this->set('img',$img);
 //タイトル検索
 		$this->Prg->commonProcess();
 	  $this->Paginator->settings['conditions']=$this->Post->parseCriteria($this->Prg->parsedParams());
-		$this->set('posts',$this->Paginator->paginate());
-//カテゴリ検索
-		$this->set('category',$this->Category->find('list',array('fields'=>array('id','category'))));
-//タグ検索
-    $this->set('tag',$this->Post->Tag->find('list',array('fields'=>array('id','tag'))));
 }
 
 
@@ -55,10 +46,6 @@ class PostsController extends AppController{
 		$this->Prg->commonProcess();
 	  $this->Paginator->settings['conditions']=$this->Post->parseCriteria($this->Prg->parsedParams());
 		$this->set('posts',$this->Paginator->paginate());
-//カテゴリ検索
-		$this->set('category',$this->Category->find('list',array('fields'=>array('id','category'))));
-//タグ検索
-    $this->set('tag',$this->Post->Tag->find('list',array('fields'=>array('id','tag'))));
 	}
 
   public function view($id = null){
@@ -66,43 +53,30 @@ class PostsController extends AppController{
       throw new NotFoundException(__('ご覧になれません。'));
     }
     $post = $this->Post->findById($id);
-    $img=$this->Attachment->find('count',array('conditions'=>array(
-                                              'Attachment.post_id'=>$id,
-                                              'NOT'=>array(
-                                              'Attachment.dir'=>'null'
-                                              )
-                                            )));
-
+    $img=$this->Attachment->find('count',
+    array('conditions'=>array('Attachment.post_id'=>$id,'NOT'=>array('Attachment.dir'=>'null'))));
     $this->set('img',$img);
-
     if(!$post){
       throw new NotFoundException(__('ご覧になれません。'));
     }
-  //カテゴリ検索
-    $this->set('category',$this->Category->find('list',array('fields'=>array('id','category'))));
-//タグ検索
-    $this->set('tag',$this->Post->Tag->find('list',array('fields'=>array('id','tag'))));
     $this->set('post', $post);
     }
 
 
   public function add(){
     if($this->request->is('post')){
-      $this->Post->create();
-      $data = $this->request->data;
-      if($this->Post->saveAll($data)){
+        $this->Post->create();
+    $data = $this->request->data;
+    if($this->Post->saveAll($data)){
         $this->Flash->success(__('投稿完了'));
-        return $this->redirect(array('controller'=>'users','action'=>'index'));
-      }
+        $this->Attachment->create();
+      return $this->redirect(array('controller'=>'users','action'=>'index'));
+    }
     }
     //カテゴリ、タグの呼び出し
     $category = $this->set('categories',$this->Post->Category->find('list',array('fields'=>array('category'))));
     $tag = $this->set('tags',$this->Post->Tag->find('list',array('fields'=>array('tag'))));
     $this->set(compact('categories','tags'));
-    //カテゴリ検索
-        $this->set('category',$this->Category->find('list',array('fields'=>array('id','category'))));
-    //タグ検索
-        $this->set('tag',$this->Post->Tag->find('list',array('fields'=>array('id','tag'))));
 }
 
   public function edit($id = null){

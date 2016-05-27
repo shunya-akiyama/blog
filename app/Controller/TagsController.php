@@ -7,12 +7,6 @@ class TagsController extends AppController{
 	public $uses = array('Post','Category','Tag','PostsTag','User');
 
   public function add(){
-		$this->set('posts',$this->Paginator->paginate());
-//カテゴリ検索
-		$this->set('category',$this->Category->find('list',array('fields'=>array('id','category'))));
-//タグ検索
-		$this->set('tag',$this->Post->Tag->find('list',array('fields'=>array('id','tag'))));
-
     if($this->request->is('post')){
       $this->Tag->create();
       if($this->Tag->save($this->request->data)){

@@ -15,11 +15,6 @@ class ZipnumbersController extends AppController {
         $this->set('answer',$this->Zipnumber->find('first',
         array('conditions' => array('Zipnumber.zip' => ''))));
 
-        $this->set('posts',$this->Paginator->paginate());
-        //カテゴリ検索
-        $this->set('category',$this->Category->find('list',array('fields'=>array('id','category'))));
-        //タグ検索
-        $this->set('tag',$this->Post->Tag->find('list',array('fields'=>array('id','tag'))));
     }
 
 

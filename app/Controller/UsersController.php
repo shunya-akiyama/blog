@@ -13,7 +13,8 @@ class UsersController extends AppController{
 	public $paginate = array('maxLimit'=>5);
 	public $uses = array('Post','Category','PostsTag','User');
   public function beforeFilter() {
-        $this->Auth->allow('logout','find','login','add');
+    parent::beforeFilter();
+      $this->Auth->allow('logout','find','login','add');
     }
 
 	public function index(){
@@ -24,24 +25,9 @@ class UsersController extends AppController{
     $this->Paginator->settings = $this->paginate;
 		$posts = $this->Paginator->paginate('Post');
 		$this->set('posts',$posts);
-//タイトル検索
-		$this->Prg->commonProcess();
-	  $this->Paginator->settings['conditions']=$this->Post->parseCriteria($this->Prg->parsedParams());
-		$this->set('posts',$this->Paginator->paginate());
-//カテゴリ検索
-		$this->set('category',$this->Category->find('list',array('fields'=>array('id','category'))));
-//タグ検索
-    $this->set('tag',$this->Post->Tag->find('list',array('fields'=>array('id','tag'))));
-
 	}
 
   public function add() {
-		//タイトル検索
-				$this->set('posts',$this->Paginator->paginate());
-		//カテゴリ検索
-				$this->set('category',$this->Category->find('list',array('fields'=>array('id','category'))));
-		//タグ検索
-		    $this->set('tag',$this->Post->Tag->find('list',array('fields'=>array('id','tag'))));
       if ($this->request->is('post')){
           $this->User->create();
           if ($this->User->save($this->request->data)){
@@ -54,13 +40,6 @@ class UsersController extends AppController{
       }
   }
 	public function login(){
-		//タイトル検索
-				$this->set('posts',$this->Paginator->paginate());
-		//カテゴリ検索
-				$this->set('category',$this->Category->find('list',array('fields'=>array('id','category'))));
-		//タグ検索
-		    $this->set('tag',$this->Post->Tag->find('list',array('fields'=>array('id','tag'))));
-
     if($this->request->is('post')){
 			if($this->Auth->login()){
 				$this->redirect($this->Auth->redirect(array('action'=>'index')));

@@ -26,7 +26,16 @@ public $helpers = array(
   'Paginator'=>array('className'=>'TwitterBootstrap.BootstrapPaginator')
 );
 public $layout = 'TwitterBootstrap.default';
+
+public function beforeFilter() {
+//タイトル検索
+  $this->set('posts',$this->Paginator->paginate());
+//カテゴリ検索
+  $this->set('category',$this->Category->find('list',array('fields'=>array('id','category'))));
+//タグ検索
+  $this->set('tag',$this->Post->Tag->find('list',array('fields'=>array('id','tag'))));
+   }
+
+
 }
-
-
 ?>
