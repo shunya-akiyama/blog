@@ -71,7 +71,7 @@ class DATABASE_CONFIG {
 		'persistent' => false,
 		'host' => 'localhost',
 		'login' => 'root',
-		'password' => 'Blog_Test_2016',
+		'password' => '35690954',
 		'database' => 'akiyama_blog',
 		'prefix' => '',
 		//'encoding' => 'utf8',

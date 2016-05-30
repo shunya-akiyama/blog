@@ -33,10 +33,17 @@ class Attachment extends AppModel{
     ),
   );
 
-    public function uploadCheck($imgcheck){
-      $imgcheck = empty($this->data[$this->alias]['attachment']);
-debug($this->data);
-return !$imgcheck;
+    public function uploadCheck(){
+    $imgcheck = $this->data[$this->alias]['attachment'];
+
+debug($imgcheck);
+if(($imgcheck['name'] == '') == $imgcheck['name']){
+	return $imgcheck;
+}else if(($imgcheck['name'] == '') !== count($imgcheck['name'])){
+debug(($imgcheck['name'] == '') == count($imgcheck['name']));
+	return $imgcheck;
+}
+
 		}
 
 }
