@@ -22,17 +22,33 @@ class Attachment extends AppModel{
     );
 
     public $validate = array(
-
-        'attachment' => array(
-        'rule'=>'uploadCheck',
-        'message'=>'一枚くらい登録してください。',
-  //      'required'=>'false',
+/*      'attachment' => array(
+        'rule'=>array('extension',array('jpg','jpeg','gif','png')),
+        'message'=>'jpg,jpeg,gif,pngのみ登録できます。',
         'allowEmpty'=>'true',
-  //      'rule'=>array('multiple'=>array('min'=>1),
-  //      'message'=>'登録できない拡張子です。'
-  //        ),
+        'require'=>'false',
       ),
-    );
+      'attachment' => array(
+      'rule'=>'uploadCheck',
+      'message'=>'一枚くらい登録してください。',
+      'allowEmpty'=>'true',
+      'require'=>'false',
+    ),
+*/
+        'attachment' => array(
+        'rule1'=>array(
+          'rule'=>'uploadCheck',
+          'message'=>'一枚くらい登録してください。',
+          'allowEmpty'=>'true',
+          'require'=>'false',
+        ),
+        'rule2'=>array(
+          'rule'=>array('extension',array('jpg','jpeg','gif','png')),
+          'message'=>'jpg,jpeg,gif,pngのみ登録できます。',
+      ),
+        
+    )
+  );
 
     public function uploadCheck(){
       $imgcheck = $this->data[$this->alias];
