@@ -66,6 +66,19 @@ class PostsController extends AppController{
   public function add(){
     if($this->request->is('post')){
         $this->Post->create();
+
+    //debug($this->request->data['Image']);
+    $flg = 0;
+    foreach($this->request->data['Image'] as $img){
+      if ($img['attachment']['tmp_name']) $flg = 1;
+    }
+    //debug($this->request->data['Image']);
+    $i = 0;
+    foreach($this->request->data['Image'] as $img){
+      $this->request->data['Image'][$i]['attachment']['tmp_flg'] = $flg;
+      $i ++;
+    }
+    //debug($this->request->data['Image']);
     $data = $this->request->data;
     if($this->Post->saveAll($data)){
         $this->Flash->success(__('投稿完了'));

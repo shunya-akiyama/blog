@@ -71741,3 +71741,197 @@ Stack Trace:
 #15 /var/www/html/akiyama_blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
 #16 /var/www/html/akiyama_blog/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #17 {main}
+2016-05-31 11:11:54 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /vagrant/blog/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3626): ConnectionManager::getDataSource('default')
+#3 /vagrant/blog/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#5 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#6 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#7 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#8 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#9 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#10 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#11 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#12 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#13 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#14 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#15 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2016-05-31 11:18:21 Error: Fatal Error (4): syntax error, unexpected ')' in [/vagrant/blog/app/Model/Attachment.php, line 42]
+2016-05-31 11:18:21 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 42)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 42, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 42, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-05-31 11:26:31 Error: Fatal Error (4): syntax error, unexpected 'unset' (T_UNSET) in [/vagrant/blog/app/Model/Attachment.php, line 44]
+2016-05-31 11:26:31 Error: [FatalErrorException] syntax error, unexpected 'unset' (T_UNSET)
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 44)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 44, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 44, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-05-31 11:29:06 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'unset' at line 1
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('unset', Array)
+#2 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(664): DboSource->execute('unset', Array, Array)
+#3 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(607): DboSource->fetchAll('unset', Array, Array)
+#4 /vagrant/blog/lib/Cake/Model/Model.php(827): DboSource->query('unset', Array, Object(Attachment))
+#5 /vagrant/blog/app/Model/Attachment.php(44): Model->__call('unset', Array)
+#6 /vagrant/blog/app/Model/Attachment.php(44): Attachment->unset(Array)
+#7 [internal function]: Attachment->uploadCheck(Array, Array)
+#8 /vagrant/blog/lib/Cake/Model/Validator/CakeValidationRule.php(275): call_user_func_array(Array, Array)
+#9 /vagrant/blog/lib/Cake/Model/Validator/CakeValidationSet.php(135): CakeValidationRule->process('attachment', Array, Array)
+#10 /vagrant/blog/lib/Cake/Model/ModelValidator.php(268): CakeValidationSet->validate(Array, false)
+#11 /vagrant/blog/lib/Cake/Model/ModelValidator.php(99): ModelValidator->errors(Array)
+#12 /vagrant/blog/lib/Cake/Model/Model.php(3469): ModelValidator->validates(Array)
+#13 /vagrant/blog/lib/Cake/Model/ModelValidator.php(214): Model->validates(Array)
+#14 /vagrant/blog/lib/Cake/Model/Model.php(2404): ModelValidator->validateMany(Array, Array)
+#15 /vagrant/blog/lib/Cake/Model/ModelValidator.php(162): Model->validateMany(Array, Array)
+#16 /vagrant/blog/lib/Cake/Model/Model.php(2650): ModelValidator->validateAssociated(Array, Array)
+#17 /vagrant/blog/lib/Cake/Model/Model.php(2454): Model->validateAssociated(Array, Array)
+#18 /vagrant/blog/lib/Cake/Model/Model.php(2278): Model->saveAssociated(Array, Array)
+#19 /vagrant/blog/app/Controller/PostsController.php(70): Model->saveAll(Array)
+#20 [internal function]: PostsController->add()
+#21 /vagrant/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#22 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#23 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#24 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#25 {main}
+2016-05-31 11:39:30 Error: Fatal Error (4): syntax error, unexpected '?>', expecting function (T_FUNCTION) in [/vagrant/blog/app/Model/Attachment.php, line 55]
+2016-05-31 11:39:30 Error: [FatalErrorException] syntax error, unexpected '?>', expecting function (T_FUNCTION)
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 55)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 55, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 55, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-05-31 11:43:17 Error: Fatal Error (4): syntax error, unexpected '}', expecting ',' or ';' in [/vagrant/blog/app/Model/Attachment.php, line 43]
+2016-05-31 11:43:17 Error: [FatalErrorException] syntax error, unexpected '}', expecting ',' or ';'
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 43)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 43, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 43, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-05-31 12:21:31 Error: Fatal Error (4): syntax error, unexpected '{' in [/vagrant/blog/app/Model/Attachment.php, line 41]
+2016-05-31 12:21:31 Error: [FatalErrorException] syntax error, unexpected '{'
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 41, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 41, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-05-31 12:28:06 Error: Fatal Error (4): syntax error, unexpected ';' in [/vagrant/blog/app/Model/Attachment.php, line 40]
+2016-05-31 12:28:06 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 40, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 40, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-05-31 12:34:28 Error: Fatal Error (4): syntax error, unexpected 'is_array' (T_STRING) in [/vagrant/blog/app/Model/Attachment.php, line 41]
+2016-05-31 12:34:28 Error: [FatalErrorException] syntax error, unexpected 'is_array' (T_STRING)
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 41, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 41, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-05-31 12:34:57 Error: Fatal Error (4): syntax error, unexpected '==' (T_IS_EQUAL) in [/vagrant/blog/app/Model/Attachment.php, line 41]
+2016-05-31 12:34:57 Error: [FatalErrorException] syntax error, unexpected '==' (T_IS_EQUAL)
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 41, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 41, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-05-31 12:38:58 Error: Fatal Error (4): syntax error, unexpected '}' in [/vagrant/blog/app/Controller/PostsController.php, line 72]
+2016-05-31 12:38:58 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 72)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 72, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 72, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-05-31 12:39:35 Error: Fatal Error (4): syntax error, unexpected ';' in [/vagrant/blog/app/Controller/PostsController.php, line 71]
+2016-05-31 12:39:35 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 71)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 71, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 71, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-05-31 12:39:41 Error: Fatal Error (4): syntax error, unexpected ';' in [/vagrant/blog/app/Controller/PostsController.php, line 71]
+2016-05-31 12:39:41 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 71)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 71, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 71, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-05-31 12:39:43 Error: Fatal Error (4): syntax error, unexpected ';' in [/vagrant/blog/app/Controller/PostsController.php, line 71]
+2016-05-31 12:39:43 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 71)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 71, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 71, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-05-31 13:13:50 Error: Fatal Error (1): Call to undefined function uploadCheck() in [/vagrant/blog/app/Model/Attachment.php, line 40]
+2016-05-31 13:13:50 Error: [FatalErrorException] Call to undefined function uploadCheck()
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/vagrant/blog/a...', 40)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/vagrant/blog/a...', 40, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/vagrant/blog/a...', 40, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-05-31 13:41:01 Error: Fatal Error (4): syntax error, unexpected ')' in [/vagrant/blog/app/Model/Attachment.php, line 43]
+2016-05-31 13:41:01 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 43)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 43, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 43, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
