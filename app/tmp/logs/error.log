@@ -71935,3 +71935,2390 @@ Stack Trace:
 #3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2016-05-31 15:35:58 Error: [MissingActionException] Action UsersController::blog_acl() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'blog_acl',
+)
+Request URL: /users/blog_acl
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-06-01 11:13:52 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1049] Unknown database \'akiyama_blog\'',
+  'enabled' => true,
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /vagrant/blog/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3626): ConnectionManager::getDataSource('default')
+#3 /vagrant/blog/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#5 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#6 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#7 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#8 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#9 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#10 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#11 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#12 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#13 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#14 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#15 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2016-06-01 11:15:58 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 11:16:01 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 11:16:04 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 11:17:50 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 11:17:51 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 11:18:30 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 11:18:31 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 11:19:36 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 11:19:37 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 11:24:06 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 11:24:07 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 11:25:50 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 11:31:15 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1049] Unknown database \'akisama_blog\'',
+  'enabled' => true,
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /vagrant/blog/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3626): ConnectionManager::getDataSource('default')
+#3 /vagrant/blog/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#5 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#6 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#7 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#8 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#9 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#10 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#11 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#12 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#13 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#14 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#15 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2016-06-01 11:31:39 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 11:32:36 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 11:37:39 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 11:37:46 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 11:40:47 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 11:40:47 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 11:49:09 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 11:49:09 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:25:40 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:25:45 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:28:10 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:28:10 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:28:10 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:28:11 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:33:01 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:33:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:33:02 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:33:02 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:33:04 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:33:05 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:33:50 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:33:50 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:33:51 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:33:51 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:35:51 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:35:52 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:35:52 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:35:53 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:35:58 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /categories/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#6 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(CategoriesController), Object(CakeRequest))
+#10 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-06-01 12:35:58 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:37:57 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:37:57 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:40:08 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:40:08 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:42:38 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:42:38 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:44:15 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:44:16 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:44:19 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:44:19 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:44:36 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:44:36 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:44:50 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:44:50 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:45:01 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:45:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:45:08 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:45:09 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:45:56 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:45:56 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:45:57 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:45:57 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:46:27 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:46:27 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:46:32 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:46:33 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:46:33 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:49:23 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:49:23 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:49:35 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:49:35 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:49:36 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:49:37 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:49:41 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:49:41 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:49:47 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:49:47 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:49:50 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:49:51 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:49:59 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:50:00 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:52:47 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:52:47 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:52:48 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:52:48 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:55:51 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:55:52 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:55:54 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:55:54 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:58:15 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:58:15 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:58:16 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Model.php(3653): Model->setSource('posts')
+#1 /vagrant/blog/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/blog/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /vagrant/blog/app/Controller/AppController.php(32): PaginatorComponent->paginate()
+#5 /vagrant/blog/app/Controller/PostsController.php(20): AppController->beforeFilter()
+#6 [internal function]: PostsController->beforeFilter(Object(CakeEvent))
+#7 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 12:58:16 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:59:18 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:59:23 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:59:31 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:59:40 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 12:59:46 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'name' doesn't have a default value
+Request URL: /users/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ak...', Array)
+#2 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ak...')
+#3 /vagrant/blog/lib/Cake/Model/Model.php(1933): DboSource->create(Object(User), Array, Array)
+#4 /vagrant/blog/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /vagrant/blog/app/Controller/UsersController.php(33): Model->save(Array)
+#6 [internal function]: UsersController->add()
+#7 /vagrant/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-06-01 12:59:46 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 13:00:13 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 13:00:15 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 13:00:20 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.username' in 'where clause'
+Request URL: /users/login
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(664): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(1113): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /vagrant/blog/lib/Cake/Model/Model.php(3031): DboSource->read(Object(User), Array)
+#5 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('first', Array)
+#6 /vagrant/blog/lib/Cake/Controller/Component/Auth/BaseAuthenticate.php(130): Model->find('first', Array)
+#7 /vagrant/blog/lib/Cake/Controller/Component/Auth/FormAuthenticate.php(79): BaseAuthenticate->_findUser('akiyama', '1111')
+#8 /vagrant/blog/lib/Cake/Controller/Component/AuthComponent.php(766): FormAuthenticate->authenticate(Object(CakeRequest), Object(CakeResponse))
+#9 /vagrant/blog/lib/Cake/Controller/Component/AuthComponent.php(611): AuthComponent->identify(Object(CakeRequest), Object(CakeResponse))
+#10 /vagrant/blog/app/Controller/UsersController.php(44): AuthComponent->login()
+#11 [internal function]: UsersController->login()
+#12 /vagrant/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#13 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#14 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2016-06-01 13:00:21 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 13:02:13 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 13:02:16 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 13:02:20 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 13:02:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 13:02:31 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 13:06:02 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'attachment' doesn't have a default value
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ak...', Array)
+#2 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ak...')
+#3 /vagrant/blog/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Attachment), Array, Array)
+#4 /vagrant/blog/lib/Cake/Model/Model.php(1745): Model->_doSave(Array, Array)
+#5 /vagrant/blog/lib/Cake/Model/Model.php(2343): Model->save(Array, Array)
+#6 /vagrant/blog/lib/Cake/Model/Model.php(2563): Model->saveMany(Array, Array)
+#7 /vagrant/blog/lib/Cake/Model/Model.php(2278): Model->saveAssociated(Array, Array)
+#8 /vagrant/blog/app/Controller/PostsController.php(83): Model->saveAll(Array)
+#9 [internal function]: PostsController->add()
+#10 /vagrant/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2016-06-01 13:07:32 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'attachment' doesn't have a default value
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ak...', Array)
+#2 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ak...')
+#3 /vagrant/blog/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Attachment), Array, Array)
+#4 /vagrant/blog/lib/Cake/Model/Model.php(1745): Model->_doSave(Array, Array)
+#5 /vagrant/blog/lib/Cake/Model/Model.php(2343): Model->save(Array, Array)
+#6 /vagrant/blog/lib/Cake/Model/Model.php(2563): Model->saveMany(Array, Array)
+#7 /vagrant/blog/lib/Cake/Model/Model.php(2278): Model->saveAssociated(Array, Array)
+#8 /vagrant/blog/app/Controller/PostsController.php(83): Model->saveAll(Array)
+#9 [internal function]: PostsController->add()
+#10 /vagrant/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2016-06-01 13:08:44 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'attachment' doesn't have a default value
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ak...', Array)
+#2 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ak...')
+#3 /vagrant/blog/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Attachment), Array, Array)
+#4 /vagrant/blog/lib/Cake/Model/Model.php(1745): Model->_doSave(Array, Array)
+#5 /vagrant/blog/lib/Cake/Model/Model.php(2343): Model->save(Array, Array)
+#6 /vagrant/blog/lib/Cake/Model/Model.php(2563): Model->saveMany(Array, Array)
+#7 /vagrant/blog/lib/Cake/Model/Model.php(2278): Model->saveAssociated(Array, Array)
+#8 /vagrant/blog/app/Controller/PostsController.php(83): Model->saveAll(Array)
+#9 [internal function]: PostsController->add()
+#10 /vagrant/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2016-06-01 13:08:58 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'attachment' doesn't have a default value
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ak...', Array)
+#2 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ak...')
+#3 /vagrant/blog/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Attachment), Array, Array)
+#4 /vagrant/blog/lib/Cake/Model/Model.php(1745): Model->_doSave(Array, Array)
+#5 /vagrant/blog/lib/Cake/Model/Model.php(2343): Model->save(Array, Array)
+#6 /vagrant/blog/lib/Cake/Model/Model.php(2563): Model->saveMany(Array, Array)
+#7 /vagrant/blog/lib/Cake/Model/Model.php(2278): Model->saveAssociated(Array, Array)
+#8 /vagrant/blog/app/Controller/PostsController.php(83): Model->saveAll(Array)
+#9 [internal function]: PostsController->add()
+#10 /vagrant/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2016-06-01 13:11:00 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'attachment' doesn't have a default value
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ak...', Array)
+#2 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ak...')
+#3 /vagrant/blog/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Attachment), Array, Array)
+#4 /vagrant/blog/lib/Cake/Model/Model.php(1745): Model->_doSave(Array, Array)
+#5 /vagrant/blog/lib/Cake/Model/Model.php(2343): Model->save(Array, Array)
+#6 /vagrant/blog/lib/Cake/Model/Model.php(2563): Model->saveMany(Array, Array)
+#7 /vagrant/blog/lib/Cake/Model/Model.php(2278): Model->saveAssociated(Array, Array)
+#8 /vagrant/blog/app/Controller/PostsController.php(83): Model->saveAll(Array)
+#9 [internal function]: PostsController->add()
+#10 /vagrant/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2016-06-01 13:13:12 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'attachment' doesn't have a default value
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ak...', Array)
+#2 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ak...')
+#3 /vagrant/blog/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Attachment), Array, Array)
+#4 /vagrant/blog/lib/Cake/Model/Model.php(1745): Model->_doSave(Array, Array)
+#5 /vagrant/blog/lib/Cake/Model/Model.php(2343): Model->save(Array, Array)
+#6 /vagrant/blog/lib/Cake/Model/Model.php(2563): Model->saveMany(Array, Array)
+#7 /vagrant/blog/lib/Cake/Model/Model.php(2278): Model->saveAssociated(Array, Array)
+#8 /vagrant/blog/app/Controller/PostsController.php(83): Model->saveAll(Array)
+#9 [internal function]: PostsController->add()
+#10 /vagrant/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2016-06-01 13:14:44 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'attachment' doesn't have a default value
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ak...', Array)
+#2 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ak...')
+#3 /vagrant/blog/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Attachment), Array, Array)
+#4 /vagrant/blog/lib/Cake/Model/Model.php(1745): Model->_doSave(Array, Array)
+#5 /vagrant/blog/lib/Cake/Model/Model.php(2343): Model->save(Array, Array)
+#6 /vagrant/blog/lib/Cake/Model/Model.php(2563): Model->saveMany(Array, Array)
+#7 /vagrant/blog/lib/Cake/Model/Model.php(2278): Model->saveAssociated(Array, Array)
+#8 /vagrant/blog/app/Controller/PostsController.php(83): Model->saveAll(Array)
+#9 [internal function]: PostsController->add()
+#10 /vagrant/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2016-06-01 13:15:14 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'attachment' doesn't have a default value
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ak...', Array)
+#2 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ak...')
+#3 /vagrant/blog/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Attachment), Array, Array)
+#4 /vagrant/blog/lib/Cake/Model/Model.php(1745): Model->_doSave(Array, Array)
+#5 /vagrant/blog/lib/Cake/Model/Model.php(2343): Model->save(Array, Array)
+#6 /vagrant/blog/lib/Cake/Model/Model.php(2563): Model->saveMany(Array, Array)
+#7 /vagrant/blog/lib/Cake/Model/Model.php(2278): Model->saveAssociated(Array, Array)
+#8 /vagrant/blog/app/Controller/PostsController.php(83): Model->saveAll(Array)
+#9 [internal function]: PostsController->add()
+#10 /vagrant/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2016-06-01 13:20:42 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'attachment' doesn't have a default value
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ak...', Array)
+#2 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ak...')
+#3 /vagrant/blog/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Attachment), Array, Array)
+#4 /vagrant/blog/lib/Cake/Model/Model.php(1745): Model->_doSave(Array, Array)
+#5 /vagrant/blog/lib/Cake/Model/Model.php(2343): Model->save(Array, Array)
+#6 /vagrant/blog/lib/Cake/Model/Model.php(2563): Model->saveMany(Array, Array)
+#7 /vagrant/blog/lib/Cake/Model/Model.php(2278): Model->saveAssociated(Array, Array)
+#8 /vagrant/blog/app/Controller/PostsController.php(83): Model->saveAll(Array)
+#9 [internal function]: PostsController->add()
+#10 /vagrant/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2016-06-01 13:25:09 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/image/attachment/79/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202016-05-18%2015.12.33.png
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 13:25:09 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/image/attachment/81/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202016-05-18%2015.12.51.png
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 13:25:09 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/image/attachment/80/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202016-05-18%2015.12.43.png
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 13:27:35 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'attachment' doesn't have a default value
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ak...', Array)
+#2 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ak...')
+#3 /vagrant/blog/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Attachment), Array, Array)
+#4 /vagrant/blog/lib/Cake/Model/Model.php(1745): Model->_doSave(Array, Array)
+#5 /vagrant/blog/lib/Cake/Model/Model.php(2343): Model->save(Array, Array)
+#6 /vagrant/blog/lib/Cake/Model/Model.php(2563): Model->saveMany(Array, Array)
+#7 /vagrant/blog/lib/Cake/Model/Model.php(2278): Model->saveAssociated(Array, Array)
+#8 /vagrant/blog/app/Controller/PostsController.php(83): Model->saveAll(Array)
+#9 [internal function]: PostsController->add()
+#10 /vagrant/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2016-06-01 15:48:08 Error: Fatal Error (64): Cannot redeclare class User in [/vagrant/blog/app/Model/Group.php, line 0]
+2016-06-01 15:48:08 Error: [FatalErrorException] Cannot redeclare class User
+Request URL: /groups/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', '/vagrant/blog/a...', 0)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', '/vagrant/blog/a...', 0, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', '/vagrant/blog/a...', 0, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-01 15:48:51 Error: Fatal Error (1): Call to a member function find() on null in [/vagrant/blog/app/Controller/AppController.php, line 37]
+2016-06-01 15:48:51 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /groups/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/vagrant/blog/a...', 37)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/vagrant/blog/a...', 37, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/vagrant/blog/a...', 37, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-01 15:49:49 Error: Fatal Error (1): Call to a member function find() on null in [/vagrant/blog/app/Controller/AppController.php, line 37]
+2016-06-01 15:49:49 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /groups/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/vagrant/blog/a...', 37)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/vagrant/blog/a...', 37, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/vagrant/blog/a...', 37, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-01 15:50:39 Error: Fatal Error (1): Call to a member function find() on null in [/vagrant/blog/app/Controller/AppController.php, line 37]
+2016-06-01 15:50:39 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /groups/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/vagrant/blog/a...', 37)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/vagrant/blog/a...', 37, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/vagrant/blog/a...', 37, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-01 15:52:12 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'username' doesn't have a default value
+Request URL: /groups/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ak...', Array)
+#2 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ak...')
+#3 /vagrant/blog/lib/Cake/Model/Model.php(1933): DboSource->create(Object(User), Array, Array)
+#4 /vagrant/blog/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /vagrant/blog/app/Controller/GroupsController.php(14): Model->save(Array)
+#6 [internal function]: GroupsController->add()
+#7 /vagrant/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(GroupsController), Array)
+#8 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(GroupsController), Object(CakeRequest))
+#10 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-06-01 15:53:23 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 15:54:03 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'username' doesn't have a default value
+Request URL: /groups/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ak...', Array)
+#2 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ak...')
+#3 /vagrant/blog/lib/Cake/Model/Model.php(1933): DboSource->create(Object(User), Array, Array)
+#4 /vagrant/blog/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /vagrant/blog/app/Controller/GroupsController.php(14): Model->save(Array)
+#6 [internal function]: GroupsController->add()
+#7 /vagrant/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(GroupsController), Array)
+#8 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(GroupsController), Object(CakeRequest))
+#10 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-06-01 15:54:03 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 15:54:32 Error: Fatal Error (1): Call to a member function create() on null in [/vagrant/blog/app/Controller/GroupsController.php, line 13]
+2016-06-01 15:54:32 Error: [FatalErrorException] Call to a member function create() on null
+Request URL: /groups/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/vagrant/blog/a...', 13)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/vagrant/blog/a...', 13, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/vagrant/blog/a...', 13, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-01 15:54:33 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 15:54:53 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 15:54:58 Error: Fatal Error (1): Call to a member function create() on null in [/vagrant/blog/app/Controller/GroupsController.php, line 13]
+2016-06-01 15:54:58 Error: [FatalErrorException] Call to a member function create() on null
+Request URL: /groups/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/vagrant/blog/a...', 13)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/vagrant/blog/a...', 13, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/vagrant/blog/a...', 13, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-01 15:54:58 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 15:55:49 Error: Fatal Error (1): Call to a member function success() on null in [/vagrant/blog/app/Controller/GroupsController.php, line 15]
+2016-06-01 15:55:49 Error: [FatalErrorException] Call to a member function success() on null
+Request URL: /groups/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/vagrant/blog/a...', 15)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/vagrant/blog/a...', 15, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/vagrant/blog/a...', 15, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-01 15:55:49 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 15:56:28 Error: [MissingActionException] Action GroupsController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'GroupsController',
+  'action' => 'index',
+)
+Request URL: /groups
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(GroupsController), Object(CakeRequest))
+#2 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-06-01 15:56:28 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 15:57:08 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 16:00:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 16:00:35 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 16:00:47 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 16:03:54 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 16:12:08 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Group.group' in 'field list'
+Request URL: /users/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT `Group`....', Array)
+#2 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(664): DboSource->execute('SELECT `Group`....', Array, Array)
+#3 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(1113): DboSource->fetchAll('SELECT `Group`....', false)
+#4 /vagrant/blog/lib/Cake/Model/Model.php(3031): DboSource->read(Object(Group), Array)
+#5 /vagrant/blog/lib/Cake/Model/Model.php(3003): Model->_readDataSource('list', Array)
+#6 /vagrant/blog/app/Controller/UsersController.php(28): Model->find('list', Array)
+#7 [internal function]: UsersController->add()
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-01 16:12:08 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 16:12:29 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 16:12:51 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 16:13:12 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 16:14:05 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 16:19:44 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 16:19:45 Error: Fatal Error (1): Call to a member function find() on null in [/vagrant/blog/app/Controller/AppController.php, line 37]
+2016-06-01 16:19:45 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /groups/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/vagrant/blog/a...', 37)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/vagrant/blog/a...', 37, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/vagrant/blog/a...', 37, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-01 16:19:45 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 16:19:46 Error: Fatal Error (1): Call to a member function find() on null in [/vagrant/blog/app/Controller/AppController.php, line 37]
+2016-06-01 16:19:46 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /groups/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/vagrant/blog/a...', 37)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/vagrant/blog/a...', 37, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/vagrant/blog/a...', 37, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-01 16:19:47 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 16:20:19 Error: [MissingLayoutException] Layout file "Layouts/bootstrap.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Layouts/bootstrap.ctp',
+)
+Request URL: /groups/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/View/View.php(514): View->_getLayoutFileName('bootstrap')
+#1 /vagrant/blog/lib/Cake/View/View.php(481): View->renderLayout('', 'bootstrap')
+#2 /vagrant/blog/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#3 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#4 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(GroupsController), Object(CakeRequest))
+#5 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-01 16:20:19 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 16:20:32 Error: [MissingLayoutException] Layout file "Layouts/bootstrap.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Layouts/bootstrap.ctp',
+)
+Request URL: /groups/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/View/View.php(514): View->_getLayoutFileName('bootstrap')
+#1 /vagrant/blog/lib/Cake/View/View.php(481): View->renderLayout('', 'bootstrap')
+#2 /vagrant/blog/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#3 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#4 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(GroupsController), Object(CakeRequest))
+#5 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-01 16:20:32 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 16:20:39 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 16:20:46 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 16:20:50 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 16:20:51 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 16:20:57 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 16:20:59 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 16:21:07 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 16:34:24 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 16:36:39 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => User
+    [Aro0.foreign_key] => 7
+)
+"
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Permission.php(80): AclNode->node(Array)
+#1 /vagrant/blog/lib/Cake/Controller/Component/Acl/DbAcl.php(73): Permission->check(Array, 'controllers/Pos...', '*')
+#2 /vagrant/blog/lib/Cake/Controller/Component/AclComponent.php(110): DbAcl->check(Array, 'controllers/Pos...', '*')
+#3 /vagrant/blog/lib/Cake/Controller/Component/Auth/ActionsAuthorize.php(38): AclComponent->check(Array, 'controllers/Pos...')
+#4 /vagrant/blog/lib/Cake/Controller/Component/AuthComponent.php(469): ActionsAuthorize->authorize(Array, Object(CakeRequest))
+#5 /vagrant/blog/lib/Cake/Controller/Component/AuthComponent.php(310): AuthComponent->isAuthorized(Array)
+#6 [internal function]: AuthComponent->startup(Object(PostsController))
+#7 /vagrant/blog/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#8 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#10 /vagrant/blog/lib/Cake/Controller/Controller.php(678): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#12 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2016-06-01 16:36:45 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => User
+    [Aro0.foreign_key] => 7
+)
+"
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Permission.php(80): AclNode->node(Array)
+#1 /vagrant/blog/lib/Cake/Controller/Component/Acl/DbAcl.php(73): Permission->check(Array, 'controllers/Pos...', '*')
+#2 /vagrant/blog/lib/Cake/Controller/Component/AclComponent.php(110): DbAcl->check(Array, 'controllers/Pos...', '*')
+#3 /vagrant/blog/lib/Cake/Controller/Component/Auth/ActionsAuthorize.php(38): AclComponent->check(Array, 'controllers/Pos...')
+#4 /vagrant/blog/lib/Cake/Controller/Component/AuthComponent.php(469): ActionsAuthorize->authorize(Array, Object(CakeRequest))
+#5 /vagrant/blog/lib/Cake/Controller/Component/AuthComponent.php(310): AuthComponent->isAuthorized(Array)
+#6 [internal function]: AuthComponent->startup(Object(PostsController))
+#7 /vagrant/blog/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#8 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#10 /vagrant/blog/lib/Cake/Controller/Controller.php(678): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#12 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}

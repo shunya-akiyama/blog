@@ -55,7 +55,7 @@
 	<p>
 		<?php
 		echo $this->Html->link('ログアウト',
-		array('controller'=>'posts','action'=>'index'),array('class'=>'panel-body'));
+		array('controller'=>'users','action'=>'logout'),array('class'=>'panel-body'));
 		?>
 	</p>
 </div>

@@ -70,6 +70,7 @@ Cache::config('default', array('engine' => 'File'));
  CakePlugin::load('Upload');
  CakePlugin::load('Search');
  CakePlugin::load('TwitterBootstrap');
+ CakePlugin::load('AclExtras');
 
 /*
 CakePlugin::load('AclExtras');

@@ -26,11 +26,7 @@ class Attachment extends AppModel{
         'attachment' => array(
         'rule'=>'uploadCheck',
         'message'=>'一枚くらい登録してください。',
-  //      'required'=>'false',
         'allowEmpty'=>'true',
-  //      'rule'=>array('multiple'=>array('min'=>1),
-  //      'message'=>'登録できない拡張子です。'
-  //        ),
       ),
     );
 

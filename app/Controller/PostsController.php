@@ -78,7 +78,7 @@ class PostsController extends AppController{
       $this->request->data['Image'][$i]['attachment']['tmp_flg'] = $flg;
       $i ++;
     }
-    //debug($this->request->data['Image']);
+  debug($this->request->data['Image']);
     $data = $this->request->data;
     if($this->Post->saveAll($data)){
         $this->Flash->success(__('投稿完了'));

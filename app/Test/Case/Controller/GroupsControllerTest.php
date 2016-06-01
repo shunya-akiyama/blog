@@ -12,9 +12,7 @@ class GroupsControllerTest extends ControllerTestCase {
  * @var array
  */
 	public $fixtures = array(
-		'app.group',
-		'app.user',
-		'app.post'
+		'app.group'
 	);
 
 /**
