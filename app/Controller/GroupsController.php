@@ -48,6 +48,7 @@ class GroupsController extends AppController {
 					$this->request->data = $this->Group->find('first', $options);
 				}
 		}
+		
 		public function delete($id = null) {
 			$this->Group->id = $id;
 			if (!$this->Group->exists()) {

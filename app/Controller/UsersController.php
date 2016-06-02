@@ -8,13 +8,36 @@ class UsersController extends AppController {
     		'commonProcess'=>array('paramType'=>'querystring','filterEmpty'=>true,)));
 	public $paginate = array('maxLimit'=>5);
 
-
-  public function beforefilter(){
+	public function beforefilter(){
 		parent::beforefilter();
 		$this->Auth->allow();
 	}
+	/*
 
+public function beforefilter(){
+parent::beforefilter();
+$this->Auth->allow('initDB');
+}
+public function initDB(){
+$group = $this->User->Group;
+$group->id = 1;
+$this->Acl->allow($group,'controllers');
 
+$group->id = 2;
+$this->Acl->deny($group,'controllers');
+$this->Acl->allow($group,'controllers/Tags');
+$this->Acl->allow($group,'controllers/Categories');
+$this->Acl->allow($group,'controllers/Posts');
+
+$group->id = 3;
+$this->Acl->deny($group,'controllers');
+$this->Acl->allow($group,'controllers/Posts/add');
+$this->Acl->allow($group,'controllers/Tags');
+$this->Acl->allow($group,'controllers/Posts/edit');
+echo "all done";
+exit;
+}
+*/
 		public function index() {
 				$this->User->recursive = 0;
 				$this->set('users', $this->Paginator->paginate());
@@ -22,6 +45,10 @@ class UsersController extends AppController {
 				$this->Paginator->settings = $this->paginate;
 				$posts = $this->Paginator->paginate('Post');
 				$this->set('posts',$posts);
+		}
+		public function userlist() {
+				$this->User->recursive = 0;
+				$this->set('users', $this->Paginator->paginate());
 		}
 
 	public function login(){
