@@ -1,4 +1,4 @@
-<h1>一覧</h1>
+<h1>記事一覧</h1>
 <ul class="col-xs-8 col-md-8 col-lg-8">
 <?php foreach ($posts as $post): ?>
   <li>

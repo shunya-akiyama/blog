@@ -1,130 +1,64 @@
 <?php
 App::uses('AppController', 'Controller');
-/**
- * Groups Controller
- *
- * @property Group $Group
- * @property PaginatorComponent $Paginator
- */
 class GroupsController extends AppController {
-
-public $uses = array('Group','Post','Category','PostsTag','User');
-
-public $components = array('Paginator');
-	public function index() {
-		$this->Group->recursive = 0;
-		$this->set('groups', $this->Paginator->paginate());
-	}
-  public function beforeFilter() {
-      parent::beforeFilter();
-      $this->Auth->allow();
-  }
-
-	public function view($id = null) {
-		$this->Group->id = $id;
-		if (!$this->Group->exists()) {
-			throw new NotFoundException(__('Invalid %s', __('group')));
+		public $components = array('Paginator','Flash');
+		public function beforefilter(){
+				parent::beforefilter();
+				$this->Auth->allow();
 		}
-		$this->set('group', $this->Group->read(null, $id));
-	}
 
-	public function add() {
-		if ($this->request->is('post')) {
-			$this->Group->create();
-			if ($this->Group->save($this->request->data)) {
-				$this->Session->setFlash(
-					__('The %s has been saved', __('group')),
-					'alert',
-					array(
-						'plugin' => 'TwitterBootstrap',
-						'class' => 'alert-success'
-					)
-				);
-				$this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(
-					__('The %s could not be saved. Please, try again.', __('group')),
-					'alert',
-					array(
-						'plugin' => 'TwitterBootstrap',
-						'class' => 'alert-error'
-					)
-				);
+		public function index() {
+				$this->Group->recursive = 0;
+				$this->set('groups', $this->Paginator->paginate());
+		}
+
+		public function view($id = null) {
+				if(!$this->Group->exists($id)) {
+    				throw new NotFoundException(__('Invalid group'));
+				}
+				$options = array('conditions' => array('Group.' . $this->Group->primaryKey => $id));
+				$this->set('group', $this->Group->find('first', $options));
+		}
+
+		public function add() {
+				if($this->request->is('post')) {
+					$this->Group->create();
+					if($this->Group->save($this->request->data)) {
+					  	$this->Flash->success(__('The group has been saved.'));
+						  return $this->redirect(array('action' => 'index'));
+					}else{
+						  $this->Flash->error(__('The group could not be saved. Please, try again.'));
+					}
+				}
+		}
+
+		public function edit($id = null) {
+				if(!$this->Group->exists($id)) {
+  					throw new NotFoundException(__('Invalid group'));
+				}
+				if($this->request->is(array('post', 'put'))) {
+					  if($this->Group->save($this->request->data)) {
+						$this->Flash->success(__('The group has been saved.'));
+						return $this->redirect(array('action' => 'index'));
+					} else {
+						$this->Flash->error(__('The group could not be saved. Please, try again.'));
+					}
+				} else {
+					$options = array('conditions' => array('Group.' . $this->Group->primaryKey => $id));
+					$this->request->data = $this->Group->find('first', $options);
+				}
+		}
+		public function delete($id = null) {
+			$this->Group->id = $id;
+			if (!$this->Group->exists()) {
+				throw new NotFoundException(__('Invalid group'));
 			}
-		}
-	}
-
-/**
- * edit method
- *
- * @param string $id
- * @return void
- */
-	public function edit($id = null) {
-		$this->Group->id = $id;
-		if (!$this->Group->exists()) {
-			throw new NotFoundException(__('Invalid %s', __('group')));
-		}
-		if ($this->request->is('post') || $this->request->is('put')) {
-			if ($this->Group->save($this->request->data)) {
-				$this->Session->setFlash(
-					__('The %s has been saved', __('group')),
-					'alert',
-					array(
-						'plugin' => 'TwitterBootstrap',
-						'class' => 'alert-success'
-					)
-				);
-				$this->redirect(array('action' => 'index'));
+			$this->request->allowMethod('post', 'delete');
+			if ($this->Group->delete()) {
+				$this->Flash->success(__('The group has been deleted.'));
 			} else {
-				$this->Session->setFlash(
-					__('The %s could not be saved. Please, try again.', __('group')),
-					'alert',
-					array(
-						'plugin' => 'TwitterBootstrap',
-						'class' => 'alert-error'
-					)
-				);
+				$this->Flash->error(__('The group could not be deleted. Please, try again.'));
 			}
-		} else {
-			$this->request->data = $this->Group->read(null, $id);
+			return $this->redirect(array('action' => 'index'));
 		}
-	}
-
-/**
- * delete method
- *
- * @param string $id
- * @return void
- */
-	public function delete($id = null) {
-		if (!$this->request->is('post')) {
-			throw new MethodNotAllowedException();
-		}
-		$this->Group->id = $id;
-		if (!$this->Group->exists()) {
-			throw new NotFoundException(__('Invalid %s', __('group')));
-		}
-		if ($this->Group->delete()) {
-			$this->Session->setFlash(
-				__('The %s deleted', __('group')),
-				'alert',
-				array(
-					'plugin' => 'TwitterBootstrap',
-					'class' => 'alert-success'
-				)
-			);
-			$this->redirect(array('action' => 'index'));
-		}
-		$this->Session->setFlash(
-			__('The %s was not deleted', __('group')),
-			'alert',
-			array(
-				'plugin' => 'TwitterBootstrap',
-				'class' => 'alert-error'
-			)
-		);
-		$this->redirect(array('action' => 'index'));
-	}
-
 }

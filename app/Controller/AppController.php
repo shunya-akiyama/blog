@@ -8,21 +8,6 @@ public $components = array('Paginator','Session','DebugKit.Toolbar','RequestHand
     'authorize'=>array(
     'Actions'=>array('actionPath'=>'controllers')
     )
-/*
-        'loginRedirect'=>array(
-        'controller'=>'users',
-        'action'=>'index'
-        ),
-        'logoutRedirect'=>array(
-        'controller'=>'posts',
-        'action'=>'index',
-        ),
-        'authenticate'=>array(
-        'Form'=>array(
-        'passwordHasher'=>'Blowfish'
-        )
-        ),
-*/
     ),
     'Session'
     );
@@ -37,13 +22,6 @@ public $helpers = array(
 public $layout = 'TwitterBootstrap.default';
 
 public function beforeFilter() {
-//タイトル検索
-    $this->set('posts',$this->Paginator->paginate());
-//カテゴリ検索
-    $this->set('category',$this->Category->find('list',array('fields'=>array('id','category'))));
-//タグ検索
-    $this->set('tag',$this->Post->Tag->find('list',array('fields'=>array('id','tag'))));
-
     $this->Auth->loginAction = array(
         'controller'=>'users',
         'action'=>'login'
@@ -57,6 +35,13 @@ public function beforeFilter() {
         'action'=>'index'
     );
     $this->Auth->allow('display');
+    //タイトル検索
+
+        $this->set('posts',$this->Paginator->paginate());
+    //カテゴリ検索
+        $this->set('category',$this->Category->find('list',array('fields'=>array('id','category'))));
+    //タグ検索
+        $this->set('tag',$this->Post->Tag->find('list',array('fields'=>array('id','tag'))));
 
 }
 
