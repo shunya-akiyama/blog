@@ -74659,3 +74659,2554 @@ Stack Trace:
 #3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2016-06-02 18:58:13 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-02 18:59:41 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-02 19:08:26 Error: Fatal Error (64): Cannot redeclare UsersController::beforefilter() in [/vagrant/blog/app/Controller/UsersController.php, line 16]
+2016-06-02 19:08:26 Error: [FatalErrorException] Cannot redeclare UsersController::beforefilter()
+Request URL: /users/logout
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', '/vagrant/blog/a...', 16)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', '/vagrant/blog/a...', 16, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', '/vagrant/blog/a...', 16, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-02 19:08:32 Error: Fatal Error (64): Cannot redeclare UsersController::beforefilter() in [/vagrant/blog/app/Controller/UsersController.php, line 16]
+2016-06-02 19:08:32 Error: [FatalErrorException] Cannot redeclare UsersController::beforefilter()
+Request URL: /users/logout
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', '/vagrant/blog/a...', 16)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', '/vagrant/blog/a...', 16, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', '/vagrant/blog/a...', 16, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-02 19:09:40 Error: Fatal Error (64): Cannot redeclare UsersController::beforefilter() in [/vagrant/blog/app/Controller/UsersController.php, line 16]
+2016-06-02 19:09:40 Error: [FatalErrorException] Cannot redeclare UsersController::beforefilter()
+Request URL: /users/initDB
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', '/vagrant/blog/a...', 16)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', '/vagrant/blog/a...', 16, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', '/vagrant/blog/a...', 16, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-02 19:10:41 Error: Fatal Error (64): Cannot redeclare UsersController::beforefilter() in [/vagrant/blog/app/Controller/UsersController.php, line 16]
+2016-06-02 19:10:41 Error: [FatalErrorException] Cannot redeclare UsersController::beforefilter()
+Request URL: /users/initDB
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', '/vagrant/blog/a...', 16)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', '/vagrant/blog/a...', 16, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', '/vagrant/blog/a...', 16, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-02 19:25:40 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-02 19:26:28 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-02 19:27:15 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-02 20:06:19 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => User
+    [Aro0.foreign_key] => 3
+)
+"
+Request URL: /categories/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Permission.php(80): AclNode->node(Array)
+#1 /vagrant/blog/lib/Cake/Controller/Component/Acl/DbAcl.php(73): Permission->check(Array, 'controllers/Cat...', '*')
+#2 /vagrant/blog/lib/Cake/Controller/Component/AclComponent.php(110): DbAcl->check(Array, 'controllers/Cat...', '*')
+#3 /vagrant/blog/lib/Cake/Controller/Component/Auth/ActionsAuthorize.php(38): AclComponent->check(Array, 'controllers/Cat...')
+#4 /vagrant/blog/lib/Cake/Controller/Component/AuthComponent.php(469): ActionsAuthorize->authorize(Array, Object(CakeRequest))
+#5 /vagrant/blog/lib/Cake/Controller/Component/AuthComponent.php(310): AuthComponent->isAuthorized(Array)
+#6 [internal function]: AuthComponent->startup(Object(CategoriesController))
+#7 /vagrant/blog/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#8 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#10 /vagrant/blog/lib/Cake/Controller/Controller.php(678): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#12 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(CategoriesController), Object(CakeRequest))
+#13 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2016-06-02 20:08:15 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => User
+    [Aro0.foreign_key] => 3
+)
+"
+Request URL: /categories/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Permission.php(80): AclNode->node(Array)
+#1 /vagrant/blog/lib/Cake/Controller/Component/Acl/DbAcl.php(73): Permission->check(Array, 'controllers/Cat...', '*')
+#2 /vagrant/blog/lib/Cake/Controller/Component/AclComponent.php(110): DbAcl->check(Array, 'controllers/Cat...', '*')
+#3 /vagrant/blog/lib/Cake/Controller/Component/Auth/ActionsAuthorize.php(38): AclComponent->check(Array, 'controllers/Cat...')
+#4 /vagrant/blog/lib/Cake/Controller/Component/AuthComponent.php(469): ActionsAuthorize->authorize(Array, Object(CakeRequest))
+#5 /vagrant/blog/lib/Cake/Controller/Component/AuthComponent.php(310): AuthComponent->isAuthorized(Array)
+#6 [internal function]: AuthComponent->startup(Object(CategoriesController))
+#7 /vagrant/blog/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#8 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#9 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#10 /vagrant/blog/lib/Cake/Controller/Controller.php(678): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#12 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(CategoriesController), Object(CakeRequest))
+#13 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2016-06-02 20:12:25 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => User
+    [Aro0.foreign_key] => 1
+)
+"
+Request URL: /users/delete/1
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Behavior/AclBehavior.php(90): AclNode->node(Array)
+#1 /vagrant/blog/lib/Cake/Model/Behavior/AclBehavior.php(137): AclBehavior->node(Object(User), NULL, 'Aro')
+#2 [internal function]: AclBehavior->afterDelete(Object(User))
+#3 /vagrant/blog/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#4 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#5 /vagrant/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#6 /vagrant/blog/lib/Cake/Model/Model.php(2722): CakeEventManager->dispatch(Object(CakeEvent))
+#7 /vagrant/blog/app/Controller/UsersController.php(114): Model->delete()
+#8 [internal function]: UsersController->delete('1')
+#9 /vagrant/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#12 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2016-06-03 11:34:50 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'validate' at line 1
+Request URL: /posts/edit/8
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('validate', Array)
+#2 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(664): DboSource->execute('validate', Array, Array)
+#3 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(607): DboSource->fetchAll('validate', Array, Array)
+#4 /vagrant/blog/lib/Cake/Model/Model.php(827): DboSource->query('validate', Array, Object(Attachment))
+#5 /vagrant/blog/app/Controller/PostsController.php(103): Model->__call('validate', Array)
+#6 /vagrant/blog/app/Controller/PostsController.php(103): Attachment->validate()
+#7 [internal function]: PostsController->edit('8')
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-03 11:53:08 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 11:55:32 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'attachment' doesn't have a default value
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ak...', Array)
+#2 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ak...')
+#3 /vagrant/blog/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Attachment), Array, Array)
+#4 /vagrant/blog/lib/Cake/Model/Model.php(1745): Model->_doSave(Array, Array)
+#5 /vagrant/blog/lib/Cake/Model/Model.php(2343): Model->save(Array, Array)
+#6 /vagrant/blog/lib/Cake/Model/Model.php(2563): Model->saveMany(Array, Array)
+#7 /vagrant/blog/lib/Cake/Model/Model.php(2278): Model->saveAssociated(Array, Array)
+#8 /vagrant/blog/app/Controller/PostsController.php(76): Model->saveAll(Array)
+#9 [internal function]: PostsController->add()
+#10 /vagrant/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2016-06-03 11:55:49 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'attachment' doesn't have a default value
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ak...', Array)
+#2 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ak...')
+#3 /vagrant/blog/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Attachment), Array, Array)
+#4 /vagrant/blog/lib/Cake/Model/Model.php(1745): Model->_doSave(Array, Array)
+#5 /vagrant/blog/lib/Cake/Model/Model.php(2343): Model->save(Array, Array)
+#6 /vagrant/blog/lib/Cake/Model/Model.php(2563): Model->saveMany(Array, Array)
+#7 /vagrant/blog/lib/Cake/Model/Model.php(2278): Model->saveAssociated(Array, Array)
+#8 /vagrant/blog/app/Controller/PostsController.php(76): Model->saveAll(Array)
+#9 [internal function]: PostsController->add()
+#10 /vagrant/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2016-06-03 11:56:03 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'attachment' doesn't have a default value
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ak...', Array)
+#2 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ak...')
+#3 /vagrant/blog/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Attachment), Array, Array)
+#4 /vagrant/blog/lib/Cake/Model/Model.php(1745): Model->_doSave(Array, Array)
+#5 /vagrant/blog/lib/Cake/Model/Model.php(2343): Model->save(Array, Array)
+#6 /vagrant/blog/lib/Cake/Model/Model.php(2563): Model->saveMany(Array, Array)
+#7 /vagrant/blog/lib/Cake/Model/Model.php(2278): Model->saveAssociated(Array, Array)
+#8 /vagrant/blog/app/Controller/PostsController.php(76): Model->saveAll(Array)
+#9 [internal function]: PostsController->add()
+#10 /vagrant/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2016-06-03 11:56:20 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'attachment' doesn't have a default value
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ak...', Array)
+#2 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ak...')
+#3 /vagrant/blog/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Attachment), Array, Array)
+#4 /vagrant/blog/lib/Cake/Model/Model.php(1745): Model->_doSave(Array, Array)
+#5 /vagrant/blog/lib/Cake/Model/Model.php(2343): Model->save(Array, Array)
+#6 /vagrant/blog/lib/Cake/Model/Model.php(2563): Model->saveMany(Array, Array)
+#7 /vagrant/blog/lib/Cake/Model/Model.php(2278): Model->saveAssociated(Array, Array)
+#8 /vagrant/blog/app/Controller/PostsController.php(76): Model->saveAll(Array)
+#9 [internal function]: PostsController->add()
+#10 /vagrant/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2016-06-03 11:56:39 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'attachment' doesn't have a default value
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ak...', Array)
+#2 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ak...')
+#3 /vagrant/blog/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Attachment), Array, Array)
+#4 /vagrant/blog/lib/Cake/Model/Model.php(1745): Model->_doSave(Array, Array)
+#5 /vagrant/blog/lib/Cake/Model/Model.php(2343): Model->save(Array, Array)
+#6 /vagrant/blog/lib/Cake/Model/Model.php(2563): Model->saveMany(Array, Array)
+#7 /vagrant/blog/lib/Cake/Model/Model.php(2278): Model->saveAssociated(Array, Array)
+#8 /vagrant/blog/app/Controller/PostsController.php(76): Model->saveAll(Array)
+#9 [internal function]: PostsController->add()
+#10 /vagrant/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2016-06-03 12:29:43 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 12:31:03 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 12:31:16 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 12:34:47 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 12:35:36 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 12:35:37 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 12:35:58 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 12:36:40 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 12:37:11 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 12:38:19 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 12:38:24 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 12:38:26 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 12:41:59 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 12:49:05 Error: Fatal Error (1): Call to a member function find() on null in [/vagrant/blog/app/Controller/AppController.php, line 44]
+2016-06-03 12:49:05 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /users
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/vagrant/blog/a...', 44)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/vagrant/blog/a...', 44, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/vagrant/blog/a...', 44, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 12:50:14 Error: Fatal Error (1): Call to a member function find() on null in [/vagrant/blog/app/Controller/AppController.php, line 44]
+2016-06-03 12:50:14 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /users
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/vagrant/blog/a...', 44)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/vagrant/blog/a...', 44, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/vagrant/blog/a...', 44, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 12:50:16 Error: Fatal Error (1): Call to a member function find() on null in [/vagrant/blog/app/Controller/AppController.php, line 44]
+2016-06-03 12:50:16 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /users
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/vagrant/blog/a...', 44)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/vagrant/blog/a...', 44, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/vagrant/blog/a...', 44, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 13:11:30 Error: Fatal Error (1): Call to a member function find() on null in [/vagrant/blog/app/Controller/AppController.php, line 44]
+2016-06-03 13:11:30 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /users
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/vagrant/blog/a...', 44)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/vagrant/blog/a...', 44, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/vagrant/blog/a...', 44, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 13:11:54 Error: Fatal Error (1): Call to a member function find() on null in [/vagrant/blog/app/Controller/AppController.php, line 44]
+2016-06-03 13:11:54 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /users
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/vagrant/blog/a...', 44)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/vagrant/blog/a...', 44, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/vagrant/blog/a...', 44, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 13:11:56 Error: Fatal Error (1): Call to a member function find() on null in [/vagrant/blog/app/Controller/AppController.php, line 44]
+2016-06-03 13:11:56 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /users
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/vagrant/blog/a...', 44)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/vagrant/blog/a...', 44, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/vagrant/blog/a...', 44, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 13:22:18 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 13:56:49 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [/vagrant/blog/app/Controller/UsersController.php, line 43]
+2016-06-03 13:56:49 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /users
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 43)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 43, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 43, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 13:57:21 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [/vagrant/blog/app/Controller/UsersController.php, line 43]
+2016-06-03 13:57:21 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /users
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 43)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 43, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 43, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 14:08:51 Error: Fatal Error (1): Call to a member function find() on null in [/vagrant/blog/app/Controller/AppController.php, line 42]
+2016-06-03 14:08:51 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /groups/view/1
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/vagrant/blog/a...', 42)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/vagrant/blog/a...', 42, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/vagrant/blog/a...', 42, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 14:16:16 Error: Fatal Error (4): syntax error, unexpected '=', expecting ')' in [/vagrant/blog/app/Model/Attachment.php, line 33]
+2016-06-03 14:16:16 Error: [FatalErrorException] syntax error, unexpected '=', expecting ')'
+Request URL: /posts/edit/20
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 33)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 33, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 33, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 14:16:24 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [/vagrant/blog/app/Model/Attachment.php, line 34]
+2016-06-03 14:16:24 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+Request URL: /posts/edit/20
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 34)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 34, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 34, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 14:16:44 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [/vagrant/blog/app/Model/Attachment.php, line 37]
+2016-06-03 14:16:44 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+Request URL: /posts/edit/20
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 37)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 37, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 37, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 14:27:39 Error: Fatal Error (1): Unsupported operand types in [/vagrant/blog/lib/Cake/Model/Model.php, line 2265]
+2016-06-03 14:27:39 Error: [FatalErrorException] Unsupported operand types
+Request URL: /posts/edit/20
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Unsupported ope...', '/vagrant/blog/l...', 2265)
+#1 [internal function]: ErrorHandler::handleError(1, 'Unsupported ope...', '/vagrant/blog/l...', 2265, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Unsupported ope...', '/vagrant/blog/l...', 2265, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 14:29:15 Error: Fatal Error (1): Unsupported operand types in [/vagrant/blog/lib/Cake/Model/Model.php, line 2265]
+2016-06-03 14:29:15 Error: [FatalErrorException] Unsupported operand types
+Request URL: /posts/edit/20
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Unsupported ope...', '/vagrant/blog/l...', 2265)
+#1 [internal function]: ErrorHandler::handleError(1, 'Unsupported ope...', '/vagrant/blog/l...', 2265, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Unsupported ope...', '/vagrant/blog/l...', 2265, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 15:15:22 Error: Fatal Error (4): syntax error, unexpected ';' in [/vagrant/blog/app/Controller/PostsController.php, line 112]
+2016-06-03 15:15:22 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /posts/edit/20
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 112)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 112, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 112, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 15:20:09 Error: Fatal Error (1): Method name must be a string in [/vagrant/blog/app/Controller/PostsController.php, line 100]
+2016-06-03 15:20:09 Error: [FatalErrorException] Method name must be a string
+Request URL: /posts/edit/20
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Method name mus...', '/vagrant/blog/a...', 100)
+#1 [internal function]: ErrorHandler::handleError(1, 'Method name mus...', '/vagrant/blog/a...', 100, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Method name mus...', '/vagrant/blog/a...', 100, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 15:21:12 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'validate' at line 1
+Request URL: /posts/edit/20
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('validate', Array)
+#2 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(664): DboSource->execute('validate', Array, Array)
+#3 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(607): DboSource->fetchAll('validate', Array, Array)
+#4 /vagrant/blog/lib/Cake/Model/Model.php(827): DboSource->query('validate', Array, Object(Attachment))
+#5 /vagrant/blog/app/Controller/PostsController.php(101): Model->__call('validate', Array)
+#6 /vagrant/blog/app/Controller/PostsController.php(101): Attachment->validate()
+#7 [internal function]: PostsController->edit('20')
+#8 /vagrant/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#9 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-03 15:25:23 Error: Fatal Error (4): syntax error, unexpected ';' in [/vagrant/blog/app/Controller/PostsController.php, line 102]
+2016-06-03 15:25:23 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /posts/edit/20
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 102)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 102, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 102, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 15:25:40 Error: Fatal Error (4): syntax error, unexpected '=' in [/vagrant/blog/app/Controller/PostsController.php, line 102]
+2016-06-03 15:25:40 Error: [FatalErrorException] syntax error, unexpected '='
+Request URL: /posts/edit/20
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 102)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 102, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 102, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 15:25:45 Error: Fatal Error (4): syntax error, unexpected '=' in [/vagrant/blog/app/Controller/PostsController.php, line 102]
+2016-06-03 15:25:45 Error: [FatalErrorException] syntax error, unexpected '='
+Request URL: /posts/edit/20
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 102)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 102, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 102, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 15:30:56 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:32:11 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:32:49 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:33:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:33:48 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:33:49 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:33:50 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:33:50 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:33:52 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:33:53 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:33:54 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:33:55 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:33:56 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:33:57 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:33:59 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:34:00 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:34:28 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:34:42 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:34:59 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:35:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:35:06 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:36:04 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:36:09 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:38:16 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:38:30 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:41:43 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:43:50 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:44:29 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:44:42 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:45:11 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:45:31 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:45:51 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:45:57 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:46:16 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:46:28 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:46:31 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:46:37 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:46:55 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:47:28 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:47:29 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:47:31 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:47:32 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:47:33 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:47:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:47:36 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:47:36 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:47:38 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:47:39 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:47:40 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:47:40 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:47:44 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:47:45 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:47:47 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:47:47 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:47:49 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:47:50 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:47:52 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:47:53 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:47:54 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:47:55 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:47:55 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:47:56 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:47:57 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:47:58 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:47:58 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:47:59 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:48:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:48:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:48:37 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:52:55 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:53:09 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:53:15 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:53:23 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:53:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:53:42 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:55:14 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:55:15 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:55:16 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:55:17 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:55:19 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:55:19 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:55:51 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:56:29 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:56:42 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:56:52 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:56:56 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:57:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:57:08 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:57:23 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:57:58 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:57:59 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:58:12 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:59:03 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:59:10 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 15:59:17 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:01:19 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:01:27 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:02:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:02:43 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:03:02 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:03:26 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:03:32 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:03:36 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:03:43 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:04:08 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:04:09 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:04:10 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:04:11 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:04:13 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:04:15 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:16:08 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:23:35 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:23:50 Error: Fatal Error (4): syntax error, unexpected '->' (T_OBJECT_OPERATOR) in [/vagrant/blog/app/Controller/UsersController.php, line 63]
+2016-06-03 16:23:50 Error: [FatalErrorException] syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+Request URL: /users/login
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 63)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 63, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 63, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 16:23:50 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:24:22 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:24:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:24:45 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:24:48 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:26:43 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:26:46 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:26:54 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:26:58 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:26:59 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:27:14 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:27:45 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:27:47 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:27:49 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:27:57 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:28:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:28:15 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:29:19 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:29:22 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:29:28 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:29:37 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:29:39 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:29:44 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:29:47 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:31:21 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:31:27 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:32:24 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:32:29 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:33:52 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:34:37 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:34:42 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:34:55 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 16:53:31 Error: Fatal Error (4): syntax error, unexpected 'debug' (T_STRING), expecting function (T_FUNCTION) in [/vagrant/blog/app/Model/Post.php, line 98]
+2016-06-03 16:53:31 Error: [FatalErrorException] syntax error, unexpected 'debug' (T_STRING), expecting function (T_FUNCTION)
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 98)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 98, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 98, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 16:53:46 Error: Fatal Error (4): syntax error, unexpected 'debug' (T_STRING), expecting function (T_FUNCTION) in [/vagrant/blog/app/Model/Post.php, line 98]
+2016-06-03 16:53:46 Error: [FatalErrorException] syntax error, unexpected 'debug' (T_STRING), expecting function (T_FUNCTION)
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 98)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 98, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 98, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 16:54:06 Error: Fatal Error (4): syntax error, unexpected 'debug' (T_STRING), expecting ')' in [/vagrant/blog/app/Model/Post.php, line 27]
+2016-06-03 16:54:06 Error: [FatalErrorException] syntax error, unexpected 'debug' (T_STRING), expecting ')'
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 27)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 27, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 27, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 16:54:26 Error: Fatal Error (4): syntax error, unexpected 'debug' (T_STRING), expecting ')' in [/vagrant/blog/app/Model/Post.php, line 27]
+2016-06-03 16:54:26 Error: [FatalErrorException] syntax error, unexpected 'debug' (T_STRING), expecting ')'
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 27)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 27, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 27, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 16:54:55 Error: Fatal Error (4): syntax error, unexpected 'debug' (T_STRING), expecting ')' in [/vagrant/blog/app/Model/Post.php, line 27]
+2016-06-03 16:54:55 Error: [FatalErrorException] syntax error, unexpected 'debug' (T_STRING), expecting ')'
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 27)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 27, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 27, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 16:55:03 Error: Fatal Error (4): syntax error, unexpected 'debug' (T_STRING), expecting function (T_FUNCTION) in [/vagrant/blog/app/Model/Post.php, line 29]
+2016-06-03 16:55:03 Error: [FatalErrorException] syntax error, unexpected 'debug' (T_STRING), expecting function (T_FUNCTION)
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 29, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 29, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 16:55:36 Error: Fatal Error (4): syntax error, unexpected '(', expecting ')' in [/vagrant/blog/app/Model/Post.php, line 9]
+2016-06-03 16:55:36 Error: [FatalErrorException] syntax error, unexpected '(', expecting ')'
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 9)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 9, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 9, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 17:08:10 Error: Fatal Error (4): syntax error, unexpected ''Tag'' (T_CONSTANT_ENCAPSED_STRING) in [/vagrant/blog/app/Model/Post.php, line 102]
+2016-06-03 17:08:10 Error: [FatalErrorException] syntax error, unexpected ''Tag'' (T_CONSTANT_ENCAPSED_STRING)
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 102)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 102, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 102, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 17:08:24 Error: Fatal Error (4): syntax error, unexpected ''Tag'' (T_CONSTANT_ENCAPSED_STRING) in [/vagrant/blog/app/Model/Post.php, line 102]
+2016-06-03 17:08:24 Error: [FatalErrorException] syntax error, unexpected ''Tag'' (T_CONSTANT_ENCAPSED_STRING)
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 102)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 102, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 102, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 18:21:44 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [/vagrant/blog/app/Model/Attachment.php, line 50]
+2016-06-03 18:21:44 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 50)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 50, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 50, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 18:36:18 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 18:38:04 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 18:39:44 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 18:40:23 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 18:40:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 18:40:29 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 18:41:04 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 18:42:13 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 18:44:19 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 18:44:53 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 18:49:24 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 18:50:05 Error: Fatal Error (4): syntax error, unexpected ',' in [/vagrant/blog/app/View/Posts/add.ctp, line 11]
+2016-06-03 18:50:05 Error: [FatalErrorException] syntax error, unexpected ','
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 11)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 11, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 11, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 18:50:05 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 18:50:12 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 18:50:47 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 18:51:36 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 18:51:38 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 18:57:19 Error: Fatal Error (4): syntax error, unexpected '、' (T_STRING), expecting ')' in [/vagrant/blog/app/View/Posts/add.ctp, line 3]
+2016-06-03 18:57:19 Error: [FatalErrorException] syntax error, unexpected '、' (T_STRING), expecting ')'
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 3)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 3, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 3, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 18:57:19 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 18:58:05 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 18:58:19 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 18:58:43 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 18:58:44 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 19:00:22 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'attachment' doesn't have a default value
+Request URL: /posts/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ak...', Array)
+#2 /vagrant/blog/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ak...')
+#3 /vagrant/blog/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Attachment), Array, Array)
+#4 /vagrant/blog/lib/Cake/Model/Model.php(1745): Model->_doSave(Array, Array)
+#5 /vagrant/blog/lib/Cake/Model/Model.php(2343): Model->save(Array, Array)
+#6 /vagrant/blog/lib/Cake/Model/Model.php(2563): Model->saveMany(Array, Array)
+#7 /vagrant/blog/lib/Cake/Model/Model.php(2278): Model->saveAssociated(Array, Array)
+#8 /vagrant/blog/app/Controller/PostsController.php(70): Model->saveAll(Array)
+#9 [internal function]: PostsController->add()
+#10 /vagrant/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /vagrant/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2016-06-03 19:08:25 Error: Fatal Error (4): syntax error, unexpected ''class'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [/vagrant/blog/app/View/Users/add.ctp, line 4]
+2016-06-03 19:08:25 Error: [FatalErrorException] syntax error, unexpected ''class'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /users/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 4)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 4, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 4, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 19:08:26 Error: Fatal Error (4): syntax error, unexpected ''class'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [/vagrant/blog/app/View/Users/add.ctp, line 4]
+2016-06-03 19:08:26 Error: [FatalErrorException] syntax error, unexpected ''class'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /users/add
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/blog/a...', 4)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/blog/a...', 4, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/blog/a...', 4, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 19:09:16 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 19:09:41 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 19:10:18 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 19:10:30 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 19:10:31 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 19:10:42 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 19:11:09 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 19:11:28 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 19:11:35 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 19:11:36 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 19:11:58 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 19:12:05 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 19:12:33 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 19:12:45 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 19:16:47 Error: Fatal Error (1): Call to a member function find() on null in [/vagrant/blog/app/Controller/AppController.php, line 42]
+2016-06-03 19:16:47 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /groups
+Stack Trace:
+#0 /vagrant/blog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/vagrant/blog/a...', 42)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/vagrant/blog/a...', 42, Array)
+#2 /vagrant/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/vagrant/blog/a...', 42, Array)
+#3 /vagrant/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-03 19:29:11 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 19:29:42 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 19:30:03 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 19:30:09 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 19:30:13 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 19:30:16 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 19:30:22 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 19:31:16 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 19:31:31 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 19:32:02 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 19:32:30 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 19:36:05 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 19:36:49 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 19:37:10 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 19:40:02 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 19:41:50 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 19:41:51 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-03 19:42:12 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.css.map
+Stack Trace:
+#0 /vagrant/blog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

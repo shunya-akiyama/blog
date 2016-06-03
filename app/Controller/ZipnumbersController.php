@@ -19,16 +19,16 @@ class ZipnumbersController extends AppController {
 
 
 
-  public function zipCode(){
-    if($this->request->is('ajax')){
-      $this->autoRender=FALSE;
-      $res = $this->request->data['Zipnumbers']['zip'];
-      $answer = $this->Zipnumber->find('first', array('conditions' => array('Zipnumber.zip' => $res)));
-      echo $answer ? $answer['Zipnumber']['prefecture'].$answer['Zipnumber']['city'].$answer['Zipnumber']['town'] : "見つかりません";
-		}else{
-       echo "通信失敗";
+    public function zipCode(){
+      if($this->request->is('ajax')){
+        $this->autoRender=FALSE;
+        $res = $this->request->data['Zipnumbers']['zip'];
+        $answer = $this->Zipnumber->find('first', array('conditions' => array('Zipnumber.zip' => $res)));
+        echo $answer ? $answer['Zipnumber']['prefecture'].$answer['Zipnumber']['city'].$answer['Zipnumber']['town'] : "見つかりません";
+  		}else{
+         echo "通信失敗";
+      }
     }
-  }
 
 }
  ?>
