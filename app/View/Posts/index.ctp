@@ -20,7 +20,7 @@
 </ul>
 
 <p class="col-xs-4 col-md-4 col-lg-4">
-<?php echo $this->html->link('住所検索はこちら',array('controller'=>'zipnumbers','action'=>'zip')); ?>
+<?php echo $this->html->link('住所検索はこちら',array('controller'=>'zipnumbers','action'=>'zip'),array('class'=>'btn btn-info')); ?>
 </p>
 <ul class="paging col-xs-12 col-md-12 col-lg-12">
   <li><?php echo $this->Paginator->prev('Prev',array('tag'=>false,'class'=>'btn btn-default'),null,array()); ?></li>

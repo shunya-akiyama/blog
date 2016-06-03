@@ -4,18 +4,18 @@
 <li>
 <h2>
 	  <?php echo $this->Html->link($post['Post']['title'],array('controller'=>'posts', 'action'=>'view', $post['Post']['id'])); ?>
+</h2>
 <p class="small">
     <?php echo h($post['Post']['created']);?>
 </p>
-</h2>
 <span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
     <?php echo $this->Html->tag('',$post['Category']['category']); ?>
 <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
 		<?php foreach ($post['Tag'] as $post["Tag"]): ?>
 		<?php echo $this->Html->tag('',$post['Tag']['tag'],array('class'=>'tags')); ?>,
 		<?php endforeach; ?>
-		<?php echo $this->Html->link('編集',array('controller'=>'posts','action'=>'edit', $post['Post']['id']),array('class'=>'text-right btn btn-success')); ?>
-		<?php echo $this->Form->postLink('Delete',array('controller'=>'posts','action'=>'delete',$post['Post']['id']),array('class'=>'text-right btn btn-danger','confirm'=>'削除してよろしいですか?')); ?>
+		<?php echo $this->Form->postLink('Delete',array('controller'=>'posts','action'=>'delete',$post['Post']['id']),array('class'=>'pull-right btn btn-danger','confirm'=>'削除してよろしいですか?')); ?>
+		<?php echo $this->Html->link('編集',array('controller'=>'posts','action'=>'edit', $post['Post']['id']),array('class'=>'pull-right btn btn-success')); ?>
 <hr>
 </li>
     <?php endforeach; ?>
