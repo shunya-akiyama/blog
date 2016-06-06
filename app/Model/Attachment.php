@@ -23,7 +23,7 @@ class Attachment extends AppModel{
       'attachment' => array(
       'on'=>'create',
       'rule'=>'uploadCheck',
-      'message'=>'一枚くらい登録してください。',
+      'message'=>'1枚も画像が選択されていないです。',
       'allowEmpty'=>true,
       ),
     );
@@ -47,7 +47,7 @@ class Attachment extends AppModel{
       $imgcheck = $this->data[$this->alias];
       if($imgcheck['attachment']['tmp_flg']){
         return true;
-      }else{
+    }else{
         return false;
       }
       unset($imgcheck['attachment']['tmp_flg']);

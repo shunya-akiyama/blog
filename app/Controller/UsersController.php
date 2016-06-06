@@ -10,6 +10,7 @@ class UsersController extends AppController {
 		public function beforefilter(){
 			parent::beforefilter();
 			$this->Auth->allow('login','index','logout');
+
 		}
 /*
 public function beforefilter(){

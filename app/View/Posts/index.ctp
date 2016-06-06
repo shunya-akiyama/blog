@@ -1,5 +1,5 @@
 <h1>記事一覧</h1>
-<ul class="col-xs-8 col-md-8 col-lg-8">
+<ul class="col-xs-12 col-md-8">
 <?php foreach ($posts as $post): ?>
   <li>
     <h2><?php echo $this->Html->link($post['Post']['title'],
@@ -19,7 +19,7 @@
 <?php endforeach; ?>
 </ul>
 
-<p class="col-xs-4 col-md-4 col-lg-4">
+<p class="col-xs-1 col-xs-offset-3">
 <?php echo $this->html->link('住所検索はこちら',array('controller'=>'zipnumbers','action'=>'zip'),array('class'=>'btn btn-info')); ?>
 </p>
 <ul class="paging col-xs-12 col-md-12 col-lg-12">

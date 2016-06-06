@@ -25,7 +25,7 @@
         echo $this->Html->tag('li',
         $this->Html->link($this->Html->image($base.$row["Image"]["dir"]."/".$row["Image"]["attachment"],
         array('class'=>'img-responsive')),$base.$row["Image"]["dir"]."/".$row["Image"]["attachment"],
-        array('class'=>'thumbnail','id'=>'img'.$i,'escape'=>false)),array('class' => '.col-xs-12 .col-sm-6 .col-md-3' ));
+        array('class'=>'thumbnail','id'=>'img'.$i,'escape'=>false)),array('class' => 'col-xs-12 col-sm-6 col-md-4'));
         $i++;
     /*   echo $this->Html->div('',$this->Html->image("/files/image/attachment/"."/".$row["Image"]["dir"]."/".$row["Image"]["attachment"],
        array('class'=>'img-responsive　popup-image')),array('id'=>'dummy'));*/

@@ -2,22 +2,30 @@
 App::uses('AppController', 'Controller');
 class GroupsController extends AppController {
 		public $components = array('Paginator','Flash');
+		public $name = 'Groups';
+    public $uses = array('Post','Group','Attachment','Category','PostsTag');
 		public function beforefilter(){
 				parent::beforefilter();
-				$this->Auth->allow();
 		}
 
 		public function index() {
-				$this->Group->recursive = 0;
-				$this->set('groups', $this->Paginator->paginate());
+			$this->Group->recursive = 0;
+			$this->Paginator->settings = $this->paginate;
+  		$groups = $this->Paginator->paginate('Group');
+  		$this->set('groups',$groups);
+//      $post = $this->Post->findById($id);
+
+//				$this->set('groups', $this->Paginator->paginate());
 		}
 
 		public function view($id = null) {
-				if(!$this->Group->exists($id)) {
+				if(!$this->Group->exists($id)){
     				throw new NotFoundException(__('Invalid group'));
 				}
 				$options = array('conditions' => array('Group.' . $this->Group->primaryKey => $id));
 				$this->set('group', $this->Group->find('first', $options));
+				$category = $this->set('categories',$this->Post->Category->find('list',array('fields'=>array('category'))));
+	      $tag = $this->set('tags',$this->Post->Tag->find('list',array('fields'=>array('tag'))));
 		}
 
 		public function add() {
@@ -48,7 +56,7 @@ class GroupsController extends AppController {
 					$this->request->data = $this->Group->find('first', $options);
 				}
 		}
-		
+
 		public function delete($id = null) {
 			$this->Group->id = $id;
 			if (!$this->Group->exists()) {

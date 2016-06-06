@@ -48,12 +48,10 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
 <div class="container">
 		<div class="row">
-			<article class="col-xs-12 col-md-12 col-lg-12">
 
 				<?php echo $this->Session->flash(); ?>
 
 				<?php echo $this->fetch('content'); ?>
-      </article>
 			</div>
     </div><!-- /container -->
 	</div> <!-- /containerfluid -->

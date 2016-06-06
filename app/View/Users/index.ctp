@@ -1,5 +1,5 @@
 
-<ul class="col-xs-8 col-md-8 col-lg-8">
+<ul class="col-xs-12 col-md-8">
     <?php foreach ($posts as $post): ?>
 <li>
 <h2>
@@ -20,7 +20,8 @@
 </li>
     <?php endforeach; ?>
 </ul>
-<div class="panel panel-primary col-xs-4 col-md-4 col-lg-4">
+
+<div class="panel panel-primary col-xs-3 col-xs-offset-1">
 <p class="panel-heading">
   管理メニュー
 </p>
@@ -28,16 +29,16 @@
 	<?php echo $this->Html->link('記事の新規投稿',array('controller'=>'posts','action'=>'add'),array('class'=>'panel-body'));?>
 </p>
 <p>
-	<?php echo $this->Html->link('ユーザー追加',array('controller'=>'users','action'=>'add'),array('class'=>'panel-body'));?>
+	<?php echo $this->Html->link('ユーザー一覧',array('controller'=>'users','action'=>'userlist'),array('class'=>'panel-body'));?>
 </p>
 <p>
-	<?php echo $this->Html->link('カテゴリーの追加',array('controller'=>'categories','action'=>'add'),array('class'=>'panel-body'));?>
+	<?php echo $this->Html->link('カテゴリー一覧',array('controller'=>'categories','action'=>'index'),array('class'=>'panel-body'));?>
 </p>
- <p>
-	<?php echo $this->Html->link('タグの追加',array('controller'=>'tags','action'=>'add'),array('class'=>'panel-body'));?>
- </p>
 <p>
-	<?php echo $this->Html->link('ユーザー管理',array('controller'=>'users','action'=>'userlist'),array('class'=>'panel-body'));?>
+ <?php echo $this->Html->link('タグの一覧',array('controller'=>'tags','action'=>'index'),array('class'=>'panel-body'));?>
+</p>
+<p>
+	<?php echo $this->Html->link('グループ一覧',array('controller'=>'groups','action'=>'index'),array('class'=>'panel-body'));?>
 </p>
 <p>
 	<?php echo $this->Html->link('ログアウト',array('controller'=>'users','action'=>'logout'),array('class'=>'panel-body'));?>

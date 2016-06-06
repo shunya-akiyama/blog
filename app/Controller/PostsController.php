@@ -82,6 +82,8 @@ class PostsController extends AppController{
       $category = $this->set('categories',$this->Post->Category->find('list',array('fields'=>array('category'))));
       $tag = $this->set('tags',$this->Post->Tag->find('list',array('fields'=>array('tag'))));
       $this->set(compact('categories','tags'));
+      $post = $this->Post->findById($id);
+      $this->set('post',$post);
       if(!$id){
         throw new NotFoundException(__('ご覧になれません。'));
       }

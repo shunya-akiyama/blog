@@ -5,6 +5,9 @@ class TagsController extends AppController{
   public $name = 'Tags';
   public $hasAndBelongsToMany = array('post');
 	public $uses = array('Post','Category','Tag','PostsTag','User');
+  public function beforefilter(){
+    parent::beforefilter();
+  }
 
   public function add(){
     if($this->request->is('post')){
@@ -15,9 +18,37 @@ class TagsController extends AppController{
       }
     }
   }
+  public function edit($id = null) {
+    $tag = $this->Tag->findById($id);
+
+    if($this->request->is(array('post', 'put'))){
+      $this->Tag->id = $id;
+    if($this->Tag->saveall($this->request->data)){
+      $this->Flash->success(__('編集完了'));
+      return $this->redirect(array('controller'=>'users','action'=>'index'));
+    }
+      $this->Flash->error(__('保存できませんでした。'));
+    }
+    if(!$this->request->data){
+      $this->request->data = $tag;
+    }
+    }
+
+  public function delete($id){
+    if($this->request->is('get')){
+      throw new MethodNotAllowedException();
+    }
+    if($this->Tag->delete($id)){
+      $this->Flash->success(__('削除完了',h($id)));
+    }else{
+      $this->Flash->error(__('削除できませんでした。',h($id)));
+    }
+    return $this->redirect(array('controller'=>'users','action'=>'index'));
+  }
+
 
   public function index(){
-    $tags = $this->Tag->find('all',array('recursive'=> 2));
+    $tags = $this->Tag->find('all');
     $this->set('tags', $tags);
 
   }

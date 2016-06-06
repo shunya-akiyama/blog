@@ -1,21 +1,22 @@
 <?php echo $this->Form->create('Zipnumbers'); ?>
-<br>
 <div class="col-xs-4 col-md-4 form-group input-group">
 <p class="input-group-addon">住所検索</p>
 <?php echo $this->Form->input('zip',array('class'=>'form-control','label'=>false,'placeholder'=>'郵便番号を入力してください')); ?>
 </div>
 <?php
-echo $this->Form->submit('送信',array('id'=>'zipsubmit','class'=>'btn btn-default'));
+echo $this->Form->submit('送信',array('id'=>'zipsubmit','class'=>'btn btn-default'));?>
+
+<?php
 echo $this->Form->end();
  ?>
-
-
  <div class="col-xs-4 col-md-4 input-group">
-   <p class="input-group-addon">
-     検索結果
-   </p>
-   <?php echo $this->Form->input('',array('class'=>'form-control form-group','placeholder'=>'住所','id'=>'answer')); ?>
+ <p class="input-group-addon">
+   検索結果
+ </p>
+ <?php echo $this->Form->input('',array('class'=>'form-control form-group','placeholder'=>'住所','id'=>'answer')); ?>
  </div>
+
+
 
 
  <?php $this->Html->scriptStart(array('inline'=>false)); ?>

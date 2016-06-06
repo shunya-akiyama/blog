@@ -171,10 +171,17 @@ header >.col-xs-12 > .container >
   float: left;
   height: 250px;
 }
+.thumbnail-list > li > a > img{
+  width: 300px;
+}
 .popup-image{
 	display:none;
 	position:absolute;
 	width: 600px;
 	z-index:100;
 
+}
+
+.btn-danger{
+  margin-left: 20px;
 }

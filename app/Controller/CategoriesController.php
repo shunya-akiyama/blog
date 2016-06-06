@@ -1,8 +1,46 @@
 <?php
   class CategoriesController extends AppController{
+    public $name = 'Categories';
     public $helpers = array('Html','Form','Flash');
     public $components = array('Flash','Session');
 		public $uses = array('Post','Category','PostsTag','User');
+
+    public function beforefilter(){
+      parent::beforefilter();
+    }
+
+    public function index(){
+      $categories = $this->Category->find('all');
+      $this->set('categories', $categories);
+    }
+
+    public function edit($id = null) {
+      $category = $this->Category->findById($id);
+
+      if($this->request->is(array('post', 'put'))){
+        $this->Category->id = $id;
+      if($this->Category->saveall($this->request->data)){
+        $this->Flash->success(__('編集完了'));
+        return $this->redirect(array('controller'=>'users','action'=>'index'));
+      }
+        $this->Flash->error(__('保存できませんでした。'));
+      }
+      if(!$this->request->data){
+        $this->request->data = $category;
+      }
+      }
+
+    public function delete($id){
+      if($this->request->is('get')){
+        throw new MethodNotAllowedException();
+      }
+      if($this->Category->delete($id)){
+        $this->Flash->success(__('削除完了',h($id)));
+      }else{
+        $this->Flash->error(__('削除できませんでした。',h($id)));
+      }
+      return $this->redirect(array('controller'=>'users','action'=>'index'));
+    }
 
     public function add(){
       if($this->request->is('post')){
