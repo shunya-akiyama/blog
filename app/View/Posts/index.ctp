@@ -1,7 +1,7 @@
 <h1>記事一覧</h1>
 <ul class="col-xs-12 col-md-8">
 <?php foreach ($posts as $post): ?>
-  <li>
+  <li class="col-xs10 col-xs-offset-1">
     <h2><?php echo $this->Html->link($post['Post']['title'],
     array('controller'=>'posts', 'action'=>'view', $post['Post']['id'])); ?>
 	</h2>
@@ -12,14 +12,14 @@
   <?php foreach ($post['Tag'] as $post["Tag"]): ?>
   <?php echo $this->Html->tag('',$post['Tag']['tag'],array('class'=>'tags')); ?>,
   <?php endforeach; ?>
+</p>
   <p><?php echo h($post['Post']['created']); ?></p>
-	</p>
-  </li>
   <hr>
+  </li>
 <?php endforeach; ?>
 </ul>
 
-<p class="col-xs-1 col-xs-offset-3">
+<p class="col-xs-1 col-xs-offset-2">
 <?php echo $this->html->link('住所検索はこちら',array('controller'=>'zipnumbers','action'=>'zip'),array('class'=>'btn btn-info')); ?>
 </p>
 <ul class="paging col-xs-12 col-md-12 col-lg-12">

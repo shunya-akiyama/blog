@@ -21,14 +21,13 @@
 <?php endforeach; ?>
 	</tbody>
 	</table>
-	<div class="paging">
-	<?php
-		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
-		echo $this->Paginator->numbers(array('separator' => ''));
-		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
-	?>
-	</div>
 </div>
+<ul class="paging col-xs-12 col-md-12 col-lg-12">
+  <li><?php echo $this->Paginator->prev('Prev',array('tag'=>false,'class'=>'btn btn-default'),null,array()); ?></li>
+  <li><?php echo $this->Paginator->numbers(array('class'=>'btn btn-default')); ?></li>
+  <li><?php echo $this->Paginator->next('Next',array('tag'=>false,'class'=>'btn btn-default'),null,array()); ?></li>
+</ul>
+
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<p>

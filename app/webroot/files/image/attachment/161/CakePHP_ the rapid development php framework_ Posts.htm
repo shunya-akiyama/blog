@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://blog.dev/posts/view/12# -->
+<html lang="utf−8"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>
+		CakePHP: the rapid development php framework:		Posts	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Le styles -->
+  <link rel="stylesheet" type="text/css" href="./CakePHP_ the rapid development php framework_ Posts_files/cssreset-min.css">  <link rel="stylesheet" type="text/css" href="./CakePHP_ the rapid development php framework_ Posts_files/font-awesome.min.css">	<link rel="stylesheet" type="text/css" href="./CakePHP_ the rapid development php framework_ Posts_files/bootstrap.css">  <link rel="stylesheet" type="text/css" href="./CakePHP_ the rapid development php framework_ Posts_files/style.css">  <script type="text/javascript" src="./CakePHP_ the rapid development php framework_ Posts_files/jquery.min.js"></script>	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<!-- Le fav and touch icons -->
+	<!--
+	<link rel="shortcut icon" href="/ico/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png">
+	-->
+  </head>
+
+<body>
+<div class="container-fluid">
+	<header>
+    
+<div class="col-xs-12 col-md-12">
+<h1>
+  <a href="http://blog.dev/posts">BlogTest Page</a></h1>
+  <div id="search">
+    <p>
+      <i class="fa fa-search fa-2x" aria-hidden="true"></i>
+    </p>
+
+  </div>
+    <form action="http://blog.dev/posts/find" class="container" id="PostViewForm" method="post" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"></div>    <ul class="row" id="search_form" style="display: none;">
+        <li class="col-xs-4 col-md-4 input-group">
+          <p class="input-group-addon">
+            TITLE
+          </p>
+          <input name="data[Post][titles]" class="form-control" placeholder="タイトル検索" type="text" id="PostTitles">        </li>
+        <li class="col-xs-4 col-md-3">
+          <i class="fa fa-flag fa-3x" aria-hidden="true"></i>
+
+          <input type="hidden" name="data[Post][category]" value="" id="PostCategory">
+
+<div class="checkbox-inline"><input type="checkbox" name="data[Post][category][]" value="1" id="PostCategory1"><label for="PostCategory1">テスト</label></div>
+<div class="checkbox-inline"><input type="checkbox" name="data[Post][category][]" value="2" id="PostCategory2"><label for="PostCategory2">お試し</label></div>
+<div class="checkbox-inline"><input type="checkbox" name="data[Post][category][]" value="3" id="PostCategory3"><label for="PostCategory3">aasadsasdads</label></div>
+</li>
+        
+        <li class="col-xs-3 col-md-3">
+          <i class="fa fa-tags fa-3x" aria-hidden="true"></i>
+          <input type="hidden" name="data[Post][tag]" value="" id="PostTag">
+
+<div class="checkbox-inline"><input type="checkbox" name="data[Post][tag][]" value="1" id="PostTag1"><label for="PostTag1">A</label></div>
+<div class="checkbox-inline"><input type="checkbox" name="data[Post][tag][]" value="2" id="PostTag2"><label for="PostTag2">B</label></div>
+<div class="checkbox-inline"><input type="checkbox" name="data[Post][tag][]" value="3" id="PostTag3"><label for="PostTag3">C</label></div>
+<div class="checkbox-inline"><input type="checkbox" name="data[Post][tag][]" value="4" id="PostTag4"><label for="PostTag4">D</label></div>
+<div class="checkbox-inline"><input type="checkbox" name="data[Post][tag][]" value="5" id="PostTag5"><label for="PostTag5">お試し</label></div>
+        </li>
+        <li class="col-xs-3 col-md-2">
+          <div class="submit"><input class="btn btn-default" type="submit" value="検索"></div>        </li>
+    </ul>
+    </form></div>
+	</header>
+
+<div class="container">
+		<div class="row">
+			<article class="col-xs-12 col-md-12 col-lg-12">
+
+				
+				<div class="container"><div class="row col-xs-12 col-md-12 col-lg-12 content"><h1>長文【Sample】</h1><p>Created:2016-05-09 11:47:10</p><p class="fa fa-flag">お試し</p><p class="fa fa-tags">お試し</p><div class="modal-wrap" id="image-wrap">
+  <ul class="modal-set">
+<li class="image"><a href="http://blog.dev/posts/view/class:img-responsive"><img src="./CakePHP_ the rapid development php framework_ Posts_files/organic-1280537_640.jpg" alt="" id="current"></a></li><div id="dummy"><img src="./CakePHP_ the rapid development php framework_ Posts_files/organic-1280537_640.jpg" class="popup-image" alt="" id="current"></div><li class="image"><a href="http://blog.dev/posts/view/class:img-responsive"><img src="./CakePHP_ the rapid development php framework_ Posts_files/bmw-1216469_640.jpg" alt="" id="current"></a></li><div id="dummy"><img src="./CakePHP_ the rapid development php framework_ Posts_files/bmw-1216469_640.jpg" class="popup-image" alt="" id="current"></div><li class="image"><a href="http://blog.dev/posts/view/class:img-responsive"><img src="./CakePHP_ the rapid development php framework_ Posts_files/スクリーンショット 2016-04-21 18.06.32.png" alt="" id="current"></a></li><div id="dummy"><img src="./CakePHP_ the rapid development php framework_ Posts_files/スクリーンショット 2016-04-21 18.06.32.png" class="popup-image" alt="" id="current"></div><li class="image"><a href="http://blog.dev/posts/view/class:img-responsive"><img src="./CakePHP_ the rapid development php framework_ Posts_files/スクリーンショット 2016-04-28 12.32.11.png" alt="" id="current"></a></li><div id="dummy"><img src="./CakePHP_ the rapid development php framework_ Posts_files/スクリーンショット 2016-04-28 12.32.11.png" class="popup-image" alt="" id="current"></div></ul>
+</div>
+
+</div>
+ <p>【１】昔の人々は、明るい星を結んで星座を思い描きました。星座を作ったのは、シュメール人という説もありますが、一般的には、約五千年前、バビロニアの羊飼いたちによって、作られたのが最初と言われています。<br>
+<br>
+【２】初めのころは、十二星座でしたが、その後、四十八星座に増えました。 <br>
+十七世紀に、オランダで望遠鏡が発明され、暗い星も観測できるようになると、四十八星座のすきまにも新しい星座が作られるようになりました。<br>
+<br>
+【３】そのころ、星を見つけるたびに、こんな会話が交わされたかもしれません。「新しい星を見つけたぞ。」「だめ。それは、おらンダ。」 <br>
+それまでは、星座というと、北半球のものに限られていました。<br>
+<br>
+【４】しかし、今まで知られていなかった南半球の星座が紹介されるようになると、新星座作りのブームが起こりました。なぜ星座がたくさん作られたのかというと、二十世紀の初めまでは、星座を作ることに決まりがなく、誰でも簡単に作ることができたからです。【５】一時は百二十もの星座が作られたことがあり、あまりの多さに混乱が起きるようになってしまいました。そこで、二十世紀になってから、国際天文学連合によって、八十八の星座に統一され、星座の境界も定められることになりました。<br>
+<br>
+【６】現在、私たちが親しんでいる星座は、このときに定められたものです。 <br>
+　星座は、神話とともに紹介されることが多いため、西洋のものと思われがちですが、古代のインドや中国にも独自のものがあります。<br>
+<br>
+【７】中国の星座は、七、八世紀ごろ、日本にも伝えられたようで、日本では、明治時代に西洋の天文学が導入されるまで、ずっと中国の星座が使われてきました。∵ <br>
+<br>
+【８】また、昔から星座は、時刻をはかり、季節の移り変わりを知り、農耕の時期を伝える役割を果たしてきました。海に囲まれた土地に住む人々は、広い海を航海するときに、星を観測して位置や方角を確かめるのにも使っていました。<br>
+<br>
+【９】ですから、星座の名前も、その土地独自の呼び名が数多くありました。 <br>
+四季を通じて明るく見えるオリオン座は、世界各地でさまざまな名前がつけられています。日本では、その形から鼓星と呼ばれていました。<br>
+<br>
+【１０】また、オリオン座の左上にある赤い星は平家星、右下にある白い星は源氏星とも呼ばれていました。これは平家の旗の色が赤、源氏の旗の色が白だったからです。 <br>
+さまざまな想像をふくらませてくれる星座を、たまには正座してしみじみ眺めてみるのもいいかもしれません。 <br>
+あれは大きいからお父さん星。あっちはきれいだからお母さん星。これはしょっぱいから梅干し。ここにある長いのは物干し。頭にかぶっているのはただの帽子。 <br>
+</p>
+ <div id="cover">
+   <div id="navi">
+     <a href="http://blog.dev/posts/view/12" id="prev">&lt;</a>
+     <a href="http://blog.dev/posts/view/12" id="next">&gt;</a>
+     <a href="http://blog.dev/posts/view/12#" id="close">X</a>
+   </div>
+ </div>
+      </div></article>
+			</div>
+    </div><!-- /container -->
+	</div> <!-- /containerfluid -->
+<div class="footer">
+  Footer
+</div>
+	<!-- Le javascript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script type="text/javascript" src="./CakePHP_ the rapid development php framework_ Posts_files/bootstrap.js"></script>  <script type="text/javascript" src="./CakePHP_ the rapid development php framework_ Posts_files/search.js"></script>
+
+
+</body></html>

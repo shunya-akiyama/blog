@@ -1,4 +1,4 @@
-<?php echo $this->Form->create('Zipnumbers'); ?>
+<?php echo $this->Form->create('Zipnumbers',array('class'=>'zipnum')); ?>
 <div class="col-xs-4 col-md-4 form-group input-group">
 <p class="input-group-addon">住所検索</p>
 <?php echo $this->Form->input('zip',array('class'=>'form-control','label'=>false,'placeholder'=>'郵便番号を入力してください')); ?>

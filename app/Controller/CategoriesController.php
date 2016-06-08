@@ -2,16 +2,25 @@
   class CategoriesController extends AppController{
     public $name = 'Categories';
     public $helpers = array('Html','Form','Flash');
-    public $components = array('Flash','Session');
+    public $components = array('Flash','Session','Paginator');
 		public $uses = array('Post','Category','PostsTag','User');
+    public $paginate = array(
+      'limit'=>10,
+      'fields' => array('Category.id', 'Category.category'),
+      );
 
     public function beforefilter(){
       parent::beforefilter();
     }
 
-    public function index(){
-      $categories = $this->Category->find('all');
-      $this->set('categories', $categories);
+      public function index(){
+//      $categories = $this->Category->find('all');
+//      $this->set('categories', $categories);
+//$this->Category->recursive = 2;
+$this->Paginator->settings = $this->paginate;
+$categories = $this->Paginator->paginate('Category');
+$this->set('categories',$categories);
+//$category = $this->Category->findById($id);
     }
 
     public function edit($id = null) {

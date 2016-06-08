@@ -27,8 +27,8 @@ public function beforeFilter() {
         'action'=>'login'
     );
     $this->Auth->logoutRedirect = array(
-        'controller'=>'users',
-        'action'=>'login'
+        'controller'=>'posts',
+        'action'=>'index'
     );
     $this->Auth->loginRedirect = array(
         'controller'=>'users',

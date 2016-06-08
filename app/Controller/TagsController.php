@@ -1,10 +1,16 @@
 <?php
 class TagsController extends AppController{
   public $helpers = array('Html','Form','Flash');
-  public $components = array('Flash','Session');
+  public $components = array('Flash','Session','Paginator');
   public $name = 'Tags';
+  public $uses = array('Post','Category','Tag','PostsTag','User');
+  public $paginate = array(
+    'limit'=>5,
+    'fields' => array('Tag.id', 'Tag.tag'),
+    );
   public $hasAndBelongsToMany = array('post');
-	public $uses = array('Post','Category','Tag','PostsTag','User');
+
+
   public function beforefilter(){
     parent::beforefilter();
   }
@@ -14,7 +20,7 @@ class TagsController extends AppController{
       $this->Tag->create();
       if($this->Tag->save($this->request->data)){
         $this->Flash->success(__('Tag追加完了'));
-        return $this->redirect(array('controller'=>'users','action'=>'index'));
+        return $this->redirect(array('controller'=>'tags','action'=>'index'));
       }
     }
   }
@@ -48,9 +54,9 @@ class TagsController extends AppController{
 
 
   public function index(){
-    $tags = $this->Tag->find('all');
-    $this->set('tags', $tags);
-
+    $this->Paginator->settings = $this->paginate;
+    $Tags = $this->Paginator->paginate('Tag');
+    $this->set('tags',$Tags);
   }
 
 }

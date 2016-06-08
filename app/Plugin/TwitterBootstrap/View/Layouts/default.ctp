@@ -38,24 +38,21 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 </head>
 
 <body>
-<div class="container-fluid row">
-	<header>
-    <?php echo $this->element('head_menu',array('tag'=>$tag)); ?>
-	</header>
+<div class="container-fluid">
+  <div class="row">
+    <header>
+      <?php echo $this->element('head_menu',array('tag'=>$tag)); ?>
+  	</header>
+  			<article class="col-xs-12 col-md-12 col-lg-12">
 
-<div class="container">
-		<div class="row">
-			<article class="col-xs-12 col-md-12 col-lg-12">
+  				<?php echo $this->Session->flash(); ?>
 
-				<?php echo $this->Session->flash(); ?>
-
-				<?php echo $this->fetch('content'); ?>
-      </article>
-			</div>
-    </div><!-- /container -->
+  				<?php echo $this->fetch('content'); ?>
+        </article>
+        <div class="footer col-xs-12 col-md-12 col-lg-12">
+        </div>
+  </div>
 	</div> <!-- /containerfluid -->
-<div class="footer">
-</div>
 	<!-- Le javascript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->

@@ -1,4 +1,3 @@
-<div class="col-xs-12 col-md-12 col-lg-12">
   <?php echo $this->Html->tag('h1',$post['Post']['title']); ?>
   <?php echo $this->Html->para('','Created:'.$post['Post']['created']); ?>
   <span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
@@ -12,7 +11,7 @@
   <?php echo $this->Html->tag('',$tag['Tag']['tag']); ?>,
    <?php endforeach; ?>
 
-  <div class="modal-wrap col-xs-12 col-md-12 col-lg-12" id="image-wrap">
+  <div class="modal-wrap col-xs-12 col-md-12" id="image-wrap">
     <ul class="row thumbnail-list">
       <?php
       $i=0;
@@ -25,7 +24,7 @@
         echo $this->Html->tag('li',
         $this->Html->link($this->Html->image($base.$row["Image"]["dir"]."/".$row["Image"]["attachment"],
         array('class'=>'img-responsive')),$base.$row["Image"]["dir"]."/".$row["Image"]["attachment"],
-        array('class'=>'thumbnail','id'=>'img'.$i,'escape'=>false)),array('class' => 'col-xs-12 col-sm-6 col-md-4'));
+        array('class'=>'thumbnail','id'=>'img'.$i,'escape'=>false)),array('class' => 'col-xs-12 col-md-2'));
         $i++;
     /*   echo $this->Html->div('',$this->Html->image("/files/image/attachment/"."/".$row["Image"]["dir"]."/".$row["Image"]["attachment"],
        array('class'=>'img-responsive　popup-image')),array('id'=>'dummy'));*/
@@ -58,4 +57,3 @@
   </div>
 
   <p><?php echo nl2br(h($post['Post']['body'])); ?></p>
-  </div>

@@ -61,7 +61,7 @@ exit;
 		public function login(){
 	  	if($this->Session->read('Auth.User')){
 				$this->Session->setFlash('ログイン中');
-				$this->redirect('/',null,false);
+				$this->redirect('/users/index',null,false);
 			}
 			if($this->request->is('post')){
 				$this->User->set($this->request->data);
@@ -69,7 +69,7 @@ exit;
 			if($this->Auth->login()){
 				return $this->redirect($this->Auth->redirect());
 			}
-				$this->Session->setFlash(__('Your username or password was incorrect.'));
+				$this->Session->setFlash('Your username or password was incorrect.');
 			}
 		}
 

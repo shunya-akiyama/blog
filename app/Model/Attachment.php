@@ -19,6 +19,7 @@ class Attachment extends AppModel{
       ),
     );
 
+/*
     public $validate = array(
       'attachment' => array(
       'on'=>'create',
@@ -27,22 +28,28 @@ class Attachment extends AppModel{
       'allowEmpty'=>true,
       ),
     );
-/*
+    */
     public $validate = array(
       'attachment'=>array(
-        array(
-          'rule'=>'uploadCheck',
-          'message'=>'一枚くらい登録してください。',
-          'allowEmpty'=>true,
+      array(
+//        'rule'=>array('extension',array('jpeg','jpg','gif','png')),
+        'rule'=>array('isValidMimeType', array('image/jpeg','image/jpg','image/gif','image/png'), false),
+        'message'=>'拡張子が違います。使用できるのはjpeg,jpg,gif,pngです',
+        'allowEmpty'=>true,
       ),
-        array(
-          'rule'=>array('extension',array('jpeg','jpg','gif','png')),
-          'message'=>'拡張子が違います。使用できるのはjpeg,jpg,gif,pngです',
-          'allowEmpty'=>true,
-        ),
+      array(
+        'rule'=>'uploadCheck',
+        'message'=>'一枚くらい登録してください。',
+        'allowEmpty'=>true,
+        'on'=>'create',
+      ),
+
     ),
     );
-    */
+/*
+    if(preg_match( "/.*?\.jpg|.*?\.png||.*?\.gif.*?\.jpeg/i",$imgcheck['attachment']['name'])){
+ preg_match( '/.+\.(png|jpg|jpeg|gif)/i',$imgcheck['attachment']['name'])
+ */
     public function uploadCheck(){
       $imgcheck = $this->data[$this->alias];
       if($imgcheck['attachment']['tmp_flg']){

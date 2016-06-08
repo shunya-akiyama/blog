@@ -23,6 +23,7 @@ class PostsController extends AppController{
       $post = $this->Post->findById($id);
       $img=$this->Attachment->find('count',array('conditions'=>array('Attachment.post_id'=>$id,'NOT'=>array('Attachment.dir'=>'null'))));
       $this->set('img',$img);
+
   //タイトル検索
   		$this->Prg->commonProcess();
   	  $this->Paginator->settings['conditions']=$this->Post->parseCriteria($this->Prg->parsedParams());
@@ -124,5 +125,17 @@ class PostsController extends AppController{
       }
       return $this->redirect(array('controller'=>'users','action'=>'index'));
     }
+    public function img_Delete($id){
+      if($this->request->is('get')){
+        throw new MethodNotAllowedException();
+      }
+      if($this->Attachment->delete($id)){
+        $this->Flash->success(__('削除完了',h($id)));
+      }else{
+        $this->Flash->error(__('削除できませんでした。',h($id)));
+      }
+      return $this->redirect(array('controller'=>'users','action'=>'index'));
+    }
+
 }
 ?>
